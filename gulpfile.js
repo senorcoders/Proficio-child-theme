@@ -9,9 +9,15 @@ gulp.task('hello', function() {
   console.log('Hello Gulp!!!!');
 });
 
+var sassOptions = {
+  errLogToConsole: true,
+  outputStyle: 'expanded'
+};
+
 gulp.task('sass', function(){
   return gulp.src('sass/*.scss')
-    .pipe(sass()) // Converts Sass to CSS with gulp-sass
+    //.pipe(sass()) // Converts Sass to CSS with gulp-sass
+    .pipe(sass(sassOptions).on('error', sass.logError)) // this prevent sass stop when error
     .pipe(gulp.dest('css'))
     /*.pipe(browserSync.reload({
       stream: true
