@@ -35,13 +35,20 @@
   
 ?>  
     <!-- Navigation -->
+    
     <nav class="navbar fixed-top navbar-toggleable-md navbar-light" id="mainNav">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        
         <div class="container">
-            <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
-            <div class="collapse navbar-collapse" id="navbarExample">
+            <a class="navbar-brand" href="#page-top">Proficio</a>
+
+                      <?php wp_nav_menu( array( 'theme_location' => 'Primary Menu', 'menu_id' => 'navbarExample',  'menu_class' => 'collapse navbar-collapse' ) ); ?>
+
+                      
+
+          <!--   <div class="collapse navbar-collapse" id="navbarExample">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="#about">About</a>
@@ -56,17 +63,33 @@
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
-            </div>
+            </div> -->
         </div>
     </nav>
 
-    <header class="masthead">
+    <?php 
+ 
+        $h1 = $titan->getOption( 'heading-h1', get_the_ID() );
+        $h2 = $titan->getOption( 'heading-h2', get_the_ID() );
+        $ctaText = $titan->getOption( 'cta-button-text', get_the_ID() );
+        $ctaLink = $titan->getOption( 'cta-button-link', get_the_ID() );
+        $imageID = $titan->getOption( 'header_image', get_the_ID() );
+
+        $imageSrc = $imageID; // For the default value
+        if ( is_numeric( $imageID ) ) {
+        $imageAttachment = wp_get_attachment_image_src( $imageID, 'full');
+        $imageSrc = $imageAttachment[0];
+        } 
+        ?>
+         
+
+    <header class="masthead" style="background: url('<?php echo esc_url( $imageSrc ); ?>') !important;">
         <div class="header-content">
             <div class="header-content-inner">
-                <h1 id="homeHeading">Your Favorite Source of Free Bootstrap Themes</h1>
+                <h1 id="homeHeading"><?php echo $h1; ?></h1>
                 <hr>
-                <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
-                <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
+                <p><?php echo $h2; ?></p>
+                <a class="btn btn-primary btn-xl" href="<?php echo $ctaLink; ?>"><?php echo $ctaText; ?></a>
             </div>
         </div>
     </header>

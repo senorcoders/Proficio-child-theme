@@ -61,6 +61,7 @@
 
 	    //<!-- Custom scripts for this template -->
 	    wp_enqueue_script( 'creative', get_template_directory_uri() . '/js/creative.min.js', array( 'jquery' ) );
+	    wp_enqueue_script( 'customjs', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ) );
 	}
 
 

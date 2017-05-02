@@ -70,6 +70,13 @@ function proficio_create_options() {
 	) );
 
 	$generalTab->createOption( array(
+		'name' => 'Logo',
+		'id' => 'logo-image',
+		'type' => 'file',
+		'desc' => _('Logo')
+	) );
+
+	$generalTab->createOption( array(
 		'name' => 'Email',
 		'id' => 'email',
 		'type' => 'text',
@@ -209,18 +216,59 @@ function proficio_create_options() {
 
 add_action( 'tf_create_options', 'mrec_proficio_metabox_options' );
  
-function aa_metabox_options() {
+function mrec_proficio_metabox_options() {
  
     // Initialize Titan with your theme name.
-    $titan = TitanFramework::getInstance( 'neat' );
+    $titan = TitanFramework::getInstance( 'proficio' );
  
     /**
      * First metabox.
      */
  
     $aa_metbox = $titan->createMetaBox( array(
-        'name'      => 'CTA', // Name the options menu.
+        'name'      => 'Hero Settings', // Name the options menu.
         'post_type' => array( 'page' ) // Can be a string or array.
     ) );
- 
+
+    $aa_metbox->createOption( array(
+    	'name' => 'Header Image',
+    	'id'	=> 'header_image',
+    	'type'	=> 'upload'
+    	));
+
+   $aa_metbox->createOption( array(
+		'name' => 'Heading Text H1',
+		'id' => 'heading-h1',
+		'type' => 'text'		
+	) );
+
+   $aa_metbox->createOption( array(
+		'name' => 'Heading Text H2',
+		'id' => 'heading-h2',
+		'type' => 'text'		
+	) );
+    $aa_metbox->createOption( array(
+		'name' => 'CTA Button Text',
+		'id' => 'cta-button-text',
+		'type' => 'text'		
+	) );
+	 $aa_metbox->createOption( array(
+		'name' => 'CTA Button Link',
+		'id' => 'cta-button-link',
+		'type' => 'text'		
+	) );
+
+	 $aa_metbox->createOption( array(
+		'name' => 'Height',
+		'id' => 'banner_height',
+		'type' => 'select',
+		'desc' => 'Choose a size',
+		'options' => array(
+		'red' => 'short',
+		'blue' => 'tall',
+		'silver' => 'custom',
+		),
+		'default' => 'tall',
+		) );
+		 
 }
