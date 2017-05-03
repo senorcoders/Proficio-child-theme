@@ -28,6 +28,9 @@
 	function add_style(){
 		// Add custom fonts, used in the main stylesheet.
 		wp_enqueue_style( 'roboto', 'https://fonts.googleapis.com/css?family=Roboto' );
+		wp_enqueue_style( 'Questrial', 'https://fonts.googleapis.com/css?family=Questrial' );
+		wp_enqueue_style( 'Oxygen', 'https://fonts.googleapis.com/css?family=Oxygen:300,400,700' );
+
 
 		//<!-- Bootstrap core CSS -->    
 		wp_enqueue_style( 'bootstrap', get_template_directory_uri(). '/vendor/bootstrap/css/bootstrap.min.css' );
@@ -43,7 +46,7 @@
     //<!-- Custom styles for this template -->    
     wp_enqueue_style( 'cretive', get_template_directory_uri(). '/css/creative.min.css' );  
 			
-	wp_enqueue_style( 'styleTheme', get_template_directory_uri(). '/style.css', array( 'bootstrap', 'creative' ));
+	wp_enqueue_style( 'styleTheme', get_template_directory_uri(). '/style.css' );
 
 	}
 
@@ -61,7 +64,8 @@
 
 	    //<!-- Custom scripts for this template -->
 	    wp_enqueue_script( 'creative', get_template_directory_uri() . '/js/creative.min.js', array( 'jquery' ) );
-	    wp_enqueue_script( 'customjs', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ) );
+	    
+wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ) );
 	}
 
 

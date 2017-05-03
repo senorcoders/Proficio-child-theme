@@ -72,7 +72,7 @@ function proficio_create_options() {
 	$generalTab->createOption( array(
 		'name' => 'Logo',
 		'id' => 'logo-image',
-		'type' => 'file',
+		'type' => 'upload',
 		'desc' => _('Logo')
 	) );
 
@@ -90,12 +90,7 @@ function proficio_create_options() {
 		'desc' => _('Business Phone Number')
 	) );
 
-	$generalTab->createOption( array(
-		'name' => 'Working hours',
-		'id' => 'working-hours',
-		'type' => 'text',
-		'desc' => _('Business Working Hours')
-	) );
+	
 
 	$generalTab->createOption( array(
 		'name' => 'Address',
@@ -103,25 +98,7 @@ function proficio_create_options() {
 		'type' => 'text',
 		'desc' => _('Business address')
 	) );
-
-	$generalTab->createOption( array(
-		'name' => 'Parallax Image',
-		'id' => 'parallax-image',
-		'type' => 'file',
-		'desc' => _('Background image for parallax section')
-	) );
-
-	$generalTab->createOption( array(
-		'name' => 'CTA Text',
-		'id' => 'cta-text',
-		'type' => 'text'		
-	) );
-
-	$generalTab->createOption( array(
-		'name' => 'CTA Text Button',
-		'id' => 'cta-text-button',
-		'type' => 'text'		
-	) );
+	
 	
 	$generalTab->createOption( array(
 	    'type' => 'save',

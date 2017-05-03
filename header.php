@@ -31,7 +31,17 @@
 <?php 
   $titan = TitanFramework::getInstance( 'proficio' );
   
-  $example = $titan->getOption('example');
+  $logo = $titan->getOption('logo-image');
+
+   $imageSrcLogo = $logo; // For the default value
+        if ( is_numeric( $logo ) ) {
+        $imageAttachmentLogo = wp_get_attachment_image_src( $logo, 'full');
+        $imageSrcLogo = $imageAttachmentLogo[0];
+
+        } 
+
+        $url = home_url();
+
   
 ?>  
     <!-- Navigation -->
@@ -42,9 +52,9 @@
         </button>
         
         <div class="container">
-            <a class="navbar-brand" href="#page-top">Proficio</a>
+            <a class="navbar-brand" href="<?php echo esc_url( $url ); ?>"><img width="230px" src="<?php echo $imageSrcLogo ?>"></a>
 
-                      <?php wp_nav_menu( array( 'theme_location' => 'Primary Menu', 'menu_id' => 'navbarExample',  'menu_class' => 'collapse navbar-collapse' ) ); ?>
+                      <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container_id' => 'navbarExample', 'container_class' => 'collapse navbar-collapse' ,  'menu_class' => 'navbar-nav ml-auto' ) ); ?>
 
                       
 
@@ -87,9 +97,13 @@
         <div class="header-content">
             <div class="header-content-inner">
                 <h1 id="homeHeading"><?php echo $h1; ?></h1>
-                <hr>
                 <p><?php echo $h2; ?></p>
+                <?php if ( !empty($ctaText) ) { ?>
+                   
+               
                 <a class="btn btn-primary btn-xl" href="<?php echo $ctaLink; ?>"><?php echo $ctaText; ?></a>
+
+                 <?php } ?>
             </div>
         </div>
     </header>

@@ -15,10 +15,10 @@ var sassOptions = {
 };
 
 gulp.task('sass', function(){
-  return gulp.src('sass/*.scss')
+  return gulp.src('assets/src/sass/*.scss')
     //.pipe(sass()) // Converts Sass to CSS with gulp-sass
     .pipe(sass(sassOptions).on('error', sass.logError)) // this prevent sass stop when error
-    .pipe(gulp.dest('css'))
+    .pipe(gulp.dest('assets/src/css'))
     /*.pipe(browserSync.reload({
       stream: true
     }))*/
@@ -40,10 +40,12 @@ gulp.task('changes', function(){
 // Gulp watch syntax
 gulp.task('watch', ['sass'], function (){
   livereload.listen();
-  gulp.watch('sass/*.scss', ['sass']);
+  gulp.watch('assets/src/*.scss', ['sass']);
   // Reloads the browser whenever HTML or JS files change
-  gulp.watch('*.html', ['changes']); 
+ /// gulp.watch('*.html', ['changes']); 
   gulp.watch('*.php', ['changes']); 
-  gulp.watch('js/*.js', ['changes']); 
+  gulp.watch('templates/*.php');
+  gulp.watch('includes/*.php');
+  gulp.watch('assets/src/js/*.js', ['changes']); 
   // Other watchers
 });

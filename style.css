@@ -4,3 +4,77 @@ Author: senorcoders
 Author URI:   http://senorcoders.com
 Text Domain: proficio
 */
+
+body, p{
+	font-family: 'Oxygen', sans-serif;
+	font-size: 11pt;
+}
+
+header.masthead .header-content .header-content-inner h1, .call-to-action h2, .section-heading, #mainNav{
+	    font-family: 'Questrial', sans-serif;
+}
+
+header.masthead .header-content .header-content-inner h1{
+	font-size: 30pt;
+	color: #00b3bd;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Questrial', sans-serif !important;
+	text-transform: uppercase;
+}
+
+
+.page-id-28 header.masthead, .page-template-page-inside header.masthead{
+	height: 400px !important;
+	min-height: 400px;
+}
+
+#mainNav .navbar-nav>li.nav-item>a.nav-link, #mainNav .navbar-nav>li.nav-item>a.nav-link:focus {
+    color: #fff;
+    letter-spacing: .035em;
+    font-size: 17px;
+    font-weight: 400;
+    font-family: 'Oxygen', sans-serif;
+}
+
+.insideBgSection p{
+	color: #fff;
+}
+
+.insideTableSection > .row{
+	margin: 50px 0;
+}
+
+.insideTableSection > .row > .col-md-6{
+	border: 1px solid;
+}
+
+.insideTableSection h3{
+	text-align: center;
+}
+
+.grayBg{
+	background: gray;
+	padding: 40px 0;
+}
+
+@media (max-width: 992px){
+	#mainNav{
+	 background-color: rgba(0,0,0,0.9) !important;
+}
+}
+
+
+@media (min-width: 992px){
+	#mainNav.navbar-shrink {
+    background-color: rgba(0,0,0,0.9) !important;
+    border-color: rgba(34,34,34,.05);
+}
+
+#mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link, #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link:focus {
+    color: #fff !important;
+}
+}
+
