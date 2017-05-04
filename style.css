@@ -5,9 +5,15 @@ Author URI:   http://senorcoders.com
 Text Domain: proficio
 */
 
+body{
+	    background-color: #000 !important;
+    color: #fff;
+}
+
 body, p{
 	font-family: 'Oxygen', sans-serif;
 	font-size: 11pt;
+	    line-height: 32px;
 }
 
 header.masthead .header-content .header-content-inner h1, .call-to-action h2, .section-heading, #mainNav{
@@ -16,20 +22,25 @@ header.masthead .header-content .header-content-inner h1, .call-to-action h2, .s
 
 header.masthead .header-content .header-content-inner h1{
 	font-size: 30pt;
-	color: #00b3bd;
+	color: #00FEFB;
     text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+
+.page-template-page-leadership h3{
+	color: #00FEFB;
 }
 
 h1, h2, h3, h4, h5, h6{
 	font-family: 'Questrial', sans-serif !important;
 	text-transform: uppercase;
+	text-shadow: 0 2px 5px rgba(0,0,0,0.4);
 }
 
 
-.page-id-28 header.masthead, .page-template-page-inside header.masthead{
+/*.page-id-28 header.masthead, .page-template-page-inside header.masthead{
 	height: 400px !important;
 	min-height: 400px;
-}
+}*/
 
 #mainNav .navbar-nav>li.nav-item>a.nav-link, #mainNav .navbar-nav>li.nav-item>a.nav-link:focus {
     color: #fff;
@@ -38,7 +49,16 @@ h1, h2, h3, h4, h5, h6{
     font-weight: 400;
     font-family: 'Oxygen', sans-serif;
 }
+.insideTableSection{
+	    margin-top: 100px;
+    margin-bottom: 100px;
 
+}
+
+.insideBgSection{
+	text-align: center !important;
+	background-color: rgba(0, 0, 0, 0.5);
+}
 .insideBgSection p{
 	color: #fff;
 }
@@ -58,6 +78,44 @@ h1, h2, h3, h4, h5, h6{
 .grayBg{
 	background: gray;
 	padding: 40px 0;
+}
+
+
+.resultados li{
+	list-style: none;
+	padding: 20px 0;
+}
+
+
+.eventsThumbnail, .leadersHeadshot{
+	height: 180px;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+
+}
+
+.btn-primary {
+    color: #00FEFB;
+    background-color: transparent;
+    border: 2px solid #00FEFB !important;
+    border-radius: 0 !important;
+    font-family: "Questrial",sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    font-size: 1.0625em;
+    font-weight: 300;
+    border: 2px solid #000;
+    background-color: transparent;
+    text-decoration: none;
+    opacity: 1;
+    border-radius: 0;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: transparent;
+    border-color: #fff !important;
 }
 
 @media (max-width: 992px){

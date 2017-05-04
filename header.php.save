@@ -79,41 +79,24 @@
 
     <?php 
  
-       
-
-        if (is_home()) {
-            $h1 = $titan->getOption( 'heading-h1', 47 );
-            $h2 = $titan->getOption( 'heading-h2', 47 );
-            $ctaText = $titan->getOption( 'cta-button-text', 47 );
-            $ctaLink = $titan->getOption( 'cta-button-link', 47 );
-            $imageID = $titan->getOption( 'header_image', 47 );
-            $height = $titan->getOption( 'banner_height', 47 );
-            $custom_height = $titan->getOption ('custom_banner_height' , 47 );
-        }else{
-            $h1 = $titan->getOption( 'heading-h1', get_the_ID() );
-            $h2 = $titan->getOption( 'heading-h2', get_the_ID() );
-            $ctaText = $titan->getOption( 'cta-button-text', get_the_ID() );
-            $ctaLink = $titan->getOption( 'cta-button-link', get_the_ID() );
-            $imageID = $titan->getOption( 'header_image', get_the_ID() );
-            $height = $titan->getOption( 'banner_height', get_the_ID() );
-            $custom_height = $titan->getOption ('custom_banner_height' , get_the_ID() );
-        }
-        
-	if($height == 'tall'){
-		$custom_height = 760;
-	}elseif($height == 'short'){
-		$custom_height = 350;
-	}
+        $h1 = $titan->getOption( 'heading-h1', get_the_ID() );
+        $h2 = $titan->getOption( 'heading-h2', get_the_ID() );
+        $ctaText = $titan->getOption( 'cta-button-text', get_the_ID() );
+        $ctaLink = $titan->getOption( 'cta-button-link', get_the_ID() );
+        $imageID = $titan->getOption( 'header_image', get_the_ID() );
 
         $imageSrc = $imageID; // For the default value
         if ( is_numeric( $imageID ) ) {
         $imageAttachment = wp_get_attachment_image_src( $imageID, 'full');
         $imageSrc = $imageAttachment[0];
         } 
+
+
+
         ?>
          
 
-    <header class="masthead" style="background: url('<?php echo esc_url( $imageSrc ); ?>') !important; height: <?php echo $custom_height; ?>px !important;">
+    <header class="masthead" style="background: url('<?php echo esc_url( $imageSrc ); ?>') !important;">
         <div class="header-content">
             <div class="header-content-inner">
                 <h1 id="homeHeading"><?php echo $h1; ?></h1>

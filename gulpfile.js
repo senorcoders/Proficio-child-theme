@@ -19,9 +19,6 @@ gulp.task('sass', function(){
     //.pipe(sass()) // Converts Sass to CSS with gulp-sass
     .pipe(sass(sassOptions).on('error', sass.logError)) // this prevent sass stop when error
     .pipe(gulp.dest('assets/src/css'))
-    /*.pipe(browserSync.reload({
-      stream: true
-    }))*/
     .pipe(livereload());
 });
 gulp.task('changes', function(){

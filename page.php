@@ -5,7 +5,7 @@
   
 ?>	
 
-    <div class="container" style="padding: 50px 0;">
+    <div class="container" style="padding: 100px 0;">
         <div class="row">
                 <?php if (have_posts()) : ?>
                     <?php while (have_posts()) : the_post(); ?>

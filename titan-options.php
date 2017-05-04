@@ -240,12 +240,22 @@ function mrec_proficio_metabox_options() {
 		'id' => 'banner_height',
 		'type' => 'select',
 		'desc' => 'Choose a size',
-		'options' => array(
-		'red' => 'short',
-		'blue' => 'tall',
-		'silver' => 'custom',
+		'options' => array(		
+		'short' => 'short',
+		'tall' => 'tall',		
+		'custom' => 'custom',
 		),
 		'default' => 'tall',
 		) );
+
+	
+	$aa_metbox->createOption( array(
+                'name' => 'Custom Height',
+                'id' => 'custom_banner_height',
+                'type' => 'number',
+		'default' => '230',
+		'max' => '1200'
+        ) );
+
 		 
 }
