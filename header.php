@@ -52,10 +52,17 @@
         </button>
         
         <div class="container">
-            <a class="navbar-brand" href="<?php echo esc_url( $url ); ?>"><img width="230px" src="<?php echo $imageSrcLogo ?>"></a>
+            <div class="row" style="width: 100%;">
+              
 
-                      <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container_id' => 'navbarExample', 'container_class' => 'collapse navbar-collapse' ,  'menu_class' => 'navbar-nav ml-auto' ) ); ?>
+                <div class="col-md-12">
+                      <a class="navbar-brand" id="logo-proficio" style="position: absolute;" href="<?php echo esc_url( $url ); ?>"><img width="230px" src="<?php echo $imageSrcLogo ?>"></a>
+                          <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container_id' => 'navbarExample', 'container_class' => 'collapse navbar-collapse' ,  'menu_class' => 'navbar-nav ml-auto' ) ); ?>
 
+                </div>
+            </div>
+
+                    
                       
 
           <!--   <div class="collapse navbar-collapse" id="navbarExample">
@@ -86,7 +93,7 @@
             $h2 = $titan->getOption( 'heading-h2', 47 );
             $ctaText = $titan->getOption( 'cta-button-text', 47 );
             $ctaLink = $titan->getOption( 'cta-button-link', 47 );
-            $imageID = $titan->getOption( 'header_image', 47 );
+            $hero = wp_get_attachment_url($titan->getOption( 'header_image', 47 ));
             $height = $titan->getOption( 'banner_height', 47 );
             $custom_height = $titan->getOption ('custom_banner_height' , 47 );
         }else{
@@ -94,7 +101,7 @@
             $h2 = $titan->getOption( 'heading-h2', get_the_ID() );
             $ctaText = $titan->getOption( 'cta-button-text', get_the_ID() );
             $ctaLink = $titan->getOption( 'cta-button-link', get_the_ID() );
-            $imageID = $titan->getOption( 'header_image', get_the_ID() );
+            $hero = wp_get_attachment_url($titan->getOption( 'header_image', get_the_ID() ));
             $height = $titan->getOption( 'banner_height', get_the_ID() );
             $custom_height = $titan->getOption ('custom_banner_height' , get_the_ID() );
         }
@@ -105,19 +112,15 @@
 		$custom_height = 350;
 	}
 
-        $imageSrc = $imageID; // For the default value
-        if ( is_numeric( $imageID ) ) {
-        $imageAttachment = wp_get_attachment_image_src( $imageID, 'full');
-        $imageSrc = $imageAttachment[0];
-        } 
+       
         ?>
          
 
-    <header class="masthead" style="background: url('<?php echo esc_url( $imageSrc ); ?>') !important; height: <?php echo $custom_height; ?>px !important;">
+    <header class="masthead" style="background: url('<?php echo esc_url( $hero ); ?>') !important; height: <?php echo $custom_height; ?>px !important;     background-position: center center !important;">
         <div class="header-content">
             <div class="header-content-inner">
                 <h1 id="homeHeading"><?php echo $h1; ?></h1>
-                <p><?php echo $h2; ?></p>
+                <h2><?php echo $h2; ?></h2>
                 <?php if ( !empty($ctaText) ) { ?>
                    
                

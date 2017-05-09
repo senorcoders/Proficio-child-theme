@@ -147,3 +147,110 @@ function custom_post_type() {
 
 }
 add_action( 'init', 'custom_post_type', 0 );
+
+// Register Sidebars
+function custom_sidebars() {
+
+	$args = array(
+		'id'            => 'post_sidebar',
+		'class'         => 'sidebar-posts',
+		'name'          => __( 'Right Post Sidebar', 'text_domain' ),
+		'description'   => __( 'Right sidebar for posts', 'text_domain' ),
+		'before_widget' => '<div id="%1$s">',
+		'after_widget'  => '</div>',
+	);
+	register_sidebar( $args );
+
+}
+add_action( 'widgets_init', 'custom_sidebars' );
+
+function limit_words($string, $word_limit) {
+
+	// creates an array of words from $string (this will be our excerpt)
+	// explode divides the excerpt up by using a space character
+
+	$words = explode(' ', $string);
+
+	// this next bit chops the $words array and sticks it back together
+	// starting at the first word '0' and ending at the $word_limit
+	// the $word_limit which is passed in the function will be the number
+	// of words we want to use
+	// implode glues the chopped up array back together using a space character
+
+	return implode(' ', array_slice($words, 0, $word_limit));
+
+}
+
+
+
+// Add Shortcode
+function my_recent_post()
+ {
+
+ 		ob_start();
+?>
+		<div class="custom-recent-posts">
+
+			<h4 class="post-title">Recent Posts</h4>
+
+		<?php $the_query = new WP_Query( 'posts_per_page=3' ); ?>
+
+		<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
+		<div class="row" style="margin-bottom: 40px;">
+
+		<?php if ( has_post_thumbnail() ) { ?>
+   
+    		<div class="col-md-5" class="post-thumbnails"><a href="<?php the_permalink() ?>"><?php  the_post_thumbnail('thumbnail'); ?></a></div>
+
+		<?php } ?>
+		<div class="col-md-7"><?php echo limit_words(get_the_excerpt(), '20'); ?></div>
+
+		</div>
+		<?php 
+		endwhile;
+		wp_reset_postdata();
+		?>
+		</div>
+<?php
+			return ob_get_clean();
+
+ }
+ add_shortcode( 'recent', 'my_recent_post' );
+
+
+ add_filter('widget_text','do_shortcode');
+
+
+ //GET SUBMENU OF AN ITEM FROM THE MENU
+
+ add_filter( 'wp_nav_menu_objects', 'submenu_limit', 10, 2 );
+
+function submenu_limit( $items, $args ) {
+
+    if ( empty($args->submenu) )
+        return $items;
+
+    $parent_id = array_pop( wp_filter_object_list( $items, array( 'title' => $args->submenu, 'post_parent' => 0 ), 'and', 'ID' ) );
+    $children  = submenu_get_children_ids( $parent_id, $items );
+
+    foreach ( $items as $key => $item ) {
+
+        if ( ! in_array( $item->ID, $children ) )
+            unset($items[$key]);
+    }
+
+    return $items;
+}
+
+function submenu_get_children_ids( $id, $items ) {
+
+    $ids = wp_filter_object_list( $items, array( 'menu_item_parent' => $id ), 'and', 'ID' );
+
+    foreach ( $ids as $id ) {
+
+        $ids = array_merge( $ids, submenu_get_children_ids( $id, $items ) );
+    }
+
+    return $ids;
+}
+

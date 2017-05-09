@@ -210,7 +210,7 @@ function mrec_proficio_metabox_options() {
     $aa_metbox->createOption( array(
     	'name' => 'Header Image',
     	'id'	=> 'header_image',
-    	'type'	=> 'upload'
+    	'type'	=> 'file'
     	));
 
    $aa_metbox->createOption( array(
