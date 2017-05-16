@@ -128,7 +128,7 @@
                                  <?php } ?>
                             </div>
                         </div>
-
+        <div class="filter"></div>
         <video width="100%" height="auto" autoplay="" muted="" loop="" style="background:transparent no-repeat 0 0; background-size:cover;">
                 <source src="<?php echo $hero ?>" type="video/mp4">    </video>
             </div>

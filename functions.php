@@ -161,6 +161,16 @@ function custom_sidebars() {
 	);
 	register_sidebar( $args );
 
+	$args = array(
+		'id'            => 'contact_sidebar',
+		'class'         => 'sidebar-contact',
+		'name'          => __( 'Right Contact Sidebar', 'text_domain' ),
+		'description'   => __( 'Right sidebar for Contact Page', 'text_domain' ),
+		'before_widget' => '<div id="%1$s">',
+		'after_widget'  => '</div>',
+	);
+	register_sidebar( $args );
+
 }
 add_action( 'widgets_init', 'custom_sidebars' );
 
@@ -254,3 +264,51 @@ function submenu_get_children_ids( $id, $items ) {
     return $ids;
 }
 
+
+// Register Sidebars
+function footer_sidebars() {
+
+	$args = array(
+		'id'            => 'sidebar-footer1',
+		'class'         => 'footer1',
+		'name'          => __( 'Footer 1', 'text_domain' ),
+		'description'   => __( 'Footer 1 Content', 'text_domain' ),
+		'before_widget' => '<nav class="footer-nav">',
+		'after_widget'  => '</nav>',
+	);
+	register_sidebar( $args );
+
+	$args = array(
+		'id'            => 'sidebar-footer2',
+		'class'         => 'footer2',
+		'name'          => __( 'Footer 2', 'text_domain' ),
+		'description'   => __( 'Footer 2 Content', 'text_domain' ),
+		'before_widget' => '<nav class="footer-nav">',
+		'after_widget'  => '</nav>',
+	);
+	register_sidebar( $args );
+
+	$args = array(
+		'id'            => 'sidebar-footer3',
+		'class'         => 'footer3',
+		'name'          => __( 'Footer 3', 'text_domain' ),
+		'description'   => __( 'Footer 3 Content', 'text_domain' ),
+		'before_widget' => '<div class="geo-nav">',
+		'after_widget'  => '</div>',
+	);
+	register_sidebar( $args );
+
+}
+add_action( 'widgets_init', 'footer_sidebars' );
+
+// Maps Shortcode
+function map_america_shortcode() {
+	ob_start();
+	?> 
+
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3341.177336753058!2d-117.23686088517591!3d33.13070538086654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dce7de09c85045%3A0xef35d1dcd28fc077!2sProficio!5e0!3m2!1ses-419!2sni!4v1494883822533" width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+	<?php
+	return ob_get_clean();
+
+}
+add_shortcode( 'america-map', 'map_america_shortcode' );

@@ -257,5 +257,14 @@ function mrec_proficio_metabox_options() {
 		'max' => '1200'
         ) );
 
+
+	$aa_metbox->createOption( array(
+		'name' => 'Lead Magnet Section',
+		'id' => 'lead_magnet_checkbox',
+		'type' => 'checkbox',
+		'desc' => 'Enable or Disable Lead Magnet section',
+		'default' => false,
+		) );
+
 		 
 }

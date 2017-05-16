@@ -116,7 +116,7 @@
         ?>
          
 
-    <header class="masthead" style="background: url('<?php echo esc_url( $hero ); ?>') !important; height: <?php echo $custom_height; ?>px !important;     background-position: center center !important;">
+    <header class="masthead" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('<?php echo esc_url( $hero ); ?>') !important; height: <?php echo $custom_height; ?>px !important;     background-position: center center !important;     background-size: cover !important;">
         <div class="header-content">
             <div class="header-content-inner">
                 <h1 id="homeHeading"><?php echo $h1; ?></h1>

@@ -86,7 +86,8 @@ the_post();
    
          
 
-    <header class="masthead" style="background: url('<?php the_post_thumbnail_url(); ?>') !important; height: 360px !important;">
+    <header class="masthead" style="background: url('<?php the_post_thumbnail_url(); ?>') !important; height: 360px !important; background-size: cover !important;     background-position: center center !important;
+">
         <div class="header-content">
             <div class="header-content-inner">
                 <h1 id="homeHeading"><?php the_title(); ?></h1>
