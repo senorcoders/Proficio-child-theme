@@ -69,6 +69,40 @@ the_post();
             <div class="row" style="width: 100%;">
               
 
+               
+              <ul id="top-menu" class="top-menu">
+                                                <li>
+                    <a href="https://twitter.com/proficioinc" target="_blank" title="Find us on Twitter">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/proficio-inc-" target="_blank" title="Find us on LinkedIn">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/ProficioInc" target="_blank" title="Find us on Facebook">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/user/Proficioinc" target="_blank" title="Find us on YouTube">
+                        <i class="fa fa-youtube"></i>
+                    </a>
+                </li>               
+                    
+                        <li class=" internalUrl  first  ">
+                            <a id="" href="/contact/">Contact Us</a>
+                        </li>
+           
+                    
+                        <li class=" externalUrl last   ">
+                            <a id="" href="tel:+18007795042">800.779.5042</a>
+                        </li>
+                
+            </ul>
+
                 <div class="col-md-12">
                       <a class="navbar-brand" id="logo-proficio" style="position: absolute;" href="<?php echo esc_url( $url ); ?>"><img width="230px" src="<?php echo $imageSrcLogo ?>"></a>
                           <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container_id' => 'navbarExample', 'container_class' => 'collapse navbar-collapse' ,  'menu_class' => 'navbar-nav ml-auto' ) ); ?>

@@ -20,6 +20,15 @@ jQuery(document).ready(function(){
         jQuery('#Email').attr('placeholder', 'Email');
         jQuery('#Company').attr('placeholder', 'Company');
 
+
+
+        $('.carot-down > a').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+    }, 500);
+    return false;
+});
+
         
 
 

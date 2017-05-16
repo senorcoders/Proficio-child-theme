@@ -756,7 +756,8 @@ footer, footer p{
     font-size: 45px;
     line-height: 1;
     font-weight: 300;
-        color: #fff;
+        color: #00fefb;
+    text-transform: inherit;
     margin-bottom: 69px;
 }
 
@@ -1047,6 +1048,247 @@ header.masthead .header-content{
     width: 100%;
   }
 
+  .first-row{
+        background: url(/wp-content/uploads/2017/05/bg-corner.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 50px;
+        border-bottom: 3px solid #00FEFB;
+            padding-bottom: 100px;
+  }
+   .first-row h1{
+    color: #00FEFB;
+    text-transform: inherit;
+    font-size: 3.5rem;
+  }
+
+    .first-row  p{
+        font-family: 'Questrial', sans-serif !important;
+
+  }
+
+    .first-row  h3{
+        text-transform: inherit;
+    font-size: 2.6rem;
+  }
+
+  .first-row .row:first-child{
+    margin-bottom: 30px;
+  }
+
+  .first-row  .btn-primary{
+        font-size: 11pt !important;
+  }
+
+  .home-cta p{
+        font-family: 'Questrial', sans-serif !important;
+    font-size: 30px !important;
+    line-height: 45px;
+
+  }
+
+  .home-cta a{
+        margin-top: 15px;
+  }
+
+  .home-cta{
+     border-bottom: 3px solid #00FEFB;
+  }
+
+  .cyanCta{
+        background: #00b3bd;
+    color: #000 !important;
+        padding: 50px 0;
+  }
+  .cyanCta p:first-child{
+        font-family: 'Questrial', sans-serif !important;
+    font-size: 30px !important;
+    line-height: 45px;
+    width: 80%;
+    margin: 0 auto !important;
+  }
+
+  .cyanCta a{
+    font-size: 11pt !important;
+    color: #000 ;
+    border-color: #000 !important;
+    margin-top: 15px;
+  }
+
+  .carot-down{
+        position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+        font-size: 60px;
+        -webkit-animation-name: moveDown;
+    animation-name: moveDown;
+        -webkit-animation-duration: 3.2s;
+    animation-duration: 3.2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    z-index: 10000;
+  }
+
+  @-webkit-keyframes moveDown{
+
+15%  {opacity: 1; transform: translateY(0px);}
+20%  {opacity: 1; transform: translateY(0px);}
+70%  {opacity: 1; transform: translateY(0px);}
+   
+100% {opacity: 0; transform: translateY(25px);}
+0% {opacity: 0; transform: translateY(0px);}
+10% {opacity: 0.1; transform: translateY(0px);}    
+}
+@keyframes moveDown {
+15%  {opacity: 1; transform: translateY(0px);}
+20%  {opacity: 1; transform: translateY(0px);}
+70%  {opacity: 1; transform: translateY(0px);}
+    
+100% {opacity: 0; transform: translateY(25px);}
+0% {opacity: 0; transform: translateY(0px);}
+10% {opacity: 0.1; transform: translateY(0px);}
+}
+
+a:not([href]):not([tabindex]){
+  color: #00FEFB !important;
+}
+
+#logo-proficio img{
+  width: 180px !important;
+}
+
+.triangle{
+  background: url(/wp-content/uploads/2017/05/triangle-vector.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300px;
+}
+
+#menu-objectives > li > a{
+  color: #fff !important;
+  text-transform: uppercase !important;
+  text-decoration: none;
+      font-family: 'Oxygen', sans-serif;
+}
+
+#menu-objectives > li{
+ padding-top: 10px;
+ list-style-image: url('/wp-content/uploads/2017/05/hollow_bullet.png');
+}
+
+#menu-objectives{
+  float: right;
+}
+
+#mega-menu-item-310 > a:before{
+      background: url(/wp-content/uploads/2017/05/Automate-1.png);
+    content: " ";
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+        margin: 0 auto !important;
+}
+
+#mega-menu-item-315 > a:before{
+      background: url(/wp-content/uploads/2017/05/30day.png);
+    content: " ";
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+        margin: 0 auto !important;
+}
+
+#mega-menu-item-314 > a:before{
+      background: url(/wp-content/uploads/2017/05/Custom-1.png);
+    content: " ";
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+        margin: 0 auto !important;
+}
+
+#mega-menu-item-313 > a:before{
+      background: url(/wp-content/uploads/2017/05/SmartAlerts.png);
+    content: " ";
+        width: 37px;
+    height: 30px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+        margin: 0 auto !important;
+}
+
+#mega-menu-item-312 > a:before{
+      background: url(/wp-content/uploads/2017/05/AccessPortal.png);
+    content: " ";
+    width: 35px;
+    height: 30px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+        margin: 0 auto !important;
+}
+
+#mega-menu-item-311 > a:before{
+      background: url(/wp-content/uploads/2017/05/CostEffective.png);
+    content: " ";
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+        margin: 0 auto !important;
+}
+
+#top-menu{
+      list-style: none;
+    text-align: right;
+    height: 30px;
+    margin-bottom: 0 !important;
+    padding: 0 30px;
+    width: auto;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    width: 100%;
+}
+
+#top-menu li{
+      float: none;
+    display: inline-block;
+    margin-left: 17px;
+}
+
+#top-menu a{
+  color: #fff !important;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-family: "Oxygen",sans-serif;
+}
+
+#top-menu a:hover, #top-menu a:focus, #top-menu a:active{
+      color: #00FEFB !important;
+      text-decoration: none;
+}
+.top-menu a .fa {
+    font-size: 14px;
+    cursor: pointer;
+}
+
 /*MEDIA QUERIES*/
 
 @media (min-width: 768px){
@@ -1107,6 +1349,9 @@ footer#footer .branding a {
     margin-top: 10px;
    }
 
+   #top-menu{
+    display: none;
+   }
 }
 
 @media(max-width: 1200px){
@@ -1171,6 +1416,30 @@ footer#footer .branding a {
     padding: 100px 0 !important;
   }
 }
+
+
+@media screen and (min-width: 961px){
+   #top-menu li.internalUrl {
+    border-left: 1px solid #000;
+    border-right: 1px solid #2b3d53;
+    margin-left: 11px;
+}
+
+ #top-menu li.internalUrl a {
+    border-right: 1px solid #000;
+    border-left: 1px solid #2b3d53;
+    display: block;
+    height: 30px;
+    padding: 8px 11px 0;
+        line-height: 20px;
+}
+
+.top-menu a .fa {
+    font-size: 14px;
+    cursor: pointer;
+}
+}
+
 
 
 
