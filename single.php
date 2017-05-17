@@ -93,7 +93,7 @@ the_post();
                 </li>               
                     
                         <li class=" internalUrl  first  ">
-                            <a id="" href="/contact/">Contact Us</a>
+                            <a id="" href="/contact/">Contact</a>
                         </li>
            
                     

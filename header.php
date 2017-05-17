@@ -27,7 +27,15 @@
 
 </head>
 
-<body  id="page-top" <?php body_class(); ?> >
+
+<?php if (isset($_GET["aliId"])) {?>
+    
+    <body  id="page-top"  class="thanks-body" >
+
+<?php } else{ ?>
+        <body  id="page-top" <?php body_class(); ?> >
+
+   <?php }?>
 <?php 
   $titan = TitanFramework::getInstance( 'proficio' );
   
@@ -77,7 +85,7 @@
                 </li>               
                     
                         <li class=" internalUrl  first  ">
-                            <a id="" href="/contact/">Contact Us</a>
+                            <a id="" href="/contact/">Contact</a>
                         </li>
            
                     

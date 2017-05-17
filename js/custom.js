@@ -30,11 +30,6 @@ jQuery(document).ready(function(){
 });
 
         
-
-
-
-});
-
 function preload(arrayOfImages) {
 
 	$ = jQuery;
@@ -54,5 +49,14 @@ preload([
     '/wp-content/uploads/2017/05/co-managed.png',
     '/wp-content/uploads/2017/05/co-managed_roll.png',
     '/wp-content/uploads/2017/05/custom.png',
-    '/wp-content/uploads/2017/05/custom_roll.png'
+    '/wp-content/uploads/2017/05/custom_roll.png',
+    '/wp-content/uploads/2017/05/triangle-vector.png'
 ]);
+
+
+jQuery('.thanks-body .quote-title').html('Thank you...');
+jQuery('.thanks-body .quote-content').html('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu risus eget sapien mollis finibus a nec erat. Maecenas et lorem eu nulla molestie venenatis.');
+
+
+});
+

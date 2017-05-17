@@ -1,4 +1,4 @@
-<?php /* Template Name: Resources LP */ ?>
+<?php /* Template Name: Objectives LP */ ?>
 <?php get_header(); ?>
 
 <?php 
@@ -39,18 +39,18 @@
                         'post_type' => 'page',
                         'post_status' => 'publish',
                         'posts_per_page' => -1,
-                        'post_parent' => 16,
+                        'post_parent' => 10,
                         'orderby'  => 'menu_order',
                         'order'   => 'ASC',
 
                     );
                     $query = new WP_Query($args);?>
-                 <div id="resources-submenu" class="row">
+                 <div id="resources-submenu" class="row objectives-box">
 
                    <?php while ($query->have_posts()) {
                         $query->the_post();
                         ?>
-                        <div class="col-md-3 resourcesBgBox">
+                        <div class="col-md-4 resourcesBgBox">
                         <div><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
                         <?php
                             if ('' !== get_post()->post_content) {

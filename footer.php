@@ -24,12 +24,7 @@
                 </div>
 
 
-                <div class="grayBg" style="margin-top: 20px;">
-                    <div class="container">
-                            <h4>Lead Magnet Heading</h4>
-                            <p>Lead Gen Subtext Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus fringilla quam at rhoncus finibus. Aliquam sed ultricies turpis. </p>
-                     </div>
-                </div>
+               
         <?php } ?>
 
     <div class="pre-footer text-center">
@@ -118,6 +113,43 @@
 	<?php 
 		wp_footer();
 	?>
+
+<script>
+      function initMap() {
+        var uluru = {lat: 33.1307301, lng: -117.2357504};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 18,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+
+
+        var map2 = new google.maps.Map(document.getElementById('map-eu'), {
+          zoom: 18,
+          center: uluru
+        });
+        var marker2 = new google.maps.Marker({
+          position: uluru,
+          map: map2
+        });
+
+
+         var map3 = new google.maps.Map(document.getElementById('map-emea'), {
+          zoom: 18,
+          center: uluru
+        });
+        var marker3 = new google.maps.Marker({
+          position: uluru,
+          map: map3
+        });
+      }
+    </script>
+ <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLJUxUGa6D4x1TrnHuqm4RXFckSVAEeAE&callback=initMap">
+    </script>
 
 </body>
 

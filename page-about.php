@@ -1,4 +1,4 @@
-<?php /* Template Name: Resources LP */ ?>
+<?php /* Template Name: About LP */ ?>
 <?php get_header(); ?>
 
 <?php 
@@ -39,13 +39,13 @@
                         'post_type' => 'page',
                         'post_status' => 'publish',
                         'posts_per_page' => -1,
-                        'post_parent' => 16,
+                        'post_parent' => 19,
                         'orderby'  => 'menu_order',
                         'order'   => 'ASC',
 
                     );
                     $query = new WP_Query($args);?>
-                 <div id="resources-submenu" class="row">
+                 <div id="resources-submenu" class="row objectives-box">
 
                    <?php while ($query->have_posts()) {
                         $query->the_post();
