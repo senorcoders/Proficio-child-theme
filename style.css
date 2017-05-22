@@ -343,6 +343,7 @@ h1, h2, h3, h4, h5, h6{
         color: #00FEFB !important;
         font-size: 13px;
             padding-bottom: 0 !important;
+                line-height: 16px;
 
 }
 
@@ -361,6 +362,7 @@ h1, h2, h3, h4, h5, h6{
 
 #menu-top-menu > li{
     list-style: none !important;
+        line-height: 15px;
 }
 
 #mega-menu-item-nav_menu-2 > h4{
@@ -378,7 +380,7 @@ h1, h2, h3, h4, h5, h6{
        width: 100% !important;
     clear: both !important;
     position: absolute;
-    top: 0;
+    top: -10px;
     left: -10%;
     font-size: 15px !important;
     font-family: 'Questrial', sans-serif !important;
@@ -392,6 +394,12 @@ h1, h2, h3, h4, h5, h6{
 
 #menu-additional-services > li, #menu-additional-services > li > .sub-menu > li{
     list-style: none !important;
+        line-height: 15px;
+}
+
+#menu-additional-services > li, #menu-additional-services > li > .sub-menu > li:first-child{
+        padding-top: 10px;
+
 }
 
 #menu-additional-services, #menu-additional-services > li > .sub-menu{
@@ -442,6 +450,7 @@ h1, h2, h3, h4, h5, h6{
     font-size: 15px !important;
     padding-bottom: 0 !important;
         min-height: auto !important;
+        letter-spacing: 1.5px;
 }
    #mega-menu-item-176 > a:before{
         
@@ -1074,8 +1083,8 @@ header.masthead .header-content{
   }
 
   .first-row{
-        background: url(/wp-content/uploads/2017/05/bg-corner.png);
-    background-size: cover;
+/*        background: url(/wp-content/uploads/2017/05/bg-corner.png);
+*/    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     padding-top: 50px;
@@ -1505,6 +1514,12 @@ a:not([href]):not([tabindex]){
 
 .simple-icons img{
     padding: 20px;
+}
+
+#carot-position{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
 }
 /*MEDIA QUERIES*/
 
