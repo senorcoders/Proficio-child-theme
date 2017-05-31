@@ -48,6 +48,7 @@
 			
 	wp_enqueue_style( 'styleTheme', get_template_directory_uri(). '/style.css' );
 	wp_enqueue_style( 'stylemrec', get_template_directory_uri(). '/assets/src/css/customMilton.css' );
+	wp_enqueue_style( 'stylebdangla', get_template_directory_uri(). '/assets/src/css/style-B.css' );
 
 
 	}
@@ -68,6 +69,8 @@
 	    wp_enqueue_script( 'creative', get_template_directory_uri() . '/js/creative.min.js', array( 'jquery' ) );
 	    
 wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ) );
+wp_enqueue_script( 'proficioJS', get_template_directory_uri() . '/js/proficio.js', array( 'jquery' ) );
+
 	}
 
 
@@ -90,63 +93,63 @@ require get_template_directory() . '/titan-options.php';
 
 
 // Register Event Post Type
-function custom_post_type() {
+// function custom_post_type() {
 
-	$labels = array(
-		'name'                  => _x( 'Events', 'Post Type General Name', 'text_domain' ),
-		'singular_name'         => _x( 'Event', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'             => __( 'Events', 'text_domain' ),
-		'name_admin_bar'        => __( 'Events', 'text_domain' ),
-		'archives'              => __( 'Item Archives', 'text_domain' ),
-		'attributes'            => __( 'Item Attributes', 'text_domain' ),
-		'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
-		'all_items'             => __( 'All Items', 'text_domain' ),
-		'add_new_item'          => __( 'Add New Item', 'text_domain' ),
-		'add_new'               => __( 'Add New', 'text_domain' ),
-		'new_item'              => __( 'New Item', 'text_domain' ),
-		'edit_item'             => __( 'Edit Item', 'text_domain' ),
-		'update_item'           => __( 'Update Item', 'text_domain' ),
-		'view_item'             => __( 'View Item', 'text_domain' ),
-		'view_items'            => __( 'View Items', 'text_domain' ),
-		'search_items'          => __( 'Search Item', 'text_domain' ),
-		'not_found'             => __( 'Not found', 'text_domain' ),
-		'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
-		'featured_image'        => __( 'Featured Image', 'text_domain' ),
-		'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
-		'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
-		'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
-		'insert_into_item'      => __( 'Insert into item', 'text_domain' ),
-		'uploaded_to_this_item' => __( 'Uploaded to this item', 'text_domain' ),
-		'items_list'            => __( 'Items list', 'text_domain' ),
-		'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
-		'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
+// 	$labels = array(
+// 		'name'                  => _x( 'Events', 'Post Type General Name', 'text_domain' ),
+// 		'singular_name'         => _x( 'Event', 'Post Type Singular Name', 'text_domain' ),
+// 		'menu_name'             => __( 'Events', 'text_domain' ),
+// 		'name_admin_bar'        => __( 'Events', 'text_domain' ),
+// 		'archives'              => __( 'Item Archives', 'text_domain' ),
+// 		'attributes'            => __( 'Item Attributes', 'text_domain' ),
+// 		'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
+// 		'all_items'             => __( 'All Items', 'text_domain' ),
+// 		'add_new_item'          => __( 'Add New Item', 'text_domain' ),
+// 		'add_new'               => __( 'Add New', 'text_domain' ),
+// 		'new_item'              => __( 'New Item', 'text_domain' ),
+// 		'edit_item'             => __( 'Edit Item', 'text_domain' ),
+// 		'update_item'           => __( 'Update Item', 'text_domain' ),
+// 		'view_item'             => __( 'View Item', 'text_domain' ),
+// 		'view_items'            => __( 'View Items', 'text_domain' ),
+// 		'search_items'          => __( 'Search Item', 'text_domain' ),
+// 		'not_found'             => __( 'Not found', 'text_domain' ),
+// 		'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
+// 		'featured_image'        => __( 'Featured Image', 'text_domain' ),
+// 		'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
+// 		'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
+// 		'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
+// 		'insert_into_item'      => __( 'Insert into item', 'text_domain' ),
+// 		'uploaded_to_this_item' => __( 'Uploaded to this item', 'text_domain' ),
+// 		'items_list'            => __( 'Items list', 'text_domain' ),
+// 		'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
+// 		'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
 
 
-	);
-	$args = array(
-		'label'                 => __( 'Event', 'text_domain' ),
-		'description'           => __( 'Events', 'text_domain' ),
-		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
-		'taxonomies'            => array( 'category', 'post_tag' ),
-		'hierarchical'          => false,
-		'public'                => true,
-		'show_ui'               => true,
-		'show_in_menu'          => true,
-		'menu_position'         => 5,
-		'show_in_admin_bar'     => true,
-		'show_in_nav_menus'     => true,
-		'can_export'            => true,
-		'has_archive'           => true,		
-		'exclude_from_search'   => false,
-		'publicly_queryable'    => true,
-		'capability_type'       => 'page',
-		'menu_icon'           => 'dashicons-tickets-alt',
-	);
-	register_post_type( 'events', $args );
+// 	);
+// 	$args = array(
+// 		'label'                 => __( 'Event', 'text_domain' ),
+// 		'description'           => __( 'Events', 'text_domain' ),
+// 		'labels'                => $labels,
+// 		'supports'              => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+// 		'taxonomies'            => array( 'category', 'post_tag' ),
+// 		'hierarchical'          => false,
+// 		'public'                => true,
+// 		'show_ui'               => true,
+// 		'show_in_menu'          => true,
+// 		'menu_position'         => 5,
+// 		'show_in_admin_bar'     => true,
+// 		'show_in_nav_menus'     => true,
+// 		'can_export'            => true,
+// 		'has_archive'           => true,		
+// 		'exclude_from_search'   => false,
+// 		'publicly_queryable'    => true,
+// 		'capability_type'       => 'page',
+// 		'menu_icon'           => 'dashicons-tickets-alt',
+// 	);
+// 	register_post_type( 'events', $args );
 
-}
-add_action( 'init', 'custom_post_type', 0 );
+// }
+// add_action( 'init', 'custom_post_type', 0 );
 
 // Register Sidebars
 function custom_sidebars() {
@@ -166,6 +169,17 @@ function custom_sidebars() {
 		'class'         => 'sidebar-contact',
 		'name'          => __( 'Right Contact Sidebar', 'text_domain' ),
 		'description'   => __( 'Right sidebar for Contact Page', 'text_domain' ),
+		'before_widget' => '<div id="%1$s">',
+		'after_widget'  => '</div>',
+	);
+	register_sidebar( $args );
+
+
+	$args = array(
+		'id'            => 'news_sidebar',
+		'class'         => 'news-contact',
+		'name'          => __( 'Right News Sidebar', 'text_domain' ),
+		'description'   => __( 'Right sidebar for Proficio News', 'text_domain' ),
 		'before_widget' => '<div id="%1$s">',
 		'after_widget'  => '</div>',
 	);
@@ -351,5 +365,144 @@ function map_america_emea_shortcode() {
 }
 add_shortcode( 'america-map-emea', 'map_america_emea_shortcode' );
 
+
+// PROFICIO NEWS
+function proficio_news_post_type() {
+
+	$labels = array(
+		'name'                  => _x( 'Proficio News', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'Proficio New', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'Proficio News', 'text_domain' ),
+		'name_admin_bar'        => __( 'Proficio News', 'text_domain' ),
+		'archives'              => __( 'Proficio News Archives', 'text_domain' ),
+		'attributes'            => __( 'Proficio News Attributes', 'text_domain' ),
+		'parent_item_colon'     => __( 'Parent Proficio News:', 'text_domain' ),
+		'all_items'             => __( 'All Proficio News', 'text_domain' ),
+		'add_new_item'          => __( 'Add New Proficio New', 'text_domain' ),
+		'add_new'               => __( 'Add New', 'text_domain' ),
+		'new_item'              => __( 'New Item', 'text_domain' ),
+		'edit_item'             => __( 'Edit Item', 'text_domain' ),
+		'update_item'           => __( 'Update Item', 'text_domain' ),
+		'view_item'             => __( 'View Item', 'text_domain' ),
+		'view_items'            => __( 'View Items', 'text_domain' ),
+		'search_items'          => __( 'Search Item', 'text_domain' ),
+		'not_found'             => __( 'Not found', 'text_domain' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
+		'featured_image'        => __( 'Featured Image', 'text_domain' ),
+		'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
+		'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
+		'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
+		'insert_into_item'      => __( 'Insert into item', 'text_domain' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'text_domain' ),
+		'items_list'            => __( 'Items list', 'text_domain' ),
+		'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
+		'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
+	);
+	$args = array(
+		'label'                 => __( 'Proficio New', 'text_domain' ),
+		'description'           => __( 'Custom Post Type for Proficio News', 'text_domain' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'trackbacks', 'revisions', 'custom-fields', 'page-attributes', 'post-formats', ),
+		'taxonomies'            => false,
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,		
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+		'menu_icon'				=> 'dashicons-welcome-widgets-menus',
+	);
+	register_post_type( 'news', $args );
+
+}
+add_action( 'init', 'proficio_news_post_type', 0 );
+
+ function fn_sitemap_shortcode() {
+    return 
+    wp_list_pages( array( 'title_li' => '<a href="https://proficio.wpengine.com">' . __('HomePage') . '</a>' ) );
+}
+add_shortcode('sitemap_shortcode', 'fn_sitemap_shortcode');
+
+
+function proficio_pagination(){
+       global $wp_query; 
+       echo paginate_links();
+   }
+
+
+function proficio_numeric_posts_nav() {
+
+	if( is_singular() )
+		return;
+
+	global $wp_query;
+
+	/** Stop execution if there's only 1 page */
+	if( $wp_query->max_num_pages <= 1 )
+		return;
+
+	$paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
+	$max   = intval( $wp_query->max_num_pages );
+
+	/**	Add current page to the array */
+	if ( $paged >= 1 )
+		$links[] = $paged;
+
+	/**	Add the pages around the current page to the array */
+	if ( $paged >= 3 ) {
+		$links[] = $paged - 1;
+		$links[] = $paged - 2;
+	}
+
+	if ( ( $paged + 2 ) <= $max ) {
+		$links[] = $paged + 2;
+		$links[] = $paged + 1;
+	}
+
+	echo '<div class="navigation"><ul>' . "\n";
+
+	/**	Previous Post Link */
+	if ( get_previous_posts_link() )
+		printf( '<li>%s</li>' . "\n", get_previous_posts_link() );
+
+	/**	Link to first page, plus ellipses if necessary */
+	if ( ! in_array( 1, $links ) ) {
+		$class = 1 == $paged ? ' class="active"' : '';
+
+		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
+
+		if ( ! in_array( 2, $links ) )
+			echo '<li>…</li>';
+	}
+
+	/**	Link to current page, plus 2 pages in either direction if necessary */
+	sort( $links );
+	foreach ( (array) $links as $link ) {
+		$class = $paged == $link ? ' class="active"' : '';
+		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );
+	}
+
+	/**	Link to last page, plus ellipses if necessary */
+	if ( ! in_array( $max, $links ) ) {
+		if ( ! in_array( $max - 1, $links ) )
+			echo '<li>…</li>' . "\n";
+
+		$class = $paged == $max ? ' class="active"' : '';
+		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
+	}
+
+	/**	Next Post Link */
+	if ( get_next_posts_link() )
+		printf( '<li>%s</li>' . "\n", get_next_posts_link() );
+
+	echo '</ul></div>' . "\n";
+
+}
 
 

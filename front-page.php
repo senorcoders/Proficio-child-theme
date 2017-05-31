@@ -1,25 +1,27 @@
-<?php get_header(); ?>
+<?php /* Template Name: Homepage */ ?>
+
+<?php include('header-video.php'); ?>
 <?php 
   $titan = TitanFramework::getInstance( 'proficio' );
   
   
-?>	
+?>  
 
-    <div  style="padding: 100px 0;">
-        <div class="first-row flip-left">
+    <div  style="padding-top: 100px;">
+   
 
                 <?php if (have_posts()) : ?>
                     <?php while (have_posts()) : the_post(); ?>
-                    <div class="container">
-                    <div class="row">
+                        
+                   
 
-                        <div class="col-md-7 offset-md-5">
+                        <div>
                         
                                 <?php the_content(); ?>
                         </div>
-                    </div>
-                    </div>
+        
 
+                    
 
                     <?php endwhile; ?>
                     <?php else : ?>

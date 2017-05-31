@@ -1,0 +1,34 @@
+#top-menu a:hover, #top-menu a:focus, #top-menu a:active{
+	color: #000 !important;
+}
+.thanks-body{
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(/wp-content/uploads/2017/05/thank_you_page.jpg) !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#Phone{
+	background: transparent;
+    color: white !important;
+    text-transform: uppercase;
+    border: 1px solid white;
+    box-shadow: none;
+}
+/*.mktoFieldWrap label*/
+::-webkit-input-placeholder { color: #c7cccd; } /* WebKit */
+:-moz-placeholder { color: #c7cccd; } /* Firefox 18- */
+::-moz-placeholder { color: #c7cccd; } /* Firefox 19+ */
+:-ms-input-placeholder { color: #c7cccd; } /* IE 10+ */
+.mktoError{
+	right: 0px !important;
+    bottom: -27px !important;
+}
+.mktoFieldDescriptor .mktoFieldWrap label{ display: none !important; }
+.page-id-650 .container{padding-top: 0 !important;}
+.page-id-653 .flip-left{background: transparent !important;border-bottom: none !important; padding-bottom: 0 !important;}
+.page-id-653 .container{padding-top: 0 !important;}
+.page-id-653 .pagenav a{font-size: 18px !important;}
+.panel-title{color: #00FEFB;}
+.other_services{margin-top: 20px;}
+.other_services h4{color: #00FEFB !important;}
+.page-id-308 .masthead{background-position: 0 22% !important; }

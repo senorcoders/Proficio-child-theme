@@ -37,6 +37,8 @@ global $wp_query;
 
                                </ul>
 
+                           <?php proficio_numeric_posts_nav(); ?>
+
 
 
 

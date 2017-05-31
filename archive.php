@@ -8,6 +8,8 @@ global $wp_query;
 
 ?>
 
+
+
 <div class="container" style="padding: 30px 0;">
     <div class="row" style="padding: 0 20px;">
         <div class="col-md-12">
@@ -37,10 +39,15 @@ global $wp_query;
                                </ul>
 
 
+                                                                                                                      
 
 
                                                         <?php endif; ?>
                                                             </div>
+                                                          
+                                                        
+
+
                                                              </div>
 
     </div>

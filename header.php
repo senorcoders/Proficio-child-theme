@@ -59,45 +59,17 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         
-        <div class="container">
+        <div style="width: 100%;">
             <div class="row" style="width: 100%;">
               
-              <ul id="top-menu" class="top-menu">
-                                                <li>
-                    <a href="https://twitter.com/proficioinc" target="_blank" title="Find us on Twitter">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/company/proficio-inc-" target="_blank" title="Find us on LinkedIn">
-                        <i class="fa fa-linkedin"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com/ProficioInc" target="_blank" title="Find us on Facebook">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com/user/Proficioinc" target="_blank" title="Find us on YouTube">
-                        <i class="fa fa-youtube"></i>
-                    </a>
-                </li>               
-                    
-                        <li class=" internalUrl  first  ">
-                            <a id="" href="/contact/">Contact</a>
-                        </li>
-           
-                    
-                        <li class=" externalUrl last   ">
-                            <a id="" href="tel:+18007795042">800.779.5042</a>
-                        </li>
-                
-            </ul>
+             <?php include('inc/top-menu.php'); ?>
 
-                <div class="col-md-12">
+
+
+                <div class="col-md-12" style="padding: 0 5%;">
                       <a class="navbar-brand" id="logo-proficio" style="position: absolute;" href="<?php echo esc_url( $url ); ?>"><img width="230px" src="<?php echo $imageSrcLogo ?>"></a>
                           <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container_id' => 'navbarExample', 'container_class' => 'collapse navbar-collapse' ,  'menu_class' => 'navbar-nav ml-auto' ) ); ?>
+                          <?php wp_nav_menu( array( 'theme_location' => 'max_mega_menu_6', 'container_id' => 'navbarExample', 'container_class' => 'collapse navbar-collapse mobile-proficio-menu' ,  'menu_class' => 'navbar-nav ml-auto' ) ); ?>
 
                 </div>
             </div>
@@ -128,7 +100,7 @@
  
        
 
-        if (is_home()) {
+        if (is_home() or is_search()) {
             $h1 = $titan->getOption( 'heading-h1', 47 );
             $h2 = $titan->getOption( 'heading-h2', 47 );
             $ctaText = $titan->getOption( 'cta-button-text', 47 );
@@ -149,7 +121,7 @@
 	if($height == 'tall'){
 		$custom_height = 760;
 	}elseif($height == 'short'){
-		$custom_height = 350;
+		$custom_height = 469;
 	}
 
        

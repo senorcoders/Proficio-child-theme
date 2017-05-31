@@ -1,3 +1,5 @@
+<?php /* Template Name: Template without Pods */ ?>
+
 <?php get_header(); ?>
 <?php 
   $titan = TitanFramework::getInstance( 'proficio' );
@@ -5,21 +7,21 @@
   
 ?>	
 
-    <div  style="padding: 100px 0;">
-        <div class="first-row flip-left">
+    <div class="container" style="padding: 100px 0;">
+        <div class="row">
 
                 <?php if (have_posts()) : ?>
                     <?php while (have_posts()) : the_post(); ?>
-                    <div class="container">
-                    <div class="row">
+                        
+                   
 
-                        <div class="col-md-7 offset-md-5">
+                        <div class="col-md-12">
                         
                                 <?php the_content(); ?>
                         </div>
-                    </div>
-                    </div>
+        
 
+                    
 
                     <?php endwhile; ?>
                     <?php else : ?>

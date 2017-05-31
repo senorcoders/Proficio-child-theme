@@ -50,7 +50,7 @@
                    <?php while ($query->have_posts()) {
                         $query->the_post();
                         ?>
-                        <div class="col-md-3 resourcesBgBox">
+                        <div class="col-md-4 resourcesBgBox">
                         <div><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
                         <?php
                             if ('' !== get_post()->post_content) {

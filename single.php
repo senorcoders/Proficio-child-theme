@@ -65,47 +65,19 @@ the_post();
             <span class="navbar-toggler-icon"></span>
         </button>
         
-        <div class="container">
+        <div style="width: 100%;">
             <div class="row" style="width: 100%;">
               
 
                
-              <ul id="top-menu" class="top-menu">
-                                                <li>
-                    <a href="https://twitter.com/proficioinc" target="_blank" title="Find us on Twitter">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/company/proficio-inc-" target="_blank" title="Find us on LinkedIn">
-                        <i class="fa fa-linkedin"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com/ProficioInc" target="_blank" title="Find us on Facebook">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com/user/Proficioinc" target="_blank" title="Find us on YouTube">
-                        <i class="fa fa-youtube"></i>
-                    </a>
-                </li>               
-                    
-                        <li class=" internalUrl  first  ">
-                            <a id="" href="/contact/">Contact</a>
-                        </li>
-           
-                    
-                        <li class=" externalUrl last   ">
-                            <a id="" href="tel:+18007795042">800.779.5042</a>
-                        </li>
-                
-            </ul>
+                          <?php include('inc/top-menu.php'); ?>
 
-                <div class="col-md-12">
+
+
+                <div class="col-md-12" style="padding: 0 5%;">
                       <a class="navbar-brand" id="logo-proficio" style="position: absolute;" href="<?php echo esc_url( $url ); ?>"><img width="230px" src="<?php echo $imageSrcLogo ?>"></a>
                           <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container_id' => 'navbarExample', 'container_class' => 'collapse navbar-collapse' ,  'menu_class' => 'navbar-nav ml-auto' ) ); ?>
+                            <?php wp_nav_menu( array( 'theme_location' => 'max_mega_menu_6', 'container_id' => 'navbarExample', 'container_class' => 'collapse navbar-collapse mobile-proficio-menu' ,  'menu_class' => 'navbar-nav ml-auto' ) ); ?>
 
                 </div>
             </div>
@@ -158,20 +130,10 @@ the_post();
 		
 	</div>
 
-    <div class="grayBg">
-                    <div class="container">
-                            <h4>Lead Gen Heading</h4>
-                            <p>Lead Gen Subtext Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus fringilla quam at rhoncus finibus. Aliquam sed ultricies turpis. </p>
-                     </div>
-                </div>
 
 
-                <div class="grayBg" style="margin-top: 20px;">
-                    <div class="container">
-                            <h4>Lead Magnet Heading</h4>
-                            <p>Lead Gen Subtext Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus fringilla quam at rhoncus finibus. Aliquam sed ultricies turpis. </p>
-                     </div>
-                </div>
+
+             
 <?php
 //* Run the Genesis loop
 get_footer();
