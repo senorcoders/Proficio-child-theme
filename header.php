@@ -100,15 +100,23 @@
  
        
 
-        if (is_home() or is_search()) {
-            $h1 = $titan->getOption( 'heading-h1', 47 );
+        if (is_home()) {
+ $h1 = 'Search Results';            $h2 = $titan->getOption( 'heading-h2', 47 );
+            $ctaText = $titan->getOption( 'cta-button-text', 47 );
+            $ctaLink = $titan->getOption( 'cta-button-link', 47 );
+            $hero = wp_get_attachment_url($titan->getOption( 'header_image', 47 ));
+            $height = $titan->getOption( 'banner_height', 47 );
+            $custom_height = $titan->getOption ('custom_banner_height' , 47 );
+        }elseif (is_search()) {
+            $h1 = 'Search Results';
             $h2 = $titan->getOption( 'heading-h2', 47 );
             $ctaText = $titan->getOption( 'cta-button-text', 47 );
             $ctaLink = $titan->getOption( 'cta-button-link', 47 );
             $hero = wp_get_attachment_url($titan->getOption( 'header_image', 47 ));
             $height = $titan->getOption( 'banner_height', 47 );
             $custom_height = $titan->getOption ('custom_banner_height' , 47 );
-        }else{
+        }
+        else{
             $h1 = $titan->getOption( 'heading-h1', get_the_ID() );
             $h2 = $titan->getOption( 'heading-h2', get_the_ID() );
             $ctaText = $titan->getOption( 'cta-button-text', get_the_ID() );

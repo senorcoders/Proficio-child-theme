@@ -136,8 +136,9 @@ Text Domain: proficio
  }
  
  .grayBg {
-     background: gray;
-     padding: 40px 0;
+     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('/wp-content/uploads/2017/05/iStock_43979458_MEDIUM_161006_030309_.jpg');
+     padding: 100px 0;
+     text-align: center;
  }
  
  .resultados li {
@@ -226,10 +227,14 @@ Text Domain: proficio
      color: #fff;
      padding: 20px 10px;
      text-align: center;
-     font-size: 11px;
+     font-size: 15px;
      font-family: 'Questrial', sans-serif;
      font-weight: 100;
      min-height: 74px;
+     line-height: 16px;
+ }
+ 
+ #mega-menu-wrap-primary #mega-menu-primary > #mega-menu-item-22 > ul.mega-sub-menu > li.mega-menu-item > a.mega-menu-link {
      line-height: 32px;
  }
  
@@ -1951,10 +1956,10 @@ Text Domain: proficio
  }
  
  #mega-menu-item-nav_menu-2 {
-     border-top: 1px solid #969696 !important;
- }
+/*     border-top: 1px solid #969696 !important;
+*/ }
  
- #menu-item-196:before {
+ #menu-item-801:before {
      content: " ";
      background: url(/wp-content/uploads/2017/05/Incident-Response_icon.png);
      width: 50px;
@@ -1967,7 +1972,7 @@ Text Domain: proficio
      clear: both;
  }
  
- #menu-item-197:before {
+ #menu-item-804:before {
      content: " ";
      background: url(/wp-content/uploads/2017/05/assessments_icon.png);
      width: 50px;
@@ -1980,7 +1985,7 @@ Text Domain: proficio
      clear: both;
  }
  
- #menu-item-198:before {
+ #menu-item-806:before {
      content: " ";
      background: url(/wp-content/uploads/2017/05/compliance_icon.png);
      width: 50px;
@@ -1993,7 +1998,7 @@ Text Domain: proficio
      clear: both;
  }
  
- #menu-item-199:before {
+ #menu-item-808:before {
      content: " ";
      background: url(/wp-content/uploads/2017/05/strategy_icon.png);
      width: 50px;
@@ -2339,6 +2344,7 @@ Text Domain: proficio
      padding-bottom: 30px;
      border-bottom: 2px solid #00fefb !important;
      padding-top: 30px;
+     width: 100%;
  }
  
  .accordians.page-module .panel-default.panel {
@@ -2394,6 +2400,23 @@ Text Domain: proficio
  .navigation li.active a {
      border: 2px solid #fff;
      color: #fff;
+ }
+ 
+ #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item.mega-icon-top > a.mega-menu-link > span.mega-title-below {
+     margin-top: 5px;
+ }
+
+ #page-module-987, #page-module-993{
+     background: url(/wp-content/uploads/2017/05/bg-white.png);
+    color: #000;
+ }
+
+ .center-play{
+     text-align: center;
+     font-size: 6em;
+     color: #fff;
+     margin:10px;
+     cursor: pointer;
  }
  /*MEDIA QUERIES*/
  
@@ -2643,7 +2666,7 @@ border-right: 1px solid #000;
      }
      #mega-menu-item-24 .mega-sub-menu {
          width: 40% !important;
-         left: auto !important;
+         left: 40% !important;
      }
      #mega-menu-item-240 .mega-sub-menu,
      #mega-menu-item-25 .mega-sub-menu {
