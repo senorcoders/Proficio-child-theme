@@ -4,32 +4,55 @@ $titan = TitanFramework::getInstance( 'proficio' );
 $example = $titan->getOption('example');
 
 if (is_home()) {
-  $aa_checkbox_val = $titan->getOption( 'lead_magnet_checkbox', 47 );
+  $aa_checkbox_val = $titan->getOption( 'customizable_section', 47 );
+  $video_url = $titan->getOption('video_option', 47);
 
 }else{
-  $aa_checkbox_val = $titan->getOption( 'lead_magnet_checkbox', get_the_ID() );
+  $aa_checkbox_val = $titan->getOption( 'customizable_section', get_the_ID() );
+    $video_url = $titan->getOption('video_option', get_the_ID());
 
 }
 
-
+if ($video_url == '1') {
+  $video_url = 'https://www.youtube.com/embed/D1cyvMyCgic?list=PLCsJ30EVdJs6YXJt8w8KGL9xNvXd6fYLn';
+} elseif ($video_url == '2') {
+  $video_url = 'https://www.youtube.com/embed/T6BkVOVd3m0?list=PLCsJ30EVdJs6YXJt8w8KGL9xNvXd6fYLn';
+} elseif ($video_url == '3') {
+  $video_url = 'https://www.youtube.com/embed/4f_7E5yJocI?list=PLCsJ30EVdJs6YXJt8w8KGL9xNvXd6fYLn';
+} elseif ($video_url == '4') {
+  $video_url = 'https://www.youtube.com/embed/WiIjzNiRDDg?list=PLCsJ30EVdJs6YXJt8w8KGL9xNvXd6fYLn';
+} else {
+  $video_url = 'https://www.youtube.com/embed/xqU-9JiCz9Y?list=PLCsJ30EVdJs6YXJt8w8KGL9xNvXd6fYLn';
+}
 
 ?>	
 
-<?php if ($aa_checkbox_val == 1) {?>
+<?php if ($aa_checkbox_val == 'video') { ?>
 <div class="grayBg">
   <div class="container">
-  <a  data-toggle="modal" data-target="#pre-footer-modal" class="center-play"><i class="fa fa-play-circle-o" aria-hidden="true"></i></a>
+    <a  data-toggle="modal" data-target="#pre-footer-modal" class="center-play"><i class="fa fa-play-circle-o" aria-hidden="true"></i></a>
   </br><br>
   <h4>Lead Gen Subtext Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus fringilla quam at rhoncus finibus. Aliquam sed ultricies turpis. </h4>
-  </div>
+</div>
 </div>
 
 
 
 
 <?php
-    echo do_shortcode('[pre-footer-video]');
- } ?>
+echo do_shortcode('[pre-footer-video url="'. $video_url .'"]');
+}elseif ($aa_checkbox_val == 'none') {
+   //NOTHING TO SHOW UP
+} else{ ?>
+
+<div class="lead-magnet">
+  <div class="container">
+   <h2>Lead Magnet Heading</h2>
+   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie fringilla vehicula. Ut sed faucibus dolor. Donec consequat dolor vitae mauris pharetra vulputate. Sed leo tellus, gravida nec efficitur nec, faucibus quis metus. Phasellus eleifend dolor sed orci vehicula consequat. </p>
+ </div>
+
+</div>
+<?php } ?>
 
 <div class="pre-footer text-center">
 

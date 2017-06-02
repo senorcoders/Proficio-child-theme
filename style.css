@@ -479,9 +479,10 @@ Text Domain: proficio
  }
  
  #menu-additional-services > li > a {
-     color: #fff !important;
+     color: #00FEFB;
+     !important;
      text-transform: uppercase;
-     font-size: 12px !important;
+     font-size: 15px !important;
  }
  
  #menu-additional-services > li > .sub-menu > li > a {
@@ -1578,7 +1579,12 @@ Text Domain: proficio
  
  #mega-menu-item-24 .mega-sub-menu {
      width: 60% !important;
-     left: auto !important;
+     left: 10% !important;
+ }
+ 
+ #mega-menu-item-26 .mega-sub-menu {
+     width: 70% !important;
+     left: 10% !important;
  }
  
  #tb-search-item {
@@ -1897,12 +1903,13 @@ Text Domain: proficio
  }
  
  #menu-additional-services > li {
-     width: calc(25% - 10px);
+     width: calc(20% - 10px);
      margin: 10px 5px;
-     margin-top: 9%;
+     margin-top: 3%;
+     text-align: center;
+     position: relative;
  }
- 
- #menu-additional-services > li:nth-child(1) {
+ /* #menu-additional-services > li:nth-child(1) {
      width: 27%;
  }
  
@@ -1916,10 +1923,11 @@ Text Domain: proficio
  
  #menu-additional-services > li:nth-child(4) {
      width: 20%;
- }
+ }*/
  
  #mega-menu-item-nav_menu-2 {
-     padding-right: 0 !important;
+     /*     padding-right: 0 !important;
+*/
  }
  
  #menu-top-menu,
@@ -1956,59 +1964,78 @@ Text Domain: proficio
  }
  
  #mega-menu-item-nav_menu-2 {
-/*     border-top: 1px solid #969696 !important;
-*/ }
+     /*     border-top: 1px solid #969696 !important;
+*/
+ }
  
- #menu-item-801:before {
+ #menu-item-801 a:before {
      content: " ";
-     background: url(/wp-content/uploads/2017/05/Incident-Response_icon.png);
+     background: url(/wp-content/uploads/2017/05/Incident-Response_icon-1.png);
      width: 50px;
      height: 50px;
      background-size: cover;
      background-repeat: no-repeat;
      background-position: center;
      position: absolute;
-     top: 15%;
+     top: -130%;
+     left: 32%;
      clear: both;
  }
  
- #menu-item-804:before {
+ #menu-item-804 a:before {
      content: " ";
-     background: url(/wp-content/uploads/2017/05/assessments_icon.png);
+     background: url(/wp-content/uploads/2017/05/assessments_icon-1.png);
      width: 50px;
      height: 50px;
      background-size: cover;
      background-repeat: no-repeat;
      background-position: center;
      position: absolute;
-     top: 15%;
      clear: both;
+     top: -130%;
+     left: 34%;
  }
  
- #menu-item-806:before {
+ #menu-item-806 a:before {
      content: " ";
-     background: url(/wp-content/uploads/2017/05/compliance_icon.png);
+     background: url(/wp-content/uploads/2017/05/compliance_icon-1.png);
      width: 50px;
      height: 50px;
      background-size: cover;
      background-repeat: no-repeat;
      background-position: center;
      position: absolute;
-     top: 15%;
      clear: both;
+     top: -130%;
+     left: 32%;
  }
  
- #menu-item-808:before {
+ #menu-item-808 a:before {
      content: " ";
-     background: url(/wp-content/uploads/2017/05/strategy_icon.png);
+     background: url(/wp-content/uploads/2017/05/strategic_icon.png);
      width: 50px;
      height: 50px;
      background-size: cover;
      background-repeat: no-repeat;
      background-position: center;
      position: absolute;
-     top: 15%;
      clear: both;
+     top: -130%;
+     left: 34%;
+ }
+ 
+ #menu-item-851 a:before {
+     content: " ";
+     background: url(/wp-content/uploads/2017/05/industry_icon.png);
+     width: 50px;
+     height: 50px;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+     position: absolute;
+     clear: both;
+     top: -130%;
+     left: 32%;
  }
  
  #mega-menu-wrap-max_mega_menu_6 {
@@ -2405,20 +2432,136 @@ Text Domain: proficio
  #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item.mega-icon-top > a.mega-menu-link > span.mega-title-below {
      margin-top: 5px;
  }
-
- #page-module-987, #page-module-993{
+ 
+ #page-module-987,
+ #page-module-993 {
      background: url(/wp-content/uploads/2017/05/bg-white.png);
-    color: #000;
+     color: #000;
  }
-
- .center-play{
+ 
+ .center-play {
      text-align: center;
      font-size: 6em;
      color: #fff;
-     margin:10px;
+     margin: 10px;
      cursor: pointer;
  }
+ 
+ #mega-menu-item-text-15 {
+     background: #2b2b2b !important;
+ }
+ 
+ .solutions-explore-mm {
+     text-align: center;
+ }
+ 
+ .solutions-explore-mm a {
+     color: #fff !important;
+     text-transform: uppercase;
+ }
+ 
+ #menu-additional-services li a:hover:before {
+     filter: brightness(0) invert(1);
+ }
+ 
+ #mktoForm_1055 {
+     width: 100% !important;
+ }
+ 
+ #mktoForm_1055 span {
+     color: #00fefb !important;
+ }
+ 
+ .subicons-solutions {
+     display: inline-flex;
+     flex-wrap: wrap;
+     width: 100%;
+ }
+ 
+ .subicon {
+     width: 20%;
+ }
+ 
+ .subicon > a {
+     text-align: center;
+ }
+ 
+ .subicon h3 {
+     font-size: 17px;
+     margin-top: 25px;
+     letter-spacing: 1px;
+     line-height: 20px;
+ }
+ 
+ .page-id-12,
+ .page-id-12 p {
+     font-family: 'Questrial', 'sans-serif';
+ }
+ 
+ .list-subicon-item {
+     list-style: none;
+     text-align: center;
+     padding: 0;
+ }
+ 
+ .list-subicon-item li a {
+     color: #fff;
+     font-size: 13px;
+ }
+ 
+ .main-solution-icons img {
+     height: 120px;
+ }
+ 
+ .main-solutions-h3 {
+     font-size: 17px;
+     margin-top: 20px;
+     line-height: 25px;
+ }
+ 
+ .page-id-12 #menu-top-menu {
+     column-count: 3;
+     text-align: center;
+     width: 100%;
+     margin-top: 30px;
+ }
+ 
+ .page-id-12 #menu-top-menu li {
+     padding: 5px 0;
+ }
+ 
+ #menu-objectives > li > a:hover {
+     font-weight: 900;
+ }
+ 
+ .main-solution-icons:hover img,
+ .subicon > a:hover img {
+     filter: brightness(0) invert(1);
+ }
+ 
+ .main-solution-icons:hover h3 {
+     color: #fff;
+ }
+ 
+ #menu-additional-services > li > a:hover,
+ .solutions-explore-mm > a:hover {
+     text-decoration: none;
+ }
+ 
+ .lead-magnet {
+     background: #565454;
+     padding: 20px 0;
+ }
  /*MEDIA QUERIES*/
+ 
+ @media (max-width: 768px) {
+     .subicon {
+         width: 50%;
+     }
+     .page-id-12 #menu-top-menu {
+         column-count: 2;
+     }
+ }
  
  @media (min-width: 768px) {
      .page-module.accordians .container .panel h5.panel-title {
@@ -2679,5 +2822,9 @@ border-right: 1px solid #000;
      #mega-menu-item-22 .mega-sub-menu {
          width: 30% !important;
          left: 70% !important;
+     }
+     #mega-menu-item-26 .mega-sub-menu {
+         width: 45% !important;
+         left: 40% !important;
      }
  }
