@@ -275,7 +275,7 @@ function mrec_proficio_metabox_options() {
     		'none' => 'None',
     		'video' => 'Video Section',
     		'magnet' => 'Lead Magnet Section',		
-    		'custom1' => 'Option 3',
+    		'quote' => 'Quote',
     		'custom2' => 'Option 4',
     		'custom3' => 'Option 5',
     		),
@@ -290,6 +290,33 @@ function mrec_proficio_metabox_options() {
     		'3' => 'Proficio CEO Discusses Threat Landscape',
     		'4' => 'Proficio CEO Describes Security Challenges',
     		'5' => 'Proficio Career Video',
+    		),
+    	'type' => 'radio',
+    	'desc' => 'Select one',
+    	'default' => '1',
+    	) );
+
+    $aa_metbox->createOption( array(
+    	'name' => 'Quotes',
+    	'id' => 'customer_quote',
+    	'type' => 'textarea',
+    	'desc' => 'Write down a quote'
+    	) );
+
+    $aa_metbox->createOption( array(
+    	'name' => 'Customer',
+    	'id' => 'customer_id',
+    	'type' => 'text',
+    	'desc' => 'Write down customer name'
+    	) );
+
+     $aa_metbox->createOption( array(
+    	'name' => 'Choose a Background',
+    	'id' => 'quote_bg_option',
+    	'options' => array(
+    		'1' => 'Picture One',
+    		'2' => 'Picture Two',
+    		'3' => 'Picture Three',
     		),
     	'type' => 'radio',
     	'desc' => 'Select one',
