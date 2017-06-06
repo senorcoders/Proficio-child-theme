@@ -141,6 +141,11 @@ Text Domain: proficio
      text-align: center;
  }
  
+ .grayBg blockquote {
+     font-size: 20px;
+     font-family: 'Questrial', 'sans-serif';
+ }
+ 
  .resultados li {
      list-style: none;
      padding: 20px 0;
@@ -1978,7 +1983,7 @@ Text Domain: proficio
      background-position: center;
      position: absolute;
      top: -130%;
-     left: 32%;
+     left: 32.08%;
      clear: both;
  }
  
@@ -1993,7 +1998,7 @@ Text Domain: proficio
      position: absolute;
      clear: both;
      top: -130%;
-     left: 34%;
+     left: 32.08%;
  }
  
  #menu-item-806 a:before {
@@ -2007,7 +2012,7 @@ Text Domain: proficio
      position: absolute;
      clear: both;
      top: -130%;
-     left: 32%;
+     left: 32.08%;
  }
  
  #menu-item-808 a:before {
@@ -2021,7 +2026,7 @@ Text Domain: proficio
      position: absolute;
      clear: both;
      top: -130%;
-     left: 34%;
+     left: 32.08%;
  }
  
  #menu-item-851 a:before {
@@ -2035,7 +2040,7 @@ Text Domain: proficio
      position: absolute;
      clear: both;
      top: -130%;
-     left: 32%;
+     left: 32.08%;
  }
  
  #mega-menu-wrap-max_mega_menu_6 {
@@ -2062,12 +2067,13 @@ Text Domain: proficio
  #mega-menu-wrap-primary #mega-menu-primary > #mega-menu-item-26 > ul.mega-sub-menu > #mega-menu-item-178 a:hover {
      background: #2b2b2b !important;
      overflow: hidden !important;
-/*     z-index: -1;
-*/ }
-
-#mega-menu-item-211{
+     /*     z-index: -1;
+*/
+ }
+ 
+ #mega-menu-item-211 {
      margin-bottom: 10px !important;
-}
+ }
  
  .navbar {
      padding: 0;
@@ -2556,18 +2562,119 @@ Text Domain: proficio
      background: #565454;
      padding: 20px 0;
  }
-
- .quotes-section{
-          background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('/wp-content/uploads/2017/05/PROFICIO_SOC-186_.jpg');
-              padding: 50px;
-    text-align: center;
-    font-family: 'Questrial', 'sans-serif';
-
+ 
+ .quotes-section {
+     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('/wp-content/uploads/2017/05/PROFICIO_SOC-186_.jpg');
+     padding: 50px;
+     text-align: center;
+     font-family: 'Questrial', 'sans-serif';
  }
-
- .quotes-section blockquote{
+ 
+ .quotes-section blockquote {
      font-size: 20px;
  }
+ 
+ .modal-content {
+     background: #000 !important;
+ }
+ 
+ .mktoForm,
+ .mktoForm input[type=text],
+ .mktoForm input[type=url],
+ .mktoForm input[type=email],
+ .mktoForm input[type=tel],
+ .mktoForm input[type=number],
+ .mktoForm input[type=date],
+ #Country {
+     width: 100% !important;
+ }
+ 
+ .mktoButton {
+     background: transparent !important;
+     border-radius: 0 !important;
+     margin-top: 10px !important;
+     border: 2px solid #00807e !important;
+ }
+ 
+ .mktoForm .mktoRequiredField label.mktoLabel {
+     color: #fff !important;
+ }
+ 
+ #confirmform {
+     visibility: hidden;
+ }
+ 
+ .carousel-fade .carousel-inner .carousel-item {
+     -webkit-transition-property: opacity;
+     -moz-transition-property: opacity;
+     -o-transition-property: opacity;
+     -ms-transition-property: opacity;
+     transition-property: opacity;
+ }
+ 
+ .carousel-fade .carousel-inner .carousel-item,
+ .carousel-fade .carousel-inner .active.left,
+ .carousel-fade .carousel-inner .active.right {
+     opacity: 0;
+ }
+ 
+ .carousel-fade .carousel-inner .active,
+ .carousel-fade .carousel-inner .next.left,
+ .carousel-fade .carousel-inner .prev.right {
+     opacity: 1;
+ }
+ 
+ .carousel-fade .carousel-inner .next,
+ .carousel-fade .carousel-inner .prev,
+ .carousel-fade .carousel-inner .active.left,
+ .carousel-fade .carousel-inner .active.right {
+     left: 0;
+     -webkit-transform: translate3d(0, 0, 0);
+     -moz-transform: translate3d(0, 0, 0);
+     -o-transform: translate3d(0, 0, 0);
+     -ms-transform: translate3d(0, 0, 0);
+     transform: translate3d(0, 0, 0);
+ }
+ 
+ #quotesCarousel {
+     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('/wp-content/uploads/2017/05/Customer-1.jpg');
+     background-size: cover;
+     background-position: center center;
+     background-repeat: no-repeat;
+     padding: 100px 50px;
+ }
+ 
+ #quotesCarousel .carousel-item > p {
+     text-align: center;
+     width: 100%;
+     font-size: 25px;
+     font-family: 'Questrial', 'sans-serif';
+     padding: 0 10%;
+ }
+ 
+ #quotesCarousel .carousel-item {
+     flex-wrap: wrap;
+     justify-content: center;
+ }
+ 
+ cite.h-card {
+     font-style: normal;
+     font-size: 16px;
+     letter-spacing: 1px;
+     font-family: 'Questrial', 'sans-serif';
+ }
+ 
+ .footer-testimonial:before {
+     content: '\2014 \00A0';
+ }
+ 
+ #quotesCarousel .carousel-control-next-icon,
+ .carousel-control-prev-icon {
+     background: none !important;
+     font-size: 3em;
+ }
+
+ 
  /*MEDIA QUERIES*/
  
  @media (max-width: 768px) {
@@ -2843,10 +2950,7 @@ border-right: 1px solid #000;
          width: 45% !important;
          left: 40% !important;
      }
-
-      #mega-menu-item-26 .mega-sub-menu:not(:root:root){ 
-   width: 55% !important;
-}
+     #mega-menu-item-26 .mega-sub-menu:not(:root:root) {
+         width: 55% !important;
+     }
  }
-
-

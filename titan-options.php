@@ -98,12 +98,40 @@ function proficio_create_options() {
 		'type' => 'text',
 		'desc' => _('Business address')
 		) );
+
+
 	
 	
 	$generalTab->createOption( array(
 		'type' => 'save',
 		) );
 
+	$signature = $adminPanel->createTab( array(
+		'name' => __( 'Signature Redirect', 'proficio' ),
+		) );
+
+	$signature->createOption( array(
+		'name' => 'Signature 1',
+		'id' => 'signature1',
+		'type' => 'text',
+		'desc' => _('Write down the redirect url for signature 1')
+		) );
+	$signature->createOption( array(
+		'name' => 'Signature 2',
+		'id' => 'signature2',
+		'type' => 'text',
+		'desc' => _('Write down the redirect url for signature 2')
+		) );
+	$signature->createOption( array(
+		'name' => 'Signature 3',
+		'id' => 'signature3',
+		'type' => 'text',
+		'desc' => _('Write down the redirect url for signature 3')
+		) );
+
+	$signature->createOption( array(
+		'type' => 'save',
+		) );
 	
 
 	$header = $adminPanel->createTab( array(
@@ -272,12 +300,12 @@ function mrec_proficio_metabox_options() {
     	'type' => 'select',
     	'desc' => 'Choose an option',
     	'options' => array(		
-    		'none' => 'None',
+    		'none' => 'No option selected yet',
     		'video' => 'Video Section',
-    		'magnet' => 'Lead Magnet Section',		
-    		'quote' => 'Quote',
-    		'custom2' => 'Option 4',
-    		'custom3' => 'Option 5',
+    		'checklist' => 'MSSP Checklist',		
+    		'quote' => 'Quotes',
+    		'ransomware' => 'Ransomware: Detection and Prevention',
+    		'cio' => 'CIO Guide: Why Switch to a Hybrid SOC',
     		),
     	'default' => 'none',
     	) );
@@ -297,31 +325,13 @@ function mrec_proficio_metabox_options() {
     	) );
 
     $aa_metbox->createOption( array(
-    	'name' => 'Quotes',
-    	'id' => 'customer_quote',
+    	'name' => 'Description',
+    	'id' => 'description_section',
     	'type' => 'textarea',
-    	'desc' => 'Write down a quote'
+    	'desc' => 'Write down text for this section'
     	) );
 
-    $aa_metbox->createOption( array(
-    	'name' => 'Customer',
-    	'id' => 'customer_id',
-    	'type' => 'text',
-    	'desc' => 'Write down customer name'
-    	) );
-
-     $aa_metbox->createOption( array(
-    	'name' => 'Choose a Background',
-    	'id' => 'quote_bg_option',
-    	'options' => array(
-    		'1' => 'Picture One',
-    		'2' => 'Picture Two',
-    		'3' => 'Picture Three',
-    		),
-    	'type' => 'radio',
-    	'desc' => 'Select one',
-    	'default' => '1',
-    	) );
+    
 
 
 }

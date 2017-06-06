@@ -92,64 +92,7 @@ add_theme_support( 'custom-logo', array(
     require get_template_directory() . '/titan-options.php';
 
 
-// Register Event Post Type
-// function custom_post_type() {
 
-// 	$labels = array(
-// 		'name'                  => _x( 'Events', 'Post Type General Name', 'text_domain' ),
-// 		'singular_name'         => _x( 'Event', 'Post Type Singular Name', 'text_domain' ),
-// 		'menu_name'             => __( 'Events', 'text_domain' ),
-// 		'name_admin_bar'        => __( 'Events', 'text_domain' ),
-// 		'archives'              => __( 'Item Archives', 'text_domain' ),
-// 		'attributes'            => __( 'Item Attributes', 'text_domain' ),
-// 		'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
-// 		'all_items'             => __( 'All Items', 'text_domain' ),
-// 		'add_new_item'          => __( 'Add New Item', 'text_domain' ),
-// 		'add_new'               => __( 'Add New', 'text_domain' ),
-// 		'new_item'              => __( 'New Item', 'text_domain' ),
-// 		'edit_item'             => __( 'Edit Item', 'text_domain' ),
-// 		'update_item'           => __( 'Update Item', 'text_domain' ),
-// 		'view_item'             => __( 'View Item', 'text_domain' ),
-// 		'view_items'            => __( 'View Items', 'text_domain' ),
-// 		'search_items'          => __( 'Search Item', 'text_domain' ),
-// 		'not_found'             => __( 'Not found', 'text_domain' ),
-// 		'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
-// 		'featured_image'        => __( 'Featured Image', 'text_domain' ),
-// 		'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
-// 		'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
-// 		'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
-// 		'insert_into_item'      => __( 'Insert into item', 'text_domain' ),
-// 		'uploaded_to_this_item' => __( 'Uploaded to this item', 'text_domain' ),
-// 		'items_list'            => __( 'Items list', 'text_domain' ),
-// 		'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
-// 		'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
-
-
-// 	);
-// 	$args = array(
-// 		'label'                 => __( 'Event', 'text_domain' ),
-// 		'description'           => __( 'Events', 'text_domain' ),
-// 		'labels'                => $labels,
-// 		'supports'              => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
-// 		'taxonomies'            => array( 'category', 'post_tag' ),
-// 		'hierarchical'          => false,
-// 		'public'                => true,
-// 		'show_ui'               => true,
-// 		'show_in_menu'          => true,
-// 		'menu_position'         => 5,
-// 		'show_in_admin_bar'     => true,
-// 		'show_in_nav_menus'     => true,
-// 		'can_export'            => true,
-// 		'has_archive'           => true,		
-// 		'exclude_from_search'   => false,
-// 		'publicly_queryable'    => true,
-// 		'capability_type'       => 'page',
-// 		'menu_icon'           => 'dashicons-tickets-alt',
-// 	);
-// 	register_post_type( 'events', $args );
-
-// }
-// add_action( 'init', 'custom_post_type', 0 );
 
 // Register Sidebars
     function custom_sidebars() {
@@ -315,226 +258,260 @@ add_theme_support( 'custom-logo', array(
     	}
     	add_action( 'widgets_init', 'footer_sidebars' );
 
-        function pre_footer_shortcode( $atts ) {
+      function pre_footer_shortcode( $atts ) {
     // Attributes
-            $atts = shortcode_atts(
-                array(
-                    'url' => '',
-                    ),
-                $atts
-                );
+        $atts = shortcode_atts(
+          array(
+            'url' => '',
+            ),
+          $atts
+          );
 
-            return '
-            <div class="modal fade" tabindex="-1" role="dialog" id="pre-footer-modal">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        </div>
-                        <div class="modal-body">
-                            <iframe width="100%" height="400" src="' . esc_attr($atts['url']) . '" frameborder="0" allowfullscreen></iframe>
-                        </div>
+        return '
+        <div class="modal fade" tabindex="-1" role="dialog" id="pre-footer-modal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              </div>
+              <div class="modal-body">
+                <iframe width="100%" height="400" src="' . esc_attr($atts['url']) . '" frameborder="0" allowfullscreen></iframe>
+              </div>
 
-                    </div>
-                </div>
             </div>
+          </div>
+        </div>
 
-            ';
-
-
-
-
+        ';
 
 
-        }
-        add_shortcode( 'pre-footer-video', 'pre_footer_shortcode' );
+
+
+
+
+      }
+      add_shortcode( 'pre-footer-video', 'pre_footer_shortcode' );
+
+      function modal_embed_shortcode(){
+        ob_start();
+        ?>
+        <div id="modal-embed" class="modal fade" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header"><button class="close" type="button" data-dismiss="modal">×</button></div>
+              <div class="modal-body"><script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
+                <script>MktoForms2.whenReady(function (form){
+                  form.onSuccess(function(values, followUpUrl){
+                    form.getFormElem().hide();
+                    document.getElementById('confirmform').style.visibility = 'visible';
+                    window.open(followUpUrl, '_blank');
+                    return false;
+                  });
+                });
+              </script>
+              <div id="confirmform">
+
+                Thank you for your interest in our case study, your download will begin momentarily.
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <?php
+
+      return ob_get_clean();
+    }
+
+
+    add_shortcode( 'modal-embed', 'modal_embed_shortcode' );
 
 
 // Maps Shortcode
-        function map_america_shortcode() {
-          ob_start();
-          ?> 
+    function map_america_shortcode() {
+      ob_start();
+      ?> 
 
 
 
-          <div class="map-proficio" id="map"></div>
+      <div class="map-proficio" id="map"></div>
 
 
-          <?php
-          return ob_get_clean();
+      <?php
+      return ob_get_clean();
 
 
-      }
-      add_shortcode( 'america-map', 'map_america_shortcode' );
+    }
+    add_shortcode( 'america-map', 'map_america_shortcode' );
 
-      function map_america_clone_shortcode() {
-          ob_start();
-          ?> 
-
-
-
-          <div class="map-proficio" id="map-eu"></div>
-
-
-          <?php
-          return ob_get_clean();
-
-
-      }
-      add_shortcode( 'america-map-clone', 'map_america_clone_shortcode' );
-
-
-      function map_america_emea_shortcode() {
-          ob_start();
-          ?> 
+    function map_america_clone_shortcode() {
+      ob_start();
+      ?> 
 
 
 
-          <div class="map-proficio" id="map-emea"></div>
+      <div class="map-proficio" id="map-eu"></div>
 
 
-          <?php
-          return ob_get_clean();
+      <?php
+      return ob_get_clean();
 
 
-      }
-      add_shortcode( 'america-map-emea', 'map_america_emea_shortcode' );
+    }
+    add_shortcode( 'america-map-clone', 'map_america_clone_shortcode' );
+
+
+    function map_america_emea_shortcode() {
+      ob_start();
+      ?> 
+
+
+
+      <div class="map-proficio" id="map-emea"></div>
+
+
+      <?php
+      return ob_get_clean();
+
+
+    }
+    add_shortcode( 'america-map-emea', 'map_america_emea_shortcode' );
 
 
 // PROFICIO NEWS
-      function proficio_news_post_type() {
+    function proficio_news_post_type() {
 
-          $labels = array(
-             'name'                  => _x( 'Proficio News', 'Post Type General Name', 'text_domain' ),
-             'singular_name'         => _x( 'Proficio New', 'Post Type Singular Name', 'text_domain' ),
-             'menu_name'             => __( 'Proficio News', 'text_domain' ),
-             'name_admin_bar'        => __( 'Proficio News', 'text_domain' ),
-             'archives'              => __( 'Proficio News Archives', 'text_domain' ),
-             'attributes'            => __( 'Proficio News Attributes', 'text_domain' ),
-             'parent_item_colon'     => __( 'Parent Proficio News:', 'text_domain' ),
-             'all_items'             => __( 'All Proficio News', 'text_domain' ),
-             'add_new_item'          => __( 'Add New Proficio New', 'text_domain' ),
-             'add_new'               => __( 'Add New', 'text_domain' ),
-             'new_item'              => __( 'New Item', 'text_domain' ),
-             'edit_item'             => __( 'Edit Item', 'text_domain' ),
-             'update_item'           => __( 'Update Item', 'text_domain' ),
-             'view_item'             => __( 'View Item', 'text_domain' ),
-             'view_items'            => __( 'View Items', 'text_domain' ),
-             'search_items'          => __( 'Search Item', 'text_domain' ),
-             'not_found'             => __( 'Not found', 'text_domain' ),
-             'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
-             'featured_image'        => __( 'Featured Image', 'text_domain' ),
-             'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
-             'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
-             'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
-             'insert_into_item'      => __( 'Insert into item', 'text_domain' ),
-             'uploaded_to_this_item' => __( 'Uploaded to this item', 'text_domain' ),
-             'items_list'            => __( 'Items list', 'text_domain' ),
-             'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
-             'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
-             );
-          $args = array(
-             'label'                 => __( 'Proficio New', 'text_domain' ),
-             'description'           => __( 'Custom Post Type for Proficio News', 'text_domain' ),
-             'labels'                => $labels,
-             'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'trackbacks', 'revisions', 'custom-fields', 'page-attributes', 'post-formats', ),
-             'taxonomies'            => false,
-             'hierarchical'          => false,
-             'public'                => true,
-             'show_ui'               => true,
-             'show_in_menu'          => true,
-             'menu_position'         => 5,
-             'show_in_admin_bar'     => true,
-             'show_in_nav_menus'     => true,
-             'can_export'            => true,
-             'has_archive'           => true,		
-             'exclude_from_search'   => false,
-             'publicly_queryable'    => true,
-             'capability_type'       => 'page',
-             'menu_icon'				=> 'dashicons-welcome-widgets-menus',
-             );
-          register_post_type( 'news', $args );
+      $labels = array(
+       'name'                  => _x( 'Proficio News', 'Post Type General Name', 'text_domain' ),
+       'singular_name'         => _x( 'Proficio New', 'Post Type Singular Name', 'text_domain' ),
+       'menu_name'             => __( 'Proficio News', 'text_domain' ),
+       'name_admin_bar'        => __( 'Proficio News', 'text_domain' ),
+       'archives'              => __( 'Proficio News Archives', 'text_domain' ),
+       'attributes'            => __( 'Proficio News Attributes', 'text_domain' ),
+       'parent_item_colon'     => __( 'Parent Proficio News:', 'text_domain' ),
+       'all_items'             => __( 'All Proficio News', 'text_domain' ),
+       'add_new_item'          => __( 'Add New Proficio New', 'text_domain' ),
+       'add_new'               => __( 'Add New', 'text_domain' ),
+       'new_item'              => __( 'New Item', 'text_domain' ),
+       'edit_item'             => __( 'Edit Item', 'text_domain' ),
+       'update_item'           => __( 'Update Item', 'text_domain' ),
+       'view_item'             => __( 'View Item', 'text_domain' ),
+       'view_items'            => __( 'View Items', 'text_domain' ),
+       'search_items'          => __( 'Search Item', 'text_domain' ),
+       'not_found'             => __( 'Not found', 'text_domain' ),
+       'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
+       'featured_image'        => __( 'Featured Image', 'text_domain' ),
+       'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
+       'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
+       'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
+       'insert_into_item'      => __( 'Insert into item', 'text_domain' ),
+       'uploaded_to_this_item' => __( 'Uploaded to this item', 'text_domain' ),
+       'items_list'            => __( 'Items list', 'text_domain' ),
+       'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
+       'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
+       );
+      $args = array(
+       'label'                 => __( 'Proficio New', 'text_domain' ),
+       'description'           => __( 'Custom Post Type for Proficio News', 'text_domain' ),
+       'labels'                => $labels,
+       'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'trackbacks', 'revisions', 'custom-fields', 'page-attributes', 'post-formats', ),
+       'taxonomies'            => false,
+       'hierarchical'          => false,
+       'public'                => true,
+       'show_ui'               => true,
+       'show_in_menu'          => true,
+       'menu_position'         => 5,
+       'show_in_admin_bar'     => true,
+       'show_in_nav_menus'     => true,
+       'can_export'            => true,
+       'has_archive'           => true,		
+       'exclude_from_search'   => false,
+       'publicly_queryable'    => true,
+       'capability_type'       => 'page',
+       'menu_icon'				=> 'dashicons-welcome-widgets-menus',
+       );
+      register_post_type( 'news', $args );
 
-      }
-      add_action( 'init', 'proficio_news_post_type', 0 );
+    }
+    add_action( 'init', 'proficio_news_post_type', 0 );
 
-      function fn_sitemap_shortcode() {
-          return 
-          wp_list_pages( array( 'title_li' => '<a href="https://proficio.wpengine.com">' . __('HomePage') . '</a>' ) );
-      }
-      add_shortcode('sitemap_shortcode', 'fn_sitemap_shortcode');
-
-
-      function proficio_pagination(){
-          global $wp_query; 
-          echo paginate_links();
-      }
+    function fn_sitemap_shortcode() {
+      return 
+      wp_list_pages( array( 'title_li' => '<a href="https://proficio.wpengine.com">' . __('HomePage') . '</a>' ) );
+    }
+    add_shortcode('sitemap_shortcode', 'fn_sitemap_shortcode');
 
 
-      function proficio_numeric_posts_nav() {
-
-          if( is_singular() )
-             return;
-
-         global $wp_query;
-
-         /** Stop execution if there's only 1 page */
-         if( $wp_query->max_num_pages <= 1 )
-             return;
-
-         $paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
-         $max   = intval( $wp_query->max_num_pages );
-
-         /**	Add current page to the array */
-         if ( $paged >= 1 )
-             $links[] = $paged;
-
-         /**	Add the pages around the current page to the array */
-         if ( $paged >= 3 ) {
-             $links[] = $paged - 1;
-             $links[] = $paged - 2;
-         }
-
-         if ( ( $paged + 2 ) <= $max ) {
-             $links[] = $paged + 2;
-             $links[] = $paged + 1;
-         }
-
-         echo '<div class="navigation"><ul>' . "\n";
-
-         /**	Previous Post Link */
-         if ( get_previous_posts_link() )
-             printf( '<li>%s</li>' . "\n", get_previous_posts_link() );
-
-         /**	Link to first page, plus ellipses if necessary */
-         if ( ! in_array( 1, $links ) ) {
-             $class = 1 == $paged ? ' class="active"' : '';
-
-             printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
-
-             if ( ! in_array( 2, $links ) )
-                echo '<li>…</li>';
-        }
-
-        /**	Link to current page, plus 2 pages in either direction if necessary */
-        sort( $links );
-        foreach ( (array) $links as $link ) {
-         $class = $paged == $link ? ' class="active"' : '';
-         printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );
-     }
-
-     /**	Link to last page, plus ellipses if necessary */
-     if ( ! in_array( $max, $links ) ) {
-         if ( ! in_array( $max - 1, $links ) )
-            echo '<li>…</li>' . "\n";
-
-        $class = $paged == $max ? ' class="active"' : '';
-        printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
+    function proficio_pagination(){
+      global $wp_query; 
+      echo paginate_links();
     }
 
-    /**	Next Post Link */
-    if ( get_next_posts_link() )
-     printf( '<li>%s</li>' . "\n", get_next_posts_link() );
+
+    function proficio_numeric_posts_nav() {
+
+      if( is_singular() )
+       return;
+
+     global $wp_query;
+
+     /** Stop execution if there's only 1 page */
+     if( $wp_query->max_num_pages <= 1 )
+       return;
+
+     $paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
+     $max   = intval( $wp_query->max_num_pages );
+
+     /**	Add current page to the array */
+     if ( $paged >= 1 )
+       $links[] = $paged;
+
+     /**	Add the pages around the current page to the array */
+     if ( $paged >= 3 ) {
+       $links[] = $paged - 1;
+       $links[] = $paged - 2;
+     }
+
+     if ( ( $paged + 2 ) <= $max ) {
+       $links[] = $paged + 2;
+       $links[] = $paged + 1;
+     }
+
+     echo '<div class="navigation"><ul>' . "\n";
+
+     /**	Previous Post Link */
+     if ( get_previous_posts_link() )
+       printf( '<li>%s</li>' . "\n", get_previous_posts_link() );
+
+     /**	Link to first page, plus ellipses if necessary */
+     if ( ! in_array( 1, $links ) ) {
+       $class = 1 == $paged ? ' class="active"' : '';
+
+       printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
+
+       if ( ! in_array( 2, $links ) )
+        echo '<li>…</li>';
+    }
+
+    /**	Link to current page, plus 2 pages in either direction if necessary */
+    sort( $links );
+    foreach ( (array) $links as $link ) {
+     $class = $paged == $link ? ' class="active"' : '';
+     printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );
+   }
+
+   /**	Link to last page, plus ellipses if necessary */
+   if ( ! in_array( $max, $links ) ) {
+     if ( ! in_array( $max - 1, $links ) )
+      echo '<li>…</li>' . "\n";
+
+    $class = $paged == $max ? ' class="active"' : '';
+    printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
+  }
+
+  /**	Next Post Link */
+  if ( get_next_posts_link() )
+   printf( '<li>%s</li>' . "\n", get_next_posts_link() );
 
  echo '</ul></div>' . "\n";
 
@@ -553,4 +530,60 @@ function custom_dashboard_help() {
   echo '<p>Welcome to Proficio Dashboard!</p>';
 }
 
+
+
+function quotes_post_type() {
+
+  $labels = array(
+    'name'                  => _x( 'Quotes', 'Post Type General Name', 'text_domain' ),
+    'singular_name'         => _x( 'Quote', 'Post Type Singular Name', 'text_domain' ),
+    'menu_name'             => __( 'Quotes', 'text_domain' ),
+    'name_admin_bar'        => __( 'Quotes', 'text_domain' ),
+    'archives'              => __( 'Item Archives', 'text_domain' ),
+    'attributes'            => __( 'Item Attributes', 'text_domain' ),
+    'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
+    'all_items'             => __( 'All Items', 'text_domain' ),
+    'add_new_item'          => __( 'Add New Item', 'text_domain' ),
+    'add_new'               => __( 'Add New', 'text_domain' ),
+    'new_item'              => __( 'New Item', 'text_domain' ),
+    'edit_item'             => __( 'Edit Item', 'text_domain' ),
+    'update_item'           => __( 'Update Item', 'text_domain' ),
+    'view_item'             => __( 'View Item', 'text_domain' ),
+    'view_items'            => __( 'View Items', 'text_domain' ),
+    'search_items'          => __( 'Search Item', 'text_domain' ),
+    'not_found'             => __( 'Not found', 'text_domain' ),
+    'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
+    'featured_image'        => __( 'Featured Image', 'text_domain' ),
+    'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
+    'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
+    'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
+    'insert_into_item'      => __( 'Insert into item', 'text_domain' ),
+    'uploaded_to_this_item' => __( 'Uploaded to this item', 'text_domain' ),
+    'items_list'            => __( 'Items list', 'text_domain' ),
+    'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
+    'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
+  );
+  $args = array(
+    'label'                 => __( 'Quote', 'text_domain' ),
+    'description'           => __( 'Post Type for Quotes', 'text_domain' ),
+    'labels'                => $labels,
+    'supports'              => array( ),
+    'hierarchical'          => false,
+    'public'                => true,
+    'show_ui'               => true,
+    'show_in_menu'          => true,
+    'menu_position'         => 5,
+    'show_in_admin_bar'     => true,
+    'show_in_nav_menus'     => true,
+    'can_export'            => true,
+    'has_archive'           => true,    
+    'exclude_from_search'   => false,
+    'publicly_queryable'    => true,
+    'menu_icon'             => 'dashicons-format-quote',
+    'capability_type'       => 'page',
+  );
+  register_post_type( 'quotes', $args );
+
+}
+add_action( 'init', 'quotes_post_type', 0 );
 

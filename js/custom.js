@@ -59,6 +59,17 @@ jQuery(document).ready(function() {
 
 
 
+    jQuery('.resourcesBgBox > div').each(function() {
+        var itemUrl = jQuery(this).find('a').attr('href');
+        console.log(itemUrl);
+
+        jQuery(this).on('click', function() {
+            window.location.href = itemUrl;
+
+        });
+
+
+    });
 
 
 
