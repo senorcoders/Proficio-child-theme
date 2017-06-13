@@ -5,10 +5,8 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Senorcoders custom theme">
-    <meta name="author" content="www.senorcoders.com">
+   
 
-    <title><?php bloginfo('name'); ?> | <?php bloginfo('description'); ?></title>
 
     <?php wp_head(); ?>
 

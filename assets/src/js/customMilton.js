@@ -23,15 +23,25 @@ $(function() {
     if ($("select[name='proficio_customizable_section']").val() == 'video') {
         $('#proficio_video_option1').closest('tr').show();
         $('#proficio_description_section').closest('tr').show();
+        $('select[name="proficio_my_quote_option"]').closest('tr').hide();
 
 
-    } else if ($("select[name='proficio_customizable_section']").val() == 'none' || $("select[name='proficio_customizable_section']").val() == 'quotes') {
+
+    } else if ($("select[name='proficio_customizable_section']").val() == 'quote') {
         $('#proficio_video_option1').closest('tr').hide();
         $('#proficio_description_section').closest('tr').hide();
+        $('select[name="proficio_my_quote_option"]').closest('tr').show();
+    } else if ($("select[name='proficio_customizable_section']").val() == 'none') {
+        $('#proficio_video_option1').closest('tr').hide();
+        $('#proficio_description_section').closest('tr').hide();
+        $('select[name="proficio_my_quote_option"]').closest('tr').hide();
+
 
     } else {
         $('#proficio_video_option1').closest('tr').hide();
         $('#proficio_description_section').closest('tr').show();
+        $('select[name="proficio_my_quote_option"]').closest('tr').hide();
+
 
 
     }
@@ -45,16 +55,27 @@ $(function() {
         if (this.value == 'video') {
             $('#proficio_video_option1').closest('tr').show();
             $('#proficio_description_section').closest('tr').show();
+            $('select[name="proficio_my_quote_option"]').closest('tr').hide();
 
 
 
-        } else if (this.value == 'none' || this.value == 'quote') {
+
+        } else if (this.value == 'quote') {
+            $('select[name="proficio_my_quote_option"]').closest('tr').show();
             $('#proficio_video_option1').closest('tr').hide();
             $('#proficio_description_section').closest('tr').hide();
+
+        } else if (this.value == 'none') {
+            $('#proficio_video_option1').closest('tr').hide();
+            $('#proficio_description_section').closest('tr').hide();
+            $('select[name="proficio_my_quote_option"]').closest('tr').hide();
+
 
         } else {
             $('#proficio_video_option1').closest('tr').hide();
             $('#proficio_description_section').closest('tr').show();
+            $('select[name="proficio_my_quote_option"]').closest('tr').hide();
+
 
 
         }

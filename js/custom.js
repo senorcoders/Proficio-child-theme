@@ -72,6 +72,23 @@ jQuery(document).ready(function() {
     });
 
 
+});
 
 
+
+jQuery(window).scroll(function() {
+    var scroll = jQuery(window).scrollTop();
+    var icon = jQuery('.flexContainer');
+    var posicionIcon = icon.offset().top - 850;
+    var posicion2 = jQuery('.advantages-bg').offset().top - 500;
+    console.log(scroll + " " + posicionIcon);
+
+    if (scroll > posicionIcon) {
+        jQuery('.flex5').addClass('animated fadeInRight');
+    }
+
+    if (scroll > posicion2) {
+        jQuery('.advantages-bg .col-md-3').addClass('animated fadeInRight');
+        jQuery('.advantages-bg .col-md-4').addClass('animated fadeInRight');
+    }
 });

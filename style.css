@@ -419,7 +419,8 @@ Text Domain: proficio
      font-size: 16px;
      padding-bottom: 0 !important;
      line-height: 16px;
-     letter-spacing: .1em;
+     letter-spacing: .5px;
+     font-weight: normal;
  }
  
  #mega-menu-wrap-primary #mega-menu-primary > #mega-menu-item-26 > ul.mega-sub-menu > li.mega-menu-item > a.mega-menu-link:before {
@@ -547,8 +548,7 @@ Text Domain: proficio
  }
  
  #mega-menu-item-176:hover > a:before {
-     -webkit-filter: grayscale(100%);
-     filter: grayscale(100%);
+     filter: brightness(0) invert(1);
  }
  
  #mega-menu-item-177 > a:before {
@@ -563,8 +563,7 @@ Text Domain: proficio
  }
  
  #mega-menu-item-177:hover > a:before {
-     -webkit-filter: grayscale(100%);
-     filter: grayscale(100%);
+     filter: brightness(0) invert(1);
  }
  
  #mega-menu-item-178 > a:before {
@@ -579,8 +578,7 @@ Text Domain: proficio
  }
  
  #mega-menu-item-178:hover > a:before {
-     -webkit-filter: grayscale(100%);
-     filter: grayscale(100%);
+     filter: brightness(0) invert(1);
  }
  
  #mega-menu-item-26 .mega-sub-menu {
@@ -1717,19 +1715,24 @@ Text Domain: proficio
  .week-item {
      width: 20%;
      background: #000;
-     opacity: 0.6;
+     opacity: 0.8;
      margin: 10px;
      padding-top: 20px;
      position: relative;
      z-index: 10;
  }
  
- .page-id-297 {
+ .summary-bg {
      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url(/wp-content/uploads/2017/05/images.jpg);
      /*        background-repeat: no-repeat;
 */
      background-size: cover;
      background-position: center;
+     padding: 50px 0;
+ }
+ 
+ .page-id-297 .full-padding {
+     padding: 0 !important;
  }
  
  .week-item h3 {
@@ -1750,24 +1753,25 @@ Text Domain: proficio
  
  .icon-week {
      text-align: center;
+     z-index: 120;
  }
  
  .icon-week img {
      width: 100px;
  }
  
- .week-item:after {
+ .icon-week:before {
      content: '';
      position: absolute;
-     right: -55px;
+     left: -45px;
      top: 16%;
      width: 80px;
      height: 40px;
      background: url(/wp-content/uploads/2017/05/arrow.png) center center no-repeat;
-     z-index: 12;
+     z-index: 120;
  }
  
- .week-item:last-child:after {
+ .week-item:first-child .icon-week:before {
      background: none;
  }
  
@@ -1973,7 +1977,7 @@ Text Domain: proficio
 */
  }
  
- #menu-item-801 a:before {
+ #menu-item-1027 a:before {
      content: " ";
      background: url(/wp-content/uploads/2017/05/Incident-Response_icon-1.png);
      width: 50px;
@@ -1983,11 +1987,11 @@ Text Domain: proficio
      background-position: center;
      position: absolute;
      top: -130%;
-     left: 32.08%;
+     left: 33.1%;
      clear: both;
  }
  
- #menu-item-804 a:before {
+ #menu-item-1009 a:before {
      content: " ";
      background: url(/wp-content/uploads/2017/05/assessments_icon-1.png);
      width: 50px;
@@ -2001,7 +2005,7 @@ Text Domain: proficio
      left: 32.08%;
  }
  
- #menu-item-806 a:before {
+ #menu-item-1010 a:before {
      content: " ";
      background: url(/wp-content/uploads/2017/05/compliance_icon-1.png);
      width: 50px;
@@ -2015,7 +2019,7 @@ Text Domain: proficio
      left: 32.08%;
  }
  
- #menu-item-808 a:before {
+ #menu-item-1011 a:before {
      content: " ";
      background: url(/wp-content/uploads/2017/05/strategic_icon.png);
      width: 50px;
@@ -2065,8 +2069,10 @@ Text Domain: proficio
  #mega-menu-wrap-primary #mega-menu-primary > #mega-menu-item-26 > ul.mega-sub-menu > #mega-menu-item-176 a:hover,
  #mega-menu-wrap-primary #mega-menu-primary > #mega-menu-item-26 > ul.mega-sub-menu > #mega-menu-item-177 a:hover,
  #mega-menu-wrap-primary #mega-menu-primary > #mega-menu-item-26 > ul.mega-sub-menu > #mega-menu-item-178 a:hover {
-     background: #2b2b2b !important;
+     /*     background: #2b2b2b !important;
+*/
      overflow: hidden !important;
+     color: #fff !important;
      /*     z-index: -1;
 */
  }
@@ -2442,12 +2448,11 @@ Text Domain: proficio
  #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item.mega-icon-top > a.mega-menu-link > span.mega-title-below {
      margin-top: 5px;
  }
- 
- #page-module-987,
+ /* #page-module-987,
  #page-module-993 {
      background: url(/wp-content/uploads/2017/05/bg-white.png);
      color: #000;
- }
+ }*/
  
  .center-play {
      text-align: center;
@@ -2470,8 +2475,13 @@ Text Domain: proficio
      text-transform: uppercase;
  }
  
- #menu-additional-services li a:hover:before {
+ #menu-additional-services li a:hover:before,
+ #page-module-993 img {
      filter: brightness(0) invert(1);
+ }
+ 
+ #page-module-987 img {
+     border: 2px solid #00fefb;
  }
  
  #mktoForm_1055 {
@@ -2504,8 +2514,21 @@ Text Domain: proficio
  }
  
  .page-id-12,
- .page-id-12 p {
+ .page-id-12 p,
+ .page-id-260,
+ .page-id-260 p,
+ .page-id-266,
+ .page-id-266 p,
+ .page-id-264,
+ .page-id-264 p {
      font-family: 'Questrial', 'sans-serif';
+     font-size: 13.5pt;
+ }
+ 
+ .page-id-260 .container p,
+ .page-id-266 .container p,
+ .page-id-264 .container p {
+     font-size: 13.5pt;
  }
  
  .list-subicon-item {
@@ -2556,6 +2579,7 @@ Text Domain: proficio
  #menu-additional-services > li > a:hover,
  .solutions-explore-mm > a:hover {
      text-decoration: none;
+     color: #fff;
  }
  
  .lead-magnet {
@@ -2637,19 +2661,46 @@ Text Domain: proficio
  }
  
  #quotesCarousel {
-     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('/wp-content/uploads/2017/05/Customer-1.jpg');
+     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('/wp-content/uploads/2017/05/client-quotes.jpg');
      background-size: cover;
-     background-position: center center;
+     background-position: center top;
      background-repeat: no-repeat;
      padding: 100px 50px;
+     background-attachment: fixed !important;
  }
  
  #quotesCarousel .carousel-item > p {
      text-align: center;
      width: 100%;
-     font-size: 25px;
+     font-size: 33px !important;
      font-family: 'Questrial', 'sans-serif';
      padding: 0 10%;
+     min-height: 100px;
+ }
+ 
+ #quotesCarousel .carousel-item > p:before,
+ .quote-static blockquote p:before {
+     content: " ";
+     background: url(/wp-content/uploads/2017/05/quote-left.png);
+     height: 12px !important;
+     width: 16px !important;
+     /* background-size: cover; */
+     background-repeat: no-repeat;
+     position: absolute;
+     top: 0;
+     margin-left: -1.5%;
+ }
+ 
+ #quotesCarousel .carousel-item > p:after,
+ .quote-static blockquote p:after {
+     content: " ";
+     background: url(/wp-content/uploads/2017/05/quote-right.png);
+     height: 12px !important;
+     width: 16px !important;
+     /* background-size: cover; */
+     background-repeat: no-repeat;
+     position: absolute;
+     margin-right: -1.5%;
  }
  
  #quotesCarousel .carousel-item {
@@ -2659,13 +2710,16 @@ Text Domain: proficio
  
  cite.h-card {
      font-style: normal;
-     font-size: 16px;
+     font-size: 17px;
      letter-spacing: 1px;
      font-family: 'Questrial', 'sans-serif';
+     color: #00fefb;
+     text-transform: uppercase;
  }
  
  .footer-testimonial:before {
      content: '\2014 \00A0';
+     color: #00fefb;
  }
  
  #quotesCarousel .carousel-control-next-icon,
@@ -2673,8 +2727,310 @@ Text Domain: proficio
      background: none !important;
      font-size: 3em;
  }
-
  
+ .page-id-959,
+ .page-id-959 p {
+     font-family: 'Questrial', 'sans-serif' !important;
+ }
+ 
+ .page-id-959 h1 {
+     text-transform: uppercase !important;
+ }
+ 
+ .services-container {
+     border: 2px solid #585757;
+     margin: 20px;
+     padding: 10px;
+     padding-bottom: 30px;
+     font-size: 13pt;
+ }
+ 
+ .services-container ul {
+     list-style: none;
+     margin-top: 20px;
+ }
+ 
+ .services-container span {
+     color: #00fefb !important;
+ }
+ 
+ .customer-slide {
+     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url(/wp-content/uploads/2017/05/buildings.jpg);
+     padding: 50px 0;
+     background-position: center center;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+ }
+ 
+ .carousel-fade .carousel-inner .item {
+     transition-property: opacity;
+ }
+ 
+ .carousel-fade .carousel-inner .item,
+ .carousel-fade .carousel-inner .active.left,
+ .carousel-fade .carousel-inner .active.right {
+     opacity: 0;
+ }
+ 
+ .carousel-fade .carousel-inner .active,
+ .carousel-fade .carousel-inner .next.left,
+ .carousel-fade .carousel-inner .prev.right {
+     opacity: 1;
+ }
+ 
+ .carousel-fade .carousel-inner .next,
+ .carousel-fade .carousel-inner .prev,
+ .carousel-fade .carousel-inner .active.left,
+ .carousel-fade .carousel-inner .active.right {
+     left: 0;
+     transform: translate3d(0, 0, 0);
+ }
+ 
+ .carousel-fade .carousel-control {
+     z-index: 2;
+ }
+ 
+ .owl-dots {
+     display: flex;
+     justify-content: center;
+ }
+ 
+ .owl-dot span {
+     background: none repeat scroll 0 0 #fff;
+     border-radius: 20px;
+     display: block;
+     height: 12px;
+     margin: 5px 7px;
+     opacity: 0.5;
+     width: 12px;
+ }
+ 
+ .owl-dot.active span {
+     background: none repeat scroll 0 0 #00FEFB;
+ }
+ 
+ .page-id-215 hr {
+     margin: 0 !important;
+ }
+ 
+ .quote-static {
+     background-size: cover !important;
+     background-repeat: no-repeat !important;
+     background-position: center !important;
+     padding: 90px 0;
+     background-attachment: fixed !important;
+ }
+ 
+ .quote-static blockquote {
+     text-align: center;
+ }
+ 
+ .quote-static blockquote p {
+     font-size: 33px !important;
+     font-family: 'Questrial', 'sans-serif';
+     width: 80%;
+     margin: 0 auto;
+     line-height: 40px;
+ }
+ 
+ .page-id-164 .full-padding,
+ .page-id-264 .full-padding {
+     padding-bottom: 0 !important;
+ }
+ 
+ .flexContainer {
+     display: inline-flex;
+     width: 100%;
+     flex-wrap: wrap;
+     margin-top: 90px;
+ }
+ 
+ .flex5 {
+     width: 20%;
+     text-align: center;
+     line-height: 20px;
+     position: relative;
+     -vendor-animation-duration: 5s;
+     -vendor-animation-delay: 3s;
+     -vendor-animation-iteration-count: infinite;
+ }
+ 
+ .flex5 a {
+     text-transform: uppercase;
+     position: relative;
+ }
+ 
+ .flexContainer .flex5:nth-child(1) a:before {
+     content: " ";
+     background: url(/wp-content/uploads/2017/05/Incident-Response_icon-1.png);
+     position: absolute;
+     width: 80px;
+     height: 80px;
+     top: -250%;
+     left: -35%;
+ }
+ 
+ .page-id-266 .flexContainer .flex5:nth-child(1) a:before,
+ .page-id-264 .flexContainer .flex5:nth-child(1) a:before {
+     background: url(/wp-content/uploads/2017/05/24-7-1.png);
+ }
+ 
+ .flexContainer .flex5:nth-child(2) a:before {
+     content: " ";
+     background: url(/wp-content/uploads/2017/05/assessments_icon-1.png);
+     position: absolute;
+     width: 80px;
+     height: 80px;
+     top: -250%;
+     left: -7%;
+ }
+ 
+ .page-id-266 .flexContainer .flex5:nth-child(2) a:before,
+ .page-id-264 .flexContainer .flex5:nth-child(2) a:before {
+     background: url(/wp-content/uploads/2017/05/investigate-1.png);
+ }
+ 
+ .flexContainer .flex5:nth-child(3) a:before {
+     content: " ";
+     background: url(/wp-content/uploads/2017/05/compliance_icon-1.png);
+     position: absolute;
+     width: 80px;
+     height: 80px;
+     top: -250%;
+     left: 10%;
+ }
+ 
+ .flexContainer .flex5:nth-child(4) a:before {
+     content: " ";
+     background: url(/wp-content/uploads/2017/05/strategic_icon.png);
+     position: absolute;
+     width: 80px;
+     height: 80px;
+     top: -250%;
+     left: -10%;
+ }
+ 
+ .flexContainer .flex5:nth-child(5) a:before {
+     content: " ";
+     background: url(/wp-content/uploads/2017/05/industry_icon.png);
+     position: absolute;
+     width: 80px;
+     height: 80px;
+     top: -170%;
+     left: -10%;
+ }
+ 
+ .page-id-266 .flexContainer .flex5:nth-child(3) a:before,
+ .page-id-264 .flexContainer .flex5:nth-child(3) a:before {
+     background: url(/wp-content/uploads/2017/05/validation_threat-1.png);
+ }
+ 
+ .page-id-266 .flexContainer .flex5:nth-child(4) a:before,
+ .page-id-264 .flexContainer .flex5:nth-child(4) a:before {
+     background: url(/wp-content/uploads/2017/05/threat_intelligence-1.png);
+ }
+ 
+ .page-id-266 .flexContainer .flex5:nth-child(5) a:before,
+ .page-id-264 .flexContainer .flex5:nth-child(5) a:before {
+     background: url(/wp-content/uploads/2017/05/custom_notifications-1.png);
+ }
+ 
+ .flex5 a:hover {
+     color: #fff;
+     text-decoration: none;
+ }
+ 
+ .flex5 a:hover:before {
+     filter: brightness(0) invert(1);
+ }
+ 
+ .security-list {
+     width: 70%;
+     margin: 0 auto;
+     list-style: none;
+     column-count: 2;
+     font-size: 13pt;
+ }
+ 
+ .security-bg {
+     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/wp-content/uploads/2017/06/iStock-654153362.jpg);
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+     padding: 50px 0;
+     border-top: 3px solid #00fefb;
+     border-bottom: 3px solid #00fefb;
+ }
+ 
+ .security-list li:before {
+     content: "\f058";
+     font-family: fontAwesome;
+     color: #00fefb;
+     margin-right: 10px;
+ }
+ 
+ .page-id-260 .first-row h1 {
+     font-size: 2.5rem;
+ }
+ 
+ .advantages-bg {
+     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url(/wp-content/uploads/2017/05/inside_.jpg);
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+     padding: 50px 0;
+     border-bottom: 3px solid #00fefb;
+ }
+ 
+ .advantages-bg .col-md-3 > div,
+ .advantages-bg .col-md-4 > div,
+ .advantages-bg .col-md-3 > h4,
+ .advantages-bg .col-md-4 > h4,
+ .custom-built-list .col-md-2 > div,
+ .custom-built-list .col-md-2 h4 {
+     text-align: center;
+     font-size: 16px;
+     color: #00fefb;
+ }
+ 
+ .advantages-bg .col-md-3 img,
+ .advantages-bg .col-md-4 img,
+ .custom-built-list .col-md-2 img {
+     width: 80px;
+     margin-bottom: 10px;
+ }
+ 
+ .advantages-bg h1 {
+     margin-bottom: 50px;
+ }
+ 
+ .page-id-260 .full-padding {
+     padding-bottom: 0 !important;
+ }
+ 
+ .block-list {
+     list-style: none;
+     font-size: 13pt;
+     column-count: 2;
+     width: 80%;
+     margin: 0 auto;
+ }
+ 
+ .block-list li a {
+     color: #fff;
+ }
+ 
+ .block-list li:before {
+     content: "\f096";
+     font-family: fontAwesome;
+     margin-right: 10px;
+     color: #00fefb;
+ }
+ 
+ .block-list li {
+     margin: 5px 0;
+ }
  /*MEDIA QUERIES*/
  
  @media (max-width: 768px) {
@@ -2683,6 +3039,14 @@ Text Domain: proficio
      }
      .page-id-12 #menu-top-menu {
          column-count: 2;
+     }
+     .flex5 {
+         width: 50%;
+         min-height: 200px;
+     }
+     .security-list,
+     .block-list {
+         column-count: 1;
      }
  }
  
@@ -2952,5 +3316,19 @@ border-right: 1px solid #000;
      }
      #mega-menu-item-26 .mega-sub-menu:not(:root:root) {
          width: 55% !important;
+     }
+ }
+ 
+ @media (max-width: 600px) {
+     #quotesCarousel .carousel-item > p:before,
+     .quote-static blockquote p:before {
+         margin-left: -6%;
+     }
+ }
+ 
+ @media (min-width: 601px) and (max-width: 1024px) {
+     #quotesCarousel .carousel-item > p:before,
+     .quote-static blockquote p:before {
+         margin-left: -2.5%;
      }
  }

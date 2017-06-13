@@ -57,7 +57,7 @@
                               echo apply_filters( 'the_content', wp_trim_words( strip_tags( $post->post_content ), 15 ) ); 
 
                              }else{
-                                echo "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis viverra lobortis. Donec quis nibh ut ante iaculis tincidunt. </p>";
+                                //NOTHING TO DISPLAY
                              }?>
                              </div>
                    

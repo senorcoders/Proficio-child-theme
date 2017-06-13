@@ -49,6 +49,8 @@ add_theme_support( 'custom-logo', array(
 		wp_enqueue_style( 'styleTheme', get_template_directory_uri(). '/style.css' );
 		wp_enqueue_style( 'stylemrec', get_template_directory_uri(). '/assets/src/css/customMilton.css' );
 		wp_enqueue_style( 'stylebdangla', get_template_directory_uri(). '/assets/src/css/style-B.css' );
+    wp_enqueue_style( 'styleOwl', get_template_directory_uri(). '/css/owl.carousel.min.css' );
+     wp_enqueue_style( 'animateCss', get_template_directory_uri(). '/css/animate.css' );
 
 
 	}
@@ -70,6 +72,7 @@ add_theme_support( 'custom-logo', array(
 
 		wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ) );
 		wp_enqueue_script( 'proficioJS', get_template_directory_uri() . '/js/proficio.js', array( 'jquery' ) );
+    wp_enqueue_script( 'owlJS', get_template_directory_uri() . '/js/owl.carousel.min.js', array( 'jquery' ) );
 
 	}
 
@@ -518,16 +521,13 @@ add_theme_support( 'custom-logo', array(
 }
 
 
-add_action('wp_dashboard_setup', 'my_custom_dashboard_widgets');
+add_action( 'wp_dashboard_setup', 'my_dashboard_setup_function' );
 
-function my_custom_dashboard_widgets() {
-  global $wp_meta_boxes;
-
-  wp_add_dashboard_widget('custom_help_widget', 'Proficio Support', 'custom_dashboard_help');
+function my_dashboard_setup_function() {
+        add_meta_box( 'my_dashboard_widget', 'Proficio Shortcodes', 'my_dashboard_widget_function', 'dashboard', 'side', 'high' );
 }
-
-function custom_dashboard_help() {
-  echo '<p>Welcome to Proficio Dashboard!</p>';
+function my_dashboard_widget_function() {
+        echo '[customer-logos] => Display Client Logos Carousel <br> [quotes-slider] => Display Client Testimonial slider Section <br> [pre-footer-video url="video url to embed"] => Display Video Section';
 }
 
 
@@ -562,12 +562,12 @@ function quotes_post_type() {
     'items_list'            => __( 'Items list', 'text_domain' ),
     'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
     'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
-  );
+    );
   $args = array(
     'label'                 => __( 'Quote', 'text_domain' ),
     'description'           => __( 'Post Type for Quotes', 'text_domain' ),
     'labels'                => $labels,
-    'supports'              => array( ),
+    'supports'              => array('thumbnail' ),
     'hierarchical'          => false,
     'public'                => true,
     'show_ui'               => true,
@@ -581,9 +581,26 @@ function quotes_post_type() {
     'publicly_queryable'    => true,
     'menu_icon'             => 'dashicons-format-quote',
     'capability_type'       => 'page',
-  );
+    );
   register_post_type( 'quotes', $args );
 
 }
 add_action( 'init', 'quotes_post_type', 0 );
+
+
+function quotes_shortcode() {
+  ob_start();
+  include('inc/quotes.php');    
+  return ob_get_clean();   
+} 
+add_shortcode( 'quotes-slider', 'quotes_shortcode' );
+
+
+
+function customer_slide_shortcode() {
+  ob_start();
+  include('inc/customer-slider.php');    
+  return ob_get_clean();   
+} 
+add_shortcode( 'customer-logos', 'customer_slide_shortcode' );
 

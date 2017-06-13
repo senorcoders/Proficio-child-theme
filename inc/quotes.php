@@ -1,8 +1,8 @@
-<div id="quotesCarousel" class="carousel slide" data-ride="carousel">
+<div id="quotesCarousel" class="carousel slide carousel-fade" data-ride="carousel">
   <div class="container">
 
-   <h1 style="text-align: center; margin-bottom: 30px;">Proficio Customer Quotes</h1>
-   <div class="carousel-inner" role="listbox">
+<!--    <h1 style="text-align: center; margin-bottom: 30px;">Client Testimonials</h1>
+ -->   <div class="carousel-inner" role="listbox">
 
     <?php
     $args = array( 'post_type' => 'quotes', 'post_per_page' => -1 );

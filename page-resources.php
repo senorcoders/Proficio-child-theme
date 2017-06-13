@@ -50,14 +50,14 @@
                    <?php while ($query->have_posts()) {
                         $query->the_post();
                         ?>
-                        <div class="col-md-3 resourcesBgBox">
+                        <div class="col-md-4 resourcesBgBox">
                         <div><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
                         <?php
                             if ('' !== get_post()->post_content) {
                               echo apply_filters( 'the_content', wp_trim_words( strip_tags( $post->post_content ), 15 ) ); 
 
                              }else{
-                                echo "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis viverra lobortis. Donec quis nibh ut ante iaculis tincidunt. </p>";
+                                //NOTHING TO DISPLAY
                              }?>
                              </div>
                    

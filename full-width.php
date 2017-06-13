@@ -7,7 +7,7 @@
   
 ?>	
 
-    <div style="padding: 100px 0;">
+    <div class="full-padding" style="padding: 100px 0;">
 
                 <?php if (have_posts()) : ?>
                     <?php while (have_posts()) : the_post(); ?>

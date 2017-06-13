@@ -1,5 +1,12 @@
 <?php include('inc/customizable-section.php'); ?>
 
+<?php 
+  if (!is_front_page()) {
+      include('inc/customer-slider.php'); 
+  }
+
+?>
+
 <div class="pre-footer text-center">
 
   <p>Improve Your Security Posture With Managed Security Services &nbsp;&nbsp;&nbsp; <a class="btn btn-primary btn-xl" href="/managed-security-services-quote/">Get a Quote</a></p>
