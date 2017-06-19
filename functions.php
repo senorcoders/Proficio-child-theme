@@ -50,7 +50,8 @@ add_theme_support( 'custom-logo', array(
 		wp_enqueue_style( 'stylemrec', get_template_directory_uri(). '/assets/src/css/customMilton.css' );
 		wp_enqueue_style( 'stylebdangla', get_template_directory_uri(). '/assets/src/css/style-B.css' );
     wp_enqueue_style( 'styleOwl', get_template_directory_uri(). '/css/owl.carousel.min.css' );
-     wp_enqueue_style( 'animateCss', get_template_directory_uri(). '/css/animate.css' );
+     wp_enqueue_style( 'aosCss', 'https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css' );
+     
 
 
 	}
@@ -73,6 +74,7 @@ add_theme_support( 'custom-logo', array(
 		wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ) );
 		wp_enqueue_script( 'proficioJS', get_template_directory_uri() . '/js/proficio.js', array( 'jquery' ) );
     wp_enqueue_script( 'owlJS', get_template_directory_uri() . '/js/owl.carousel.min.js', array( 'jquery' ) );
+    wp_enqueue_script( 'aosJS', 'https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js', array( 'jquery' ) );
 
 	}
 
@@ -379,6 +381,38 @@ add_theme_support( 'custom-logo', array(
 
     }
     add_shortcode( 'america-map-emea', 'map_america_emea_shortcode' );
+
+    function map_atlanta_shortcode() {
+      ob_start();
+      ?> 
+
+
+
+      <div class="map-proficio" id="map-atlanta"></div>
+
+
+      <?php
+      return ob_get_clean();
+
+
+    }
+    add_shortcode( 'map-atlanta', 'map_atlanta_shortcode' );
+
+     function map_hong_shortcode() {
+      ob_start();
+      ?> 
+
+
+
+      <div class="map-proficio" id="map-hong"></div>
+
+
+      <?php
+      return ob_get_clean();
+
+
+    }
+    add_shortcode( 'map-hong-kong', 'map_hong_shortcode' );
 
 
 // PROFICIO NEWS

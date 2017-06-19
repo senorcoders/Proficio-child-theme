@@ -17,13 +17,17 @@ global $wp_query;
 // Check if there are any posts to display
                                         if ( have_posts() ) : ?>
 
-                                                   <ul>
                                                                 <?php
 
                                                         // The Loop
                                                         while ( have_posts() ) : the_post(); ?>
+                                                        <div class="row">
+                                                        <?php if (has_post_thumbnail()) { ?>
+                                                            <div class="col-md-3 post-image" style="background: url('<?php the_post_thumbnail_url(); ?>' );"></div>
+                                                        <?php } ?>
 
-                                                         <li>
+                                                         <div class="col-md-9">
+                                                         
                                  <h4><a href="<?php the_permalink(); ?>">
                                    <?php the_title();  ?>
                                  </a></h4>
@@ -31,11 +35,10 @@ global $wp_query;
                                  <p class="date"><?php echo the_date(); ?></p>
 
                                  <p> <?php echo substr(get_the_excerpt(), 0,200); ?></p>
-                               </li>
-
+                               </div>
+                            </div>
                                <?php endwhile; ?>
 
-                               </ul>
 
                            <?php proficio_numeric_posts_nav(); ?>
 

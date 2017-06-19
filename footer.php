@@ -7,10 +7,19 @@
 
 ?>
 
-<div class="pre-footer text-center">
+<?php if (is_page(1179)) { ?>
+  <div class="pre-footer text-center">
+
+  <p>Find Out What Proficio Can Do for You &nbsp;&nbsp;&nbsp; <a class="btn btn-primary btn-xl" href="/managed-security-services-quote/">Contact Us Today!</a></p>
+</div>
+<?php }  else{ ?>
+ <div class="pre-footer text-center">
 
   <p>Improve Your Security Posture With Managed Security Services &nbsp;&nbsp;&nbsp; <a class="btn btn-primary btn-xl" href="/managed-security-services-quote/">Get a Quote</a></p>
 </div>
+ <?php } ?>
+
+
 
 <footer id="footer" class="footer">
   <div class="container">
@@ -78,9 +87,14 @@
       wp_footer();
       ?>
 
-      <script>
+<?php if (is_page(352)) { ?>
+     <script>
         function initMap() {
           var uluru = {lat: 33.1307301, lng: -117.2357504};
+          var singapur = {lat: 1.283217, lng: 103.8488996};
+          var barcelona = {lat: 41.4025344, lng: 2.1575719};
+          var atlanta = {lat: 33.8395408, lng: -84.3834633};
+          var hong = {lat: 22.3164195, lng: 114.1680507};
           var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 18,
             center: uluru
@@ -93,27 +107,47 @@
 
           var map2 = new google.maps.Map(document.getElementById('map-eu'), {
             zoom: 18,
-            center: uluru
+            center: singapur
           });
           var marker2 = new google.maps.Marker({
-            position: uluru,
+            position: singapur,
             map: map2
           });
 
 
           var map3 = new google.maps.Map(document.getElementById('map-emea'), {
             zoom: 18,
-            center: uluru
+            center: barcelona
           });
           var marker3 = new google.maps.Marker({
-            position: uluru,
+            position: barcelona,
             map: map3
+          });
+
+           var map4 = new google.maps.Map(document.getElementById('map-atlanta'), {
+            zoom: 18,
+            center: atlanta
+          });
+          var marker4 = new google.maps.Marker({
+            position: atlanta,
+            map: map4
+          });
+
+           var map5 = new google.maps.Map(document.getElementById('map-hong'), {
+            zoom: 18,
+            center: hong
+          });
+          var marker5 = new google.maps.Marker({
+            position: hong,
+            map: map5
           });
         }
       </script>
       <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLJUxUGa6D4x1TrnHuqm4RXFckSVAEeAE&callback=initMap">
     </script>
+<?php } ?>
+     
 
     <?php 
     $titan = TitanFramework::getInstance( 'proficio' );

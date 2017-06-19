@@ -40,4 +40,4 @@
 
              <div class="menu-top-header-container" style="
 "><ul id="menu-top-header" class="menu"><div id="tb-search" class="tb-menu-search tb-search-active" style="display: none;"><div class="search-close"><span class="icon-cancel tb-close">
-</span></div><div class="tb-search-inner"><form role="search" method="get" class="search-form" action="http://proficio.wpengine.com/"><label><span class="screen-reader-text">Search for:</span><input type="search" class="search-field" placeholder="Type and press enter…" value="" name="s" title="Search for:"></label></form></div></div></ul></div>
+</span></div><div class="tb-search-inner"><form role="search" method="get" class="search-form" action="https://proficio.com"><label><span class="screen-reader-text">Search for:</span><input type="search" class="search-field" placeholder="Type and press enter…" value="" name="s" title="Search for:"></label></form></div></div></ul></div>

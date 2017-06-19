@@ -27,6 +27,10 @@ global $wp_query;
                                                         while ( have_posts() ) : the_post(); ?>
 
                                                          <li>
+                                                         <?php if (has_post_thumbnail()) { ?>
+                                                            <div style="background: url("<?php the_post_thumbnail_url(); ?>" );"></div>
+                                                        <?php } ?>
+                               
                                  <h4><a href="<?php the_permalink(); ?>">
                                    <?php the_title();  ?>
                                  </a></h4>

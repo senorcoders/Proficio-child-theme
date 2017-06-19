@@ -99,7 +99,8 @@
        
 
         if (is_home()) {
- $h1 = 'Search Results';            $h2 = $titan->getOption( 'heading-h2', 47 );
+          $h1 = 'Blog';            
+           $h2 = $titan->getOption( 'heading-h2', 47 );
             $ctaText = $titan->getOption( 'cta-button-text', 47 );
             $ctaLink = $titan->getOption( 'cta-button-link', 47 );
             $hero = wp_get_attachment_url($titan->getOption( 'header_image', 47 ));

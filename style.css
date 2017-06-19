@@ -8,6 +8,7 @@ Text Domain: proficio
  body {
      background-color: #000 !important;
      color: #fff;
+     overflow-x: hidden;
  }
  
  body,
@@ -471,12 +472,12 @@ Text Domain: proficio
  #menu-additional-services > li,
  #menu-additional-services > li > .sub-menu > li {
      list-style: none !important;
-     line-height: 15px;
+     line-height: 20px;
  }
  
  #menu-additional-services > li,
  #menu-additional-services > li > .sub-menu > li:first-child {
-     padding-top: 10px;
+     padding-top: 0;
  }
  
  #menu-additional-services,
@@ -492,11 +493,11 @@ Text Domain: proficio
  }
  
  #menu-additional-services > li > .sub-menu > li > a {
-     font-size: 12px !important;
+     font-size: 13px !important;
  }
  
  #menu-additional-services > li {
-     margin-bottom: 10px;
+     margin-bottom: 20px;
  }
  
  #mega-menu-item-nav_menu-3,
@@ -547,7 +548,8 @@ Text Domain: proficio
      background-position: center;
  }
  
- #mega-menu-item-176:hover > a:before {
+ #mega-menu-item-176:hover > a:before,
+ .solutions-custom-grid img {
      filter: brightness(0) invert(1);
  }
  
@@ -1366,8 +1368,7 @@ Text Domain: proficio
  #menu-objectives {
      /*float: right;*/
  }
- 
- #mega-menu-item-310 > a:before {
+ /* #mega-menu-item-310 > a:before {
      background: url(/wp-content/uploads/2017/05/Automate-1.png);
      content: " ";
      width: 30px;
@@ -1536,7 +1537,7 @@ Text Domain: proficio
      background-position: center center;
      background-repeat: no-repeat;
      margin: 0 auto !important;
- }
+ }*/
  
  #top-menu {
      list-style: none;
@@ -1586,7 +1587,7 @@ Text Domain: proficio
  }
  
  #mega-menu-item-26 .mega-sub-menu {
-     width: 70% !important;
+     width: 60% !important;
      left: 10% !important;
  }
  
@@ -1595,12 +1596,10 @@ Text Domain: proficio
 */
      padding-right: 10px;
  }
- 
- #mega-menu-item-240 .mega-sub-menu,
- #mega-menu-item-25 .mega-sub-menu {
+ /* #mega-menu-item-25 .mega-sub-menu {
      width: 70% !important;
      left: 20% !important;
- }
+ }*/
  
  .objectives-box .resourcesBgBox > div > a {
      text-transform: uppercase;
@@ -1613,11 +1612,10 @@ Text Domain: proficio
      padding: 30px 10px !important;
      min-height: 92px;
  }
- 
- #mega-menu-item-22 .mega-sub-menu {
+ /*#mega-menu-item-22 .mega-sub-menu {
      width: 50% !important;
      left: 50% !important;
- }
+ }*/
  
  #mapDiv .place-card.place-card-medium {
      display: none !important;
@@ -1731,7 +1729,8 @@ Text Domain: proficio
      padding: 50px 0;
  }
  
- .page-id-297 .full-padding {
+ .page-id-297 .full-padding,
+ .page-id-1179 .full-padding {
      padding: 0 !important;
  }
  
@@ -1904,8 +1903,7 @@ Text Domain: proficio
      text-align: center;
      font-size: 1.5rem;
  }
- 
- #menu-additional-services {
+ /* #menu-additional-services {
      display: inline-flex;
      flex-wrap: wrap;
      width: 100%;
@@ -1918,6 +1916,7 @@ Text Domain: proficio
      text-align: center;
      position: relative;
  }
+*/
  /* #menu-additional-services > li:nth-child(1) {
      width: 27%;
  }
@@ -1963,7 +1962,6 @@ Text Domain: proficio
  }
  
  #mega-menu-item-nav_menu-7,
- #mega-menu-item-nav_menu-6,
  #mega-menu-item-text-13 {
      background: #2b2b2b !important;
  }
@@ -2244,7 +2242,7 @@ Text Domain: proficio
  }
  
  .event-list-item {
-     background: #f4f5f9;
+     background: #333;
      padding: 20px 15px 20px;
      margin-bottom: 30px;
  }
@@ -2260,7 +2258,6 @@ Text Domain: proficio
  }
  
  .event-list-title a {
-     color: #000;
      text-decoration: none;
      text-shadow: none;
  }
@@ -2268,7 +2265,7 @@ Text Domain: proficio
  .event-list .row {
      position: relative;
      padding-bottom: 40px;
-     color: #000 !important;
+     color: #fff !important;
  }
  
  .event-list-cta {
@@ -2277,7 +2274,7 @@ Text Domain: proficio
      font-size: 18px;
      right: 20px;
      bottom: 0;
-     color: #000;
+     color: #fff;
      text-decoration: underline;
  }
  
@@ -2293,7 +2290,7 @@ Text Domain: proficio
      font-weight: 300;
      margin: 0 0 10px;
      padding: 0;
-     color: #000;
+     color: #fff;
      text-shadow: none;
  }
  
@@ -2302,7 +2299,7 @@ Text Domain: proficio
      margin-bottom: 18px;
      font-weight: 600;
      padding: 0;
-     color: #000;
+     color: #fff;
  }
  
  .page-module.darkGray {
@@ -2463,7 +2460,7 @@ Text Domain: proficio
  }
  
  #mega-menu-item-text-15 {
-     background: #2b2b2b !important;
+     background: #2a2a2a !important;
  }
  
  .solutions-explore-mm {
@@ -2473,6 +2470,8 @@ Text Domain: proficio
  .solutions-explore-mm a {
      color: #fff !important;
      text-transform: uppercase;
+     background: #434343 !important;
+     padding: 10px;
  }
  
  #menu-additional-services li a:hover:before,
@@ -2859,6 +2858,10 @@ Text Domain: proficio
  .flex5 a {
      text-transform: uppercase;
      position: relative;
+     transition: color .2s ease, border .2s ease, background .2s ease, opacity .2s ease;
+     transition-delay: 0.4s;
+     transform: translateY(0);
+     opacity: 1;
  }
  
  .flexContainer .flex5:nth-child(1) a:before {
@@ -2869,6 +2872,9 @@ Text Domain: proficio
      height: 80px;
      top: -250%;
      left: -35%;
+     transition-delay: 0.4s;
+     transform: translateY(0);
+     opacity: 1;
  }
  
  .page-id-266 .flexContainer .flex5:nth-child(1) a:before,
@@ -3031,6 +3037,207 @@ Text Domain: proficio
  .block-list li {
      margin: 5px 0;
  }
+ 
+ #mega-menu-item-240 ul.mega-sub-menu,
+ #mega-menu-item-25 ul.mega-sub-menu,
+ #mega-menu-item-22 ul.mega-sub-menu {
+     width: 210% !important;
+     background: #000 !important;
+     left: -30% !important;
+     padding: 10px !important;
+     margin-top: 20px !important;
+ }
+ 
+ #mega-menu-item-240 ul.mega-sub-menu li,
+ #mega-menu-item-25 ul.mega-sub-menu li,
+ #mega-menu-item-22 ul.mega-sub-menu li {
+     border: none !important;
+     margin: 10px 0 !important;
+ }
+ 
+ #mega-menu-item-240 ul.mega-sub-menu li a span:before,
+ #mega-menu-item-25 ul.mega-sub-menu li a span:before,
+ #mega-menu-item-22 ul.mega-sub-menu li a:before {
+     content: "\f096" !important;
+     font-family: fontAwesome !important;
+     margin-right: 10px !important;
+     color: #00fefb !important;
+ }
+ 
+ #mega-menu-item-240 ul.mega-sub-menu li a,
+ #mega-menu-item-25 ul.mega-sub-menu li a,
+ #mega-menu-item-22 ul.mega-sub-menu li a {
+     line-height: 20px !important;
+ }
+ 
+ #mega-menu-item-240 ul.mega-sub-menu li a span,
+ #mega-menu-item-25 ul.mega-sub-menu li a span,
+ #mega-menu-item-22 ul.mega-sub-menu li a {
+     text-transform: uppercase !important;
+ }
+ 
+ #mega-menu-item-240 ul.mega-sub-menu li a:before,
+ #mega-menu-item-25 ul.mega-sub-menu li a:before {
+     display: none !important;
+ }
+ 
+ #menu-additional-services > li > a {
+     color: #fff !important;
+ }
+ 
+ .solution-new-mm {
+     justify-content: center;
+     align-items: center;
+     padding: 20px 0;
+ }
+ 
+ .solution-new-mm h3 {
+     font-size: 17px;
+ }
+ 
+ .solution-new-mm .col-md-8 {
+     padding-left: 0 !important;
+ }
+ 
+ .solution-new-mm .col-md-4 {
+     text-align: right;
+ }
+ 
+ .solution-new-mm .col-md-4 img {
+     width: 80px !important;
+ }
+ 
+ .custom-solution-new-mm a:hover {
+     text-decoration: none !important;
+ }
+ 
+ .custom-solution-new-mm a:hover img {
+     filter: brightness(0) invert(1);
+ }
+ 
+ #mega-menu-item-text-16 > .textwidget > .row > .col-md-12 {
+     padding-left: 0 !important;
+ }
+ 
+ .solutions-custom-grid > div.col > div {
+     background: #333333;
+     text-align: center;
+     padding-top: 20px;
+ }
+ 
+ .grid-link {
+     background: #0bf8f5;
+     line-height: 32px !important;
+ }
+ 
+ .grid-link a {
+     color: #333;
+ }
+ 
+ .solutions-custom-grid > div.col > div p {
+     line-height: 20px;
+ }
+ 
+ .grid-name {
+     min-height: 60px;
+     text-transform: uppercase;
+     font-size: 11pt !important;
+ }
+ 
+ .solutions-custom-grid > div.col > div img {
+     width: 40px;
+ }
+ 
+ .vega-bg {
+     background: url(/wp-content/uploads/2017/05/MB_LibertineArcadeBar_v2s.jpg);
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+     padding: 100px 0;
+ }
+ 
+ .vega-whitebg {
+     width: 50%;
+     margin: 0 auto;
+     background: #fff;
+     opacity: .9;
+     color: #000;
+     padding: 20px 10px;
+ }
+ 
+ .vega-whitebg p {
+     font-family: 'Questrial', 'sans-serif' !important;
+ }
+ 
+ .vega-whitebg .mktoForm input[type=text],
+ .vega-whitebg .mktoForm input[type=email],
+ .vega-whitebg .mktoForm input[type=tel] {
+     background: transparent !important;
+     box-shadow: none !important;
+     border: 1px solid #000 !important;
+     height: 30px;
+     padding-left: 10px !important;
+     text-transform: uppercase;
+     font-size: 10pt !important;
+     color: #000 !important;
+ }
+ 
+ .main-solutions-page-icons {
+     width: 70%;
+     margin: 0 auto;
+ }
+ 
+ .main-solutions-page-icons .col-md-4,
+ .industry-solutions-icons .col {
+     text-align: center;
+ }
+ 
+ .main-solutions-page-icons img {
+     height: 120px;
+ }
+ 
+ .industry-solutions-icons h3 {
+     color: #46fefa;
+     font-size: 17px;
+     margin-top: 10px;
+ }
+ 
+ .industry-solutions-icons img {
+     width: 80px;
+ }
+ 
+ .resultados .row {
+     margin: 50px 0;
+ }
+ 
+ .post-image {
+     background-size: cover !important;
+     background-repeat: no-repeat !important;
+     background-position: center !important;
+     min-height: 200px;
+     margin-bottom: 10px;
+ }
+ 
+ #mega-menu-item-text-16 {
+     width: 60% !important;
+ }
+ 
+ #mega-menu-item-nav_menu-6 {
+     width: 40% !important;
+ }
+ 
+/* #mktoForm_1098 .mktoButton {
+     background: #333 !important;
+ }*/
+ 
+ #mega-menu-max_mega_menu_6 .mega-sub-menu {
+     padding: 0 10px !important;
+     background: #000 !important;
+ }
+ 
+ .full-padding > .container {
+     padding: 50px 0;
+ }
  /*MEDIA QUERIES*/
  
  @media (max-width: 768px) {
@@ -3047,6 +3254,9 @@ Text Domain: proficio
      .security-list,
      .block-list {
          column-count: 1;
+     }
+     .industry-solutions-icons {
+         display: block;
      }
  }
  
@@ -3164,8 +3374,7 @@ Text Domain: proficio
          margin-top: 10px;
      }
      #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item,
-     #mega-menu-item-240 .mega-sub-menu,
-     #mega-menu-item-22 .mega-sub-menu {
+     #mega-menu-item-240 .mega-sub-menu {
          width: 100% !important;
      }
      #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > a.mega-menu-link {
@@ -3221,6 +3430,12 @@ Text Domain: proficio
      }
      .week-item:after {
          display: none;
+     }
+     .solutions-custom-grid {
+         display: block !important;
+     }
+     .vega-whitebg {
+         width: 100% !important;
      }
  }
  
@@ -3298,25 +3513,24 @@ border-right: 1px solid #000;
          width: 40% !important;
          left: 40% !important;
      }
-     #mega-menu-item-240 .mega-sub-menu,
-     #mega-menu-item-25 .mega-sub-menu {
+     /* #mega-menu-item-25 .mega-sub-menu {
          width: 50% !important;
          left: 40% !important;
-     }
-     #mega-menu-item-25 .mega-sub-menu {
+     }*/
+     /*#mega-menu-item-25 .mega-sub-menu {
          left: 50% !important;
-     }
-     #mega-menu-item-22 .mega-sub-menu {
+     }*/
+     /*#mega-menu-item-22 .mega-sub-menu {
          width: 30% !important;
          left: 70% !important;
-     }
+     }*/
      #mega-menu-item-26 .mega-sub-menu {
-         width: 45% !important;
+         width: 40% !important;
          left: 40% !important;
      }
-     #mega-menu-item-26 .mega-sub-menu:not(:root:root) {
+     /*#mega-menu-item-26 .mega-sub-menu:not(:root:root) {
          width: 55% !important;
-     }
+     }*/
  }
  
  @media (max-width: 600px) {
@@ -3330,5 +3544,11 @@ border-right: 1px solid #000;
      #quotesCarousel .carousel-item > p:before,
      .quote-static blockquote p:before {
          margin-left: -2.5%;
+     }
+ }
+ 
+ @media(max-width: 1400px) {
+     .vega-whitebg {
+         width: 70%;
      }
  }

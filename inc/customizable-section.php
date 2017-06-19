@@ -29,9 +29,10 @@ if ($video_url == '1') {
 <?php if ($aa_checkbox_val == 'video') { ?>
 <div class="grayBg">
   <div class="container">
-    <a  data-toggle="modal" data-target="#pre-footer-modal" class="center-play"><img src="/wp-content/uploads/2017/05/video_icon.png" alt="Resources"></a>
-  </br><br>
-  <blockquote><?php echo $description; ?></blockquote>
+
+  <h1><?php echo $description; ?></h1>
+  <br>
+  <a  data-toggle="modal" data-target="#pre-footer-modal" class="btn btn-primary btn-xl">Watch Video</a>
 </div>
 </div>
 
