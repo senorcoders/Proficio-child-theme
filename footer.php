@@ -7,7 +7,7 @@
 
 ?>
 
-<?php if (is_page(1179)) { ?>
+<?php if (is_page(1179) or (is_page(1503)) or is_page(1416) or is_page(1462) or is_page(1466)) { ?>
   <div class="pre-footer text-center">
 
   <p>Find Out What Proficio Can Do for You &nbsp;&nbsp;&nbsp; <a class="btn btn-primary btn-xl" href="/managed-security-services-quote/">Contact Us Today!</a></p>
@@ -90,13 +90,13 @@
 <?php if (is_page(352)) { ?>
      <script>
         function initMap() {
-          var uluru = {lat: 33.1307301, lng: -117.2357504};
+          var uluru = {lat: 33.1387564, lng: -117.294406};
           var singapur = {lat: 1.283217, lng: 103.8488996};
           var barcelona = {lat: 41.4025344, lng: 2.1575719};
           var atlanta = {lat: 33.8395408, lng: -84.3834633};
           var hong = {lat: 22.3164195, lng: 114.1680507};
           var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 18,
+            zoom: 12,
             center: uluru
           });
           var marker = new google.maps.Marker({
@@ -106,7 +106,7 @@
 
 
           var map2 = new google.maps.Map(document.getElementById('map-eu'), {
-            zoom: 18,
+            zoom: 12,
             center: singapur
           });
           var marker2 = new google.maps.Marker({
@@ -116,7 +116,7 @@
 
 
           var map3 = new google.maps.Map(document.getElementById('map-emea'), {
-            zoom: 18,
+            zoom: 12,
             center: barcelona
           });
           var marker3 = new google.maps.Marker({
@@ -125,7 +125,7 @@
           });
 
            var map4 = new google.maps.Map(document.getElementById('map-atlanta'), {
-            zoom: 18,
+            zoom: 12,
             center: atlanta
           });
           var marker4 = new google.maps.Marker({
@@ -134,7 +134,7 @@
           });
 
            var map5 = new google.maps.Map(document.getElementById('map-hong'), {
-            zoom: 18,
+            zoom: 12,
             center: hong
           });
           var marker5 = new google.maps.Marker({
@@ -149,17 +149,9 @@
 <?php } ?>
      
 
-    <?php 
-    $titan = TitanFramework::getInstance( 'proficio' );
     
-    $signature1 = $titan->getOption('signature1');
-    $signature2 = $titan->getOption('signature2');
 
-    $signature3 = $titan->getOption('signature2');
-
-    ?> 
-
-    <script>
+    <!-- <script>
       jQuery(document).ready(function(){
         if(document.URL.indexOf("/signature1") >= 0){ 
           window.location.href = "<?php echo $signature1; ?>";
@@ -172,7 +164,59 @@
           window.location.href = "<?php echo $signature3; ?>";
         }
       });
-    </script> 
+    </script>  -->
+
+
+    <?php if (is_front_page()) { ?>
+     
+
+<script type="text/javascript">
+    adroll_adv_id = "JFDKJUXIR5DSHFGBQA5YJA";
+    adroll_pix_id = "KHJNXXS5DRHKJEI3PVF4IT";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username@example.com"; */
+    (function () {
+        var _onload = function(){
+            if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+            if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+            var scr = document.createElement("script");
+            var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+            scr.setAttribute('async', 'true');
+            scr.type = "text/javascript";
+            scr.src = host + "/j/roundtrip.js";
+            ((document.getElementsByTagName('head') || [null])[0] ||
+                document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+        };
+        if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+        else {window.attachEvent('onload', _onload)}
+    }());
+</script>
+    <?php } ?>
+
+
+    <?php if (is_page(857)) { ?>
+      <script type="text/javascript">
+   adroll_adv_id = "QOLRKBZXNZAVDN2RQBDLU3";
+    adroll_pix_id = "QYMPIBZWURDT3LVWKOJODG";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username@example.com"; */
+    (function () {
+        var _onload = function(){
+            if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+            if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+            var scr = document.createElement("script");
+            var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+            scr.setAttribute('async', 'true');
+            scr.type = "text/javascript";
+            scr.src = host + "/j/roundtrip.js";
+            ((document.getElementsByTagName('head') || [null])[0] ||
+                document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+        };
+        if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+        else {window.attachEvent('onload', _onload)}
+    }());
+</script>
+   <?php } ?>
 
   </body>
 

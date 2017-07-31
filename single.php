@@ -1,12 +1,5 @@
 <?php
-/**
- * This file adds the Single Post Template to any Genesis child theme.
- *
- * @author Brad Dalton
- * @example  http://wpsites.net/
- * @copyright 2014 WP Sites
- */
-//* Add custom body class to the head
+
 
 the_post();
 
@@ -16,6 +9,17 @@ the_post();
 <html lang="en">
 
 <head>
+<!-- RTP tag --> 
+<script type='text/javascript'>
+(function(c,h,a,f,i,e){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+ c[a].a=i;c[a].e=e;var g=h.createElement("script");g.async=true;g.type="text/javascript";
+ g.src=f+'?aid='+i;var b=h.getElementsByTagName("script")[0];b.parentNode.insertBefore(g,b);
+ })(window,document,"rtp","//sjrtp8-cdn.marketo.com/rtp-api/v1/rtp.js","prosocinc");
+ 
+rtp('send','view');
+rtp('get', 'campaign',true);
+</script>
+<!-- End of RTP tag -->
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -109,7 +113,7 @@ the_post();
 			<div class="col-md-8">
 				
 				<div>
-					 <p>Posted on <span class="green"><?php the_date(); ?></span> by  <span class="green"><?php echo get_the_author(); ?></span></p>
+					 <p>Posted on <span class="green"><?php the_date(); ?></span> by  <span class="green"><!-- <?php //echo get_the_author(); ?> --> Proficio</span></p>
 					<p><?php 
 					the_content();
 				

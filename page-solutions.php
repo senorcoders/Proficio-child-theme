@@ -7,71 +7,93 @@
   
 ?>	
 
-    <div class="container">
+<div style="padding: 70px 0">
+<div class="container">
+    <h1 style="text-align: center; color: #00fef8; text-transform: initial;"><?php the_field('main_title'); ?></h1>
+    <div style="text-align: center;"><?php the_field('main_subtitle'); ?></div>
+
+    <?php
+
+if( have_rows('solutions_logos') ): ?>
+    <div class="main-solutions-page-icons">
         <div class="row">
-                <?php if (have_posts()) : ?>
-                    <?php while (have_posts()) : the_post(); ?>
-                    <div class="col-md-12">
-                    
-                    <?php the_content(); ?>
+
+  <?php  while ( have_rows('solutions_logos') ) : the_row(); ?>
+            <div class="col-md-4">
+                <div><img style="max-width: 100%;" src="<?php the_sub_field('logo_image'); ?>" /></div>
+                <a href="<?php the_sub_field('logo_url'); ?>"><h3 class="main-solutions-h3"><?php the_sub_field('logo_title'); ?></h3></a>
+                <div style="line-height: 20px;"><?php the_sub_field('logo_description'); ?></div>
+            </div>
+
+   <?php endwhile; ?>
+
+    </div>
+    </div>
+
+<?php else : ?>
+
+
+<?php endif; ?>
+
+    
+           
+       
+                <p><?php the_field('solutions_content'); ?></p>
+            &nbsp;
+            </div>
+            <hr>
+
+<?php 
+
+                if( have_rows('additional_services_list') ): ?>
+                    <div class="container">
+                    &nbsp;
+                        <div class="row industry-solutions-icons">
+
+
+                    <?php 
+
+                    while( have_rows('additional_services_list') ): the_row(); ?>
+
+                     <div class="col">
+                        <div><img src="<?php the_sub_field('service_logo'); ?>" alt="Incident Response" /></div>
+                        <h3><?php the_sub_field('service_name'); ?></h3>
+
+                           <?php if( have_rows('service_items') ): ?>
+                                <ul class="list-subicon-item">
+                                <?php 
+
+                                while( have_rows('service_items') ): the_row();
+
+                                    ?>
+                                   <li><a href="<?php the_sub_field('item_url'); ?>">
+                                       <?php the_sub_field('item_name'); ?>
+                                   </a></li>
+                                <?php endwhile; ?>
+                                </ul>
+                            <?php endif; ?>
+
+                
                     </div>
-                    <?php endwhile; ?>
-                    <?php else : ?>
-                    <h6 class="center">Not Found</h6>
-                    <p class="center">Sorry, but you are looking for something that isn't here.</p>
-                    <?php endif; ?>
-            
-        </div>
-    </div>
 
-    <div class="container" style="padding: 100px 0;">
+                       
 
-     <div class="menu-solution">
-   			 <div>
-    				<h3>Managed Services</h3>
-    			</div>
-    		<div class="row managed-icons">
-    			<div class="col-md-4">
-    				<div style="margin-bottom: 15px;">
-    					<img src="/wp-content/uploads/2017/05/fully-managed.png" width="150px">
-    				</div>
-    				<a href="#"><h5>Fully Managed Security Operations</h5></a>
-    				<p>We own and operate the SIEM and 24/7 SOC for you.</p>
-    			</div>
-    			<div class="col-md-4">
-    				<div style="margin-bottom: 15px;">
-    					<img src="/wp-content/uploads/2017/05/co-managed.png" width="150px">
-    				</div>
-    				<a href="#"><h5>Co-managed | Hybrid</h5></a>
-    				<p>You own the SIEM, we co-manage it for you and provide a 24/7 SOC.</p>
-    			</div>
-    			<div class="col-md-4">
-    				<div style="margin-bottom: 15px;">
-    					<img src="/wp-content/uploads/2017/05/custom.png" width="150px">
-    				</div>
-    				<a href="#"><h5>Custom solutions</h5></a>
-    				<p>Create your own cybersecurity environment with our managed security services.</p>
-    			</div>
-    			
-    		</div>
-    </div>
+                    <?php endwhile;  ?>
+                        </div>
+                    </div>
+                <?php endif;  ?>
 
-    <div class="menu-solution">
-   			 <div>
-    				<h3>Solution Topics</h3>
-    			</div>
-    		 <?php wp_nav_menu( array( 'theme_location' => 'max_mega_menu_2' ) ); ?>
+            <hr /> 
+            &nbsp;
+            <h3 style="text-align: center; color: #00fef8; text-transform: initial;"><?php the_field('solution_topics_title'); ?></h3> 
+            <div class="container">
 
-    	</div>
+            <?php echo do_shortcode('[maxmegamenu location=max_mega_menu_2]'); ?>
+            </div>
 
-    	<div class="menu-solution">
-    			<div>
-    				<h3>Additional Services</h3>
-    			</div>
-    		 <?php wp_nav_menu( array( 'theme_location' => 'max_mega_menu_1' ) ); ?>
 
-    	</div>
-    </div>
+            </div>
+
    
 
 			

@@ -272,22 +272,34 @@ add_theme_support( 'custom-logo', array(
           $atts
           );
 
-        return '
-        <div class="modal fade" tabindex="-1" role="dialog" id="pre-footer-modal">
+
+      
+
+        $html .= '<div class="modal fade" tabindex="-1" role="dialog" id="pre-footer-modal">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               </div>
-              <div class="modal-body">
-                <iframe width="100%" height="400" src="' . esc_attr($atts['url']) . '" frameborder="0" allowfullscreen></iframe>
-              </div>
+              <div class="modal-body">';
+
+                if (strpos(esc_attr($atts['url']), "/wp-content/") !== false ) {
+
+                  $html .= '<video width="100%" height="440" controls>
+                            <source src="'. esc_attr($atts['url']) .'" type="video/mp4">
+                          </video>';
+
+        }else{
+          $html .= ' <iframe width="100%" height="400" src="' . esc_attr($atts['url']) . '" frameborder="0" allowfullscreen></iframe>';
+        }
+
+          $html .= '</div>
 
             </div>
           </div>
-        </div>
+        </div>';
 
-        ';
+        return $html;
 
 
 

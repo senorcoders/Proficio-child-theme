@@ -23,8 +23,8 @@ function proficio_create_options() {
 	 */
 	
 	$section = $titan->createThemeCustomizerSection( array(
-                                                         'name' => __( 'Theme Options', 'proficio' ),
-                                                         ) );
+                                                        'name' => __( 'Theme Options', 'proficio' ),
+                                                        ) );
 	
 	$section->createOption( array(
                                 'name' => __( 'Background Color', 'proficio' ),
@@ -70,45 +70,45 @@ function proficio_create_options() {
                                               ) );
 
 	$generalTab->createOption( array(
-                                   'name' => 'Logo',
-                                   'id' => 'logo-image',
-                                   'type' => 'upload',
-                                   'desc' => _('Logo')
-                                   ) );
+                                  'name' => 'Logo',
+                                  'id' => 'logo-image',
+                                  'type' => 'upload',
+                                  'desc' => _('Logo')
+                                  ) );
 
 	$generalTab->createOption( array(
-                                   'name' => 'Email',
-                                   'id' => 'email',
-                                   'type' => 'text',
-                                   'desc' => _('Business Email')
-                                   ) );
+                                  'name' => 'Email',
+                                  'id' => 'email',
+                                  'type' => 'text',
+                                  'desc' => _('Business Email')
+                                  ) );
 
 	$generalTab->createOption( array(
-                                   'name' => 'Phone Number',
-                                   'id' => 'phone',
-                                   'type' => 'text',
-                                   'desc' => _('Business Phone Number')
-                                   ) );
+                                  'name' => 'Phone Number',
+                                  'id' => 'phone',
+                                  'type' => 'text',
+                                  'desc' => _('Business Phone Number')
+                                  ) );
 
 	
 
 	$generalTab->createOption( array(
-                                   'name' => 'Address',
-                                   'id' => 'address',
-                                   'type' => 'text',
-                                   'desc' => _('Business address')
-                                   ) );
+                                  'name' => 'Address',
+                                  'id' => 'address',
+                                  'type' => 'text',
+                                  'desc' => _('Business address')
+                                  ) );
 
 
 	
 	
 	$generalTab->createOption( array(
-                                   'type' => 'save',
-                                   ) );
+                                  'type' => 'save',
+                                  ) );
 
 	$signature = $adminPanel->createTab( array(
-                                             'name' => __( 'Signature Redirect', 'proficio' ),
-                                             ) );
+                                            'name' => __( 'Signature Redirect', 'proficio' ),
+                                            ) );
 
 	$signature->createOption( array(
                                   'name' => 'Signature 1',
@@ -128,6 +128,24 @@ function proficio_create_options() {
                                   'type' => 'text',
                                   'desc' => _('Write down the redirect url for signature 3')
                                   ) );
+  $signature->createOption( array(
+                                  'name' => 'Signature 4',
+                                  'id' => 'signature4',
+                                  'type' => 'text',
+                                  'desc' => _('Write down the redirect url for signature 4')
+                                  ) );
+  $signature->createOption( array(
+                                  'name' => 'Signature 5',
+                                  'id' => 'signature5',
+                                  'type' => 'text',
+                                  'desc' => _('Write down the redirect url for signature 5')
+                                  ) );
+  $signature->createOption( array(
+                                  'name' => 'Signature 6',
+                                  'id' => 'signature6',
+                                  'type' => 'text',
+                                  'desc' => _('Write down the redirect url for signature 6')
+                                  ) );
 
 	$signature->createOption( array(
                                   'type' => 'save',
@@ -141,79 +159,79 @@ function proficio_create_options() {
 	
 	
 	$header->createOption( array(
-                               'name' => 'Title Slide 1',
-                               'id' => 'title1',
-                               'type' => 'text'
-                               ) );
+                              'name' => 'Title Slide 1',
+                              'id' => 'title1',
+                              'type' => 'text'
+                              ) );
 
 	$header->createOption( array(
-                               'name' => 'Subtitle Slide 1',
-                               'id' => 'subtitle1',
-                               'type' => 'text'
-                               ) );
+                              'name' => 'Subtitle Slide 1',
+                              'id' => 'subtitle1',
+                              'type' => 'text'
+                              ) );
 
 
 	$header->createOption( array(
-                               'name' => 'Slide 1',
-                               'id' => 'slide1',
-                               'type' => 'file',
-                               'desc' => 'Upload your image for slide 1'
-                               ) );
+                              'name' => 'Slide 1',
+                              'id' => 'slide1',
+                              'type' => 'file',
+                              'desc' => 'Upload your image for slide 1'
+                              ) );
 
 	$header->createOption( array(
-                               'name' => 'Title Slide 2',
-                               'id' => 'title2',
-                               'type' => 'text'
-                               ) );
+                              'name' => 'Title Slide 2',
+                              'id' => 'title2',
+                              'type' => 'text'
+                              ) );
 
 	$header->createOption( array(
-                               'name' => 'Subtitle Slide 2',
-                               'id' => 'subtitle2',
-                               'type' => 'text'
-                               ) );
+                              'name' => 'Subtitle Slide 2',
+                              'id' => 'subtitle2',
+                              'type' => 'text'
+                              ) );
 
 	$header->createOption( array(
-                               'name' => 'Slide 2',
-                               'id' => 'slide2',
-                               'type' => 'file',
-                               'desc' => 'Upload your image for slide 2'
-                               ) );
+                              'name' => 'Slide 2',
+                              'id' => 'slide2',
+                              'type' => 'file',
+                              'desc' => 'Upload your image for slide 2'
+                              ) );
 
 	$header->createOption( array(
-                               'name' => 'Title Slide 3',
-                               'id' => 'title3',
-                               'type' => 'text'
-                               ) );
+                              'name' => 'Title Slide 3',
+                              'id' => 'title3',
+                              'type' => 'text'
+                              ) );
 
 	$header->createOption( array(
-                               'name' => 'Subtitle Slide 3',
-                               'id' => 'subtitle3',
-                               'type' => 'text'
-                               ) );
+                              'name' => 'Subtitle Slide 3',
+                              'id' => 'subtitle3',
+                              'type' => 'text'
+                              ) );
 
 	$header->createOption( array(
-                               'name' => 'Slide 3',
-                               'id' => 'slide3',
-                               'type' => 'file',
-                               'desc' => 'Upload your image for slide 3'
-                               ) );
+                              'name' => 'Slide 3',
+                              'id' => 'slide3',
+                              'type' => 'file',
+                              'desc' => 'Upload your image for slide 3'
+                              ) );
 
 	$header->createOption( array(
-                               'type' => 'save',
-                               ) );
+                              'type' => 'save',
+                              ) );
 
 	$footer = $adminPanel->createTab( array(
                                           'name' => __( 'Footer', 'proficio' ),
                                           ) );
 
 	$footer->createOption( array(
-                               'name' => 'footer-logo',
-                               'id' => 'footer-logo',
-                               'type' => 'file'
-                               ) );
+                              'name' => 'footer-logo',
+                              'id' => 'footer-logo',
+                              'type' => 'file'
+                              ) );
 	$footer->createOption( array(
-                               'type' => 'save',
-                               ) );
+                              'type' => 'save',
+                              ) );
 	
 }
 
@@ -262,6 +280,18 @@ function mrec_proficio_metabox_options() {
                                     'id' => 'cta-button-link',
                                     'type' => 'text'		
                                     ) );
+    $aa_metbox->createOption( array(
+                                'name' => 'CTA Link Option',
+                                'id' => 'cta_link_option',
+                                'options' => array(
+                                                   '1' => 'Datasheet Download',
+                                                   '2' => 'Video', 
+                                                   '3' => 'None',
+                                                   ),
+                                'type' => 'radio',
+                                'desc' => 'Select one',
+                                'default' => '3',
+                                ) );
 
     $aa_metbox->createOption( array(
                                     'name' => 'Height',
@@ -331,7 +361,7 @@ function mrec_proficio_metabox_options() {
                                     'desc' => 'This is a quote',
                                     'post_type' => 'quotes',
                                     ) );
-     
+
 
     
 

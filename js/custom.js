@@ -1,5 +1,5 @@
 jQuery(document).ready(function() {
-      AOS.init();
+    AOS.init();
 
     jQuery('#navbarExample > ul').addClass('navbar-nav ml-auto');
     jQuery('#navbarExample > ul > li').addClass('nav-item');
@@ -73,9 +73,48 @@ jQuery(document).ready(function() {
 
     });
 
+    jQuery('.rsvp-thank #rsvp-proficio-form').html('<p>Thank you for requesting an invitation to our exclusive Whitelist Party. <br>We will be in touch shortly as we finalize our guest list. If approved you will receive a confirmation email by July 14.</p>');
+    jQuery('.rsvp-thank #webinar-proficio-form').html('<p>Thank You For Registering, We Will Send You the Webinar Login Information Shortly</p>');
+
+
+
+
 
 });
 
 
+$ = jQuery;
+
+function sticky_relocate() {
+    var form = $('.page-id-857 #mktoForm_1055');
+    var window_top = $(window).scrollTop();
+    var div_top = $('.page-id-857 > .full-padding').offset().top;
+    var div_bottom = $('.quote-static').offset().top;
+    var form_height = $('.page-id-857 #mktoForm_1055').height();
+
+    if (window_top > div_top) {
+        form.addClass('stick');
+    } else {
+        form.removeClass('stick');
+    }
+
+    if (window_top > (div_bottom - form_height) - 100) {
+        form.addClass('bottom');
+    } else {
+        form.removeClass('bottom');
+    }
+}
 
 
+
+$(function() {
+    if ($(".page-id-857").length > 0) {
+        if ($(window).width() > 1024) {
+            $(window).scroll(sticky_relocate);
+            sticky_relocate();
+        }
+    }
+
+
+
+});
