@@ -100,8 +100,8 @@
       <a class="btn btn-primary btn-xl" href="#" data-toggle="modal" data-target="#modal-embed" data-src="1017" data-backdrop="static"><?php the_field('svp_text_button'); ?></a>
     </div>
   </div> */ ?>
-
-<div class="first-row flip-left how-proficio-can-help">
+<div class="how-proficio-can-help">
+  <div class="first-row flip-left">
     <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-5">
@@ -112,6 +112,8 @@
         </div>
     </div>
 </div>
+</div>
+
   <div class="first-row flip-right">
     <div class="container">
       <div class="row">
@@ -157,9 +159,9 @@
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
               </div>
-              <div class="modal-body"> <video width="100%" height="440" controls="">
-                            <source src="/wp-content/uploads/2017/05/Proficio_Testimonial_V4.mp4" type="video/mp4">
-                          </video></div>
+              <div class="modal-body"> 
+                <iframe width="100%" height="400" src="https://player.vimeo.com/video/228126148" frameborder="0" allowfullscreen="" id="player0"></iframe>
+              </div>
 
             </div>
           </div>

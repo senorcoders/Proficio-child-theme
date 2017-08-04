@@ -112,6 +112,9 @@ h6 {
 
 
 
+
+
+
 /*.page-id-28 header.masthead, .page-template-page-inside header.masthead{
 height: 400px !important;
 min-height: 400px;
@@ -279,6 +282,9 @@ min-height: 400px;
 
 
 
+
+
+
 /*#mega-menu-item-127  a.mega-menu-link, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item:nth-child(1) > a.mega-menu-link,*/
 
 #resources-submenu>.resourcesBgBox:nth-child(1)>div {
@@ -287,6 +293,9 @@ min-height: 400px;
     background-repeat: no-repeat;
     background-position: center;
 }
+
+
+
 
 
 
@@ -320,6 +329,9 @@ min-height: 400px;
 
 
 
+
+
+
 /*#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item:nth-child(2) > a.mega-menu-link,
 */
 
@@ -329,6 +341,9 @@ min-height: 400px;
     background-repeat: no-repeat;
     background-position: center;
 }
+
+
+
 
 
 
@@ -362,6 +377,9 @@ min-height: 400px;
 
 
 
+
+
+
 /*#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item:nth-child(3) > a.mega-menu-link,
 */
 
@@ -371,6 +389,9 @@ min-height: 400px;
     background-repeat: no-repeat;
     background-position: center;
 }
+
+
+
 
 
 
@@ -404,6 +425,9 @@ min-height: 400px;
 
 
 
+
+
+
 /*#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item:nth-child(4) > a.mega-menu-link,
 */
 
@@ -413,6 +437,9 @@ min-height: 400px;
     background-repeat: no-repeat;
     background-position: center;
 }
+
+
+
 
 
 
@@ -446,6 +473,9 @@ min-height: 400px;
 
 
 
+
+
+
 /*#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item:nth-child(5) > a.mega-menu-link,
 */
 
@@ -455,6 +485,9 @@ min-height: 400px;
     background-repeat: no-repeat;
     background-position: center;
 }
+
+
+
 
 
 
@@ -488,6 +521,9 @@ min-height: 400px;
 
 
 
+
+
+
 /*#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item:nth-child(6) > a.mega-menu-link,
 */
 
@@ -497,6 +533,9 @@ min-height: 400px;
     background-repeat: no-repeat;
     background-position: center;
 }
+
+
+
 
 
 
@@ -530,6 +569,9 @@ min-height: 400px;
 
 
 
+
+
+
 /*#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item:nth-child(7) > a.mega-menu-link,
 */
 
@@ -539,6 +581,9 @@ min-height: 400px;
     background-repeat: no-repeat;
     background-position: center;
 }
+
+
+
 
 
 
@@ -572,6 +617,9 @@ min-height: 400px;
 
 
 
+
+
+
 /*#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item:nth-child(8) > a.mega-menu-link,
 */
 
@@ -581,6 +629,9 @@ min-height: 400px;
     background-repeat: no-repeat;
     background-position: center;
 }
+
+
+
 
 
 
@@ -614,6 +665,9 @@ min-height: 400px;
 
 
 
+
+
+
 /*#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item:nth-child(9) > a.mega-menu-link,
 */
 
@@ -623,6 +677,9 @@ min-height: 400px;
     background-repeat: no-repeat;
     background-position: center;
 }
+
+
+
 
 
 
@@ -925,6 +982,9 @@ min-height: 400px;
     /*    text-shadow: 0 2px 5px rgba(0,0,0,0.4) !important;
 */
 }
+
+
+
 
 
 
@@ -1634,6 +1694,9 @@ a:not([href]):not([tabindex]) {
 
 
 
+
+
+
 /* #mega-menu-item-310 > a:before {
 background: url(/wp-content/uploads/2017/05/Automate-1.png);
 content: " ";
@@ -1860,6 +1923,9 @@ margin: 0 auto !important;
 
 
 
+
+
+
 /* #mega-menu-item-25 .mega-sub-menu {
 width: 70% !important;
 left: 20% !important;
@@ -1876,6 +1942,9 @@ left: 20% !important;
     padding: 30px 10px !important;
     min-height: 92px;
 }
+
+
+
 
 
 
@@ -2180,6 +2249,9 @@ left: 50% !important;
     text-align: center;
     font-size: 1.5rem;
 }
+
+
+
 
 
 
@@ -2732,6 +2804,9 @@ width: 20%;
 #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item.mega-icon-top>a.mega-menu-link>span.mega-title-below {
     margin-top: 5px;
 }
+
+
+
 
 
 
@@ -3564,6 +3639,9 @@ cite.h-card {
 
 
 
+
+
+
 /* #mktoForm_1098 .mktoButton {
 background: #333 !important;
 }*/
@@ -3960,6 +4038,15 @@ background: #333 !important;
     margin-top: 50px;
 }
 
+.splunk-siem {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(/wp-content/uploads/2017/05/technology-servers-server.jpg);
+    padding: 80px 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
 
 
 
@@ -4293,16 +4380,21 @@ width: 55% !important;
         width: 70%;
     }
 
-    .page-id-1179 .vega-whitebg {
+    .page-id-1179 .vega-whitebg,
+    .page-id-1416 .vega-whitebg {
         width: 50%;
     }
 }
 
 
-.page-id-1179 .vega-whitebg {
+.page-id-1179 .vega-whitebg,
+.page-id-1416 .vega-whitebg {
     width: 40%;
     padding: 20px;
 }
+
+
+
 
 
 /* Change to LI on splunk page */
@@ -4311,20 +4403,37 @@ width: 55% !important;
     font-size: 17px
 }
 
+
+
+
 /* Background to pre-footer on splunk page */
 
 .how-proficio-can-help {
-    background: url(/wp-content/uploads/2017/05/servers-bg.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url(/wp-content/uploads/2017/05/mac-bg.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+
+
 
 /** BLOG ALIGNMENT **/
 
-.alignleft{
+.alignleft {
     float: left;
     margin-right: 15px;
 }
 
-.alignright{
+.alignright {
     float: right;
     margin-left: 15px;
+}
+
+@media (min-width: 1000px) {
+    .page-id-1421 .modal-dialog,
+    .page-template-front-page .modal-dialog {
+        width: 950px;
+        max-width: 950px;
+    }
 }
