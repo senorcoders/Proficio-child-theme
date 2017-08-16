@@ -139,16 +139,46 @@ rtp('get', 'campaign',true);
     <header class="masthead" style="background-image: none !important; height: 100vh; overflow: hidden;">
             <div class="video-container">
                         <div class="header-content">
-                            <div class="header-content-inner">
-                                <h1 id="homeHeading"><?php echo $h1; ?></h1>
-                                <h2><?php echo $h2; ?></h2>
-                                <?php if ( !empty($ctaText) ) { ?>
-                                   
-                               
-                                <a class="btn btn-primary btn-xl" href="<?php echo $ctaLink; ?>"><?php echo $ctaText; ?></a>
+                        <?php if (have_rows('carousel_data', 215)) { ?>
+                            <div id="proficio-video-caroussel" class="carousel slide carousel-fade"  >
+                                <div class="carousel-inner">
 
-                                 <?php } ?>
+                               <?php 
+                                    $count = 0;
+
+                                    while (have_rows('carousel_data', 215)): the_row();
+                                        if ($count == 0) { ?>
+                                           <div class="carousel-item active" data-interval="<?php the_sub_field('time'); ?>">
+                                            <div class="header-content-inner">
+                                            <h1 id="homeHeading"><?php the_sub_field('heading_h1'); ?></h1>
+                                            <h2><?php the_sub_field('heading_h2'); ?></h2>
+                               
+                                            </div>
+                                         </div> 
+                                      <?php  } else{ ?>
+
+                                        <div class="carousel-item" data-interval="<?php the_sub_field('time'); ?>">
+                                            <div class="header-content-inner">
+                                            <h1 id="homeHeading"><?php the_sub_field('heading_h1'); ?></h1>
+                                            <h2><?php the_sub_field('heading_h2'); ?></h2>
+                               
+                                            </div>
+                                         </div>
+
+                                       <?php }
+                                       $count++;
+
+                                     endwhile;
+                               
+                             } ?>
+                            
+                             
+                               
+                               
+                               
+                              </div>
                             </div>
+                           
                         </div>
         <div class="filter"></div>
         <video width="100%" height="auto" autoplay="" muted="" loop="" style="background:transparent no-repeat 0 0; background-size:cover;">

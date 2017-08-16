@@ -459,6 +459,12 @@ add_theme_support( 'custom-logo', array(
        'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
        'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
        );
+     $rewrite = array(
+    'slug'                  => 'news',
+    'with_front'            => false,
+    'pages'                 => false,
+    'feeds'                 => false,
+  );
       $args = array(
        'label'                 => __( 'Proficio New', 'text_domain' ),
        'description'           => __( 'Custom Post Type for Proficio News', 'text_domain' ),
@@ -476,6 +482,7 @@ add_theme_support( 'custom-logo', array(
        'has_archive'           => true,		
        'exclude_from_search'   => false,
        'publicly_queryable'    => true,
+      'rewrite'               => $rewrite,
        'capability_type'       => 'page',
        'menu_icon'				=> 'dashicons-welcome-widgets-menus',
        );
@@ -649,4 +656,36 @@ function customer_slide_shortcode() {
   return ob_get_clean();   
 } 
 add_shortcode( 'customer-logos', 'customer_slide_shortcode' );
+
+
+function filter_post_link($permalink, $post) {
+    if ($post->post_type != 'news')
+        return $permalink;
+    return 'blog'.$permalink;
+}
+add_filter('pre_post_link', 'filter_post_link', 10, 2);
+
+
+add_action( 'generate_rewrite_rules', 'add_blog_rewrites' );
+function add_blog_rewrites( $wp_rewrite ) {
+    $wp_rewrite->rules = array(
+        'blog/([^/]+)/?$' => 'index.php?name=$matches[1]',
+        'blog/[^/]+/attachment/([^/]+)/?$' => 'index.php?attachment=$matches[1]',
+        'blog/[^/]+/attachment/([^/]+)/trackback/?$' => 'index.php?attachment=$matches[1]&tb=1',
+        'blog/[^/]+/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$' => 'index.php?attachment=$matches[1]&feed=$matches[2]',
+        'blog/[^/]+/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$' => 'index.php?attachment=$matches[1]&feed=$matches[2]',
+        'blog/[^/]+/attachment/([^/]+)/comment-page-([0-9]{1,})/?$' => 'index.php?attachment=$matches[1]&cpage=$matches[2]',
+        'blog/([^/]+)/trackback/?$' => 'index.php?name=$matches[1]&tb=1',
+        'blog/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$' => 'index.php?name=$matches[1]&feed=$matches[2]',
+        'blog/([^/]+)/(feed|rdf|rss|rss2|atom)/?$' => 'index.php?name=$matches[1]&feed=$matches[2]',
+        'blog/([^/]+)/page/?([0-9]{1,})/?$' => 'index.php?name=$matches[1]&paged=$matches[2]',
+        'blog/([^/]+)/comment-page-([0-9]{1,})/?$' => 'index.php?name=$matches[1]&cpage=$matches[2]',
+        'blog/([^/]+)(/[0-9]+)?/?$' => 'index.php?name=$matches[1]&page=$matches[2]',
+        'blog/[^/]+/([^/]+)/?$' => 'index.php?attachment=$matches[1]',
+        'blog/[^/]+/([^/]+)/trackback/?$' => 'index.php?attachment=$matches[1]&tb=1',
+        'blog/[^/]+/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$' => 'index.php?attachment=$matches[1]&feed=$matches[2]',
+        'blog/[^/]+/([^/]+)/(feed|rdf|rss|rss2|atom)/?$' => 'index.php?attachment=$matches[1]&feed=$matches[2]',
+        'blog/[^/]+/([^/]+)/comment-page-([0-9]{1,})/?$' => 'index.php?attachment=$matches[1]&cpage=$matches[2]',
+    ) + $wp_rewrite->rules;
+}
 

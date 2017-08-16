@@ -4,7 +4,8 @@
 		<div class="row">
 			<div class="col-md-6" style="padding-top: 10%;">
 				<header class="page-header">
-				<h1 class="page-title"><?php _e( 'Ooops! Page not found', 'wpsites' ); ?></h1>
+				<h1 class="page-title"><?php _e( "Something's not right here.", 'wpsites' ); ?></h1>
+				<br>
 			</header>
 
 			<div class="page-content">
@@ -15,7 +16,7 @@
 			</div>
 
 			<div class="col-md-6">
-				<img src="/wp-content/uploads/2017/05/404.png" alt="" class="img-responsive">
+				<img src="/wp-content/uploads/2017/05/404-page-not-found.jpg" alt="" class="img-responsive">
 			</div>
 
 			

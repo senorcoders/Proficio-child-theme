@@ -1,6 +1,28 @@
 jQuery(document).ready(function() {
     AOS.init();
 
+    var t;
+
+    var start = $('#proficio-video-caroussel').find('.active').attr('data-interval');
+    t = setTimeout("$('#proficio-video-caroussel').carousel({interval: 1000});", start - 1000);
+
+    $('#proficio-video-caroussel').on('slid.bs.carousel', function() {
+        clearTimeout(t);
+        var duration = $(this).find('.active').attr('data-interval');
+
+        $('#proficio-video-caroussel').carousel('pause');
+        t = setTimeout("$('#proficio-video-caroussel').carousel();", duration - 1000);
+    })
+
+    $('.carousel-control.right').on('click', function() {
+        clearTimeout(t);
+    });
+
+    $('.carousel-control.left').on('click', function() {
+        clearTimeout(t);
+    });
+
+
     jQuery('#navbarExample > ul').addClass('navbar-nav ml-auto');
     jQuery('#navbarExample > ul > li').addClass('nav-item');
     jQuery('#navbarExample > ul > li > a').addClass('nav-link');
