@@ -1,35 +1,4 @@
-<?php $url = 'https://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 
-$titan = TitanFramework::getInstance( 'proficio' );
-    
-    $signature1 = $titan->getOption('signature1');
-    $signature2 = $titan->getOption('signature2');
-
-    $signature3 = $titan->getOption('signature3');
-    $signature4 = $titan->getOption('signature4');
-    $signature5 = $titan->getOption('signature5');
-    $signature6 = $titan->getOption('signature6');
-
-
-if (strpos($url,'signature1') !== false) {
-    header('Location: '.$signature1);
-    die();
-} elseif (strpos($url,'signature2') !== false) {
-  header('Location: '.$signature2);
-    die();
-} elseif (strpos($url,'signature3') !== false) {
-  header('Location: '.$signature3);
-    die();
-}elseif (strpos($url,'signature4') !== false) {
-  header('Location: '.$signature4);
-    die();
-} elseif (strpos($url,'signature5') !== false) {
-  header('Location: '.$signature5);
-    die();
-} elseif (strpos($url,'signature6') !== false) {
-  header('Location: '.$signature6);
-    die();
-}  ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -77,9 +46,9 @@ rtp('get', 'campaign',true);
 <?php } elseif ( (isset($_GET["aliId"]) and is_page(1179)) or (isset($_GET["aliId"]) and is_page(1503)) or (isset($_GET["aliId"]) and is_page(1416))
         or (isset($_GET["aliId"]) and is_page(1462)) or (isset($_GET["aliId"]) and is_page(1466))) { ?>
     <body  id="page-top"  class="rsvp-thank" >
- <?php } 
-
- else{ ?>
+ <?php } elseif (isset($_GET["aliId"]) and is_page(118)) { ?>
+        <body  id="page-top" <?php body_class('webinar-video'); ?> >
+ <?php } else{ ?>
         <body  id="page-top" <?php body_class(); ?> >
 
    <?php }?>

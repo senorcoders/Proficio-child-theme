@@ -118,6 +118,11 @@ h6 {
 
 
 
+
+
+
+
+
 /*.page-id-28 header.masthead, .page-template-page-inside header.masthead{
 height: 400px !important;
 min-height: 400px;
@@ -291,6 +296,11 @@ min-height: 400px;
 
 
 
+
+
+
+
+
 /*#mega-menu-item-127  a.mega-menu-link, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item:nth-child(1) > a.mega-menu-link,*/
 
 #resources-submenu>.resourcesBgBox:nth-child(1)>div {
@@ -299,6 +309,11 @@ min-height: 400px;
     background-repeat: no-repeat;
     background-position: center;
 }
+
+
+
+
+
 
 
 
@@ -344,6 +359,11 @@ min-height: 400px;
 
 
 
+
+
+
+
+
 /*#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item:nth-child(2) > a.mega-menu-link,
 */
 
@@ -353,6 +373,11 @@ min-height: 400px;
     background-repeat: no-repeat;
     background-position: center;
 }
+
+
+
+
+
 
 
 
@@ -398,6 +423,11 @@ min-height: 400px;
 
 
 
+
+
+
+
+
 /*#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item:nth-child(3) > a.mega-menu-link,
 */
 
@@ -407,6 +437,11 @@ min-height: 400px;
     background-repeat: no-repeat;
     background-position: center;
 }
+
+
+
+
+
 
 
 
@@ -452,6 +487,11 @@ min-height: 400px;
 
 
 
+
+
+
+
+
 /*#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item:nth-child(4) > a.mega-menu-link,
 */
 
@@ -461,6 +501,11 @@ min-height: 400px;
     background-repeat: no-repeat;
     background-position: center;
 }
+
+
+
+
+
 
 
 
@@ -506,6 +551,11 @@ min-height: 400px;
 
 
 
+
+
+
+
+
 /*#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item:nth-child(5) > a.mega-menu-link,
 */
 
@@ -515,6 +565,11 @@ min-height: 400px;
     background-repeat: no-repeat;
     background-position: center;
 }
+
+
+
+
+
 
 
 
@@ -560,6 +615,11 @@ min-height: 400px;
 
 
 
+
+
+
+
+
 /*#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item:nth-child(6) > a.mega-menu-link,
 */
 
@@ -569,6 +629,11 @@ min-height: 400px;
     background-repeat: no-repeat;
     background-position: center;
 }
+
+
+
+
+
 
 
 
@@ -614,6 +679,11 @@ min-height: 400px;
 
 
 
+
+
+
+
+
 /*#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item:nth-child(7) > a.mega-menu-link,
 */
 
@@ -623,6 +693,11 @@ min-height: 400px;
     background-repeat: no-repeat;
     background-position: center;
 }
+
+
+
+
+
 
 
 
@@ -668,6 +743,11 @@ min-height: 400px;
 
 
 
+
+
+
+
+
 /*#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item:nth-child(8) > a.mega-menu-link,
 */
 
@@ -677,6 +757,11 @@ min-height: 400px;
     background-repeat: no-repeat;
     background-position: center;
 }
+
+
+
+
+
 
 
 
@@ -722,6 +807,11 @@ min-height: 400px;
 
 
 
+
+
+
+
+
 /*#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item:nth-child(9) > a.mega-menu-link,
 */
 
@@ -731,6 +821,11 @@ min-height: 400px;
     background-repeat: no-repeat;
     background-position: center;
 }
+
+
+
+
+
 
 
 
@@ -1039,6 +1134,11 @@ min-height: 400px;
     /*    text-shadow: 0 2px 5px rgba(0,0,0,0.4) !important;
 */
 }
+
+
+
+
+
 
 
 
@@ -1760,6 +1860,11 @@ a:not([href]):not([tabindex]) {
 
 
 
+
+
+
+
+
 /* #mega-menu-item-310 > a:before {
 background: url(/wp-content/uploads/2017/05/Automate-1.png);
 content: " ";
@@ -1992,6 +2097,11 @@ margin: 0 auto !important;
 
 
 
+
+
+
+
+
 /* #mega-menu-item-25 .mega-sub-menu {
 width: 70% !important;
 left: 20% !important;
@@ -2008,6 +2118,11 @@ left: 20% !important;
     padding: 30px 10px !important;
     min-height: 92px;
 }
+
+
+
+
+
 
 
 
@@ -2318,6 +2433,11 @@ left: 50% !important;
     text-align: center;
     font-size: 1.5rem;
 }
+
+
+
+
+
 
 
 
@@ -2876,6 +2996,11 @@ width: 20%;
 #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item.mega-icon-top>a.mega-menu-link>span.mega-title-below {
     margin-top: 5px;
 }
+
+
+
+
+
 
 
 
@@ -3720,6 +3845,11 @@ cite.h-card {
 
 
 
+
+
+
+
+
 /* #mktoForm_1098 .mktoButton {
 background: #333 !important;
 }*/
@@ -4168,6 +4298,93 @@ background: #333 !important;
     font-size: 23px;
 }
 
+#mktoForm_1162 .mktoButton {
+    color: #00fefb;
+    border-color: #00fefb !important;
+    padding: 5px 20px;
+}
+
+#mktoForm_1162 .mktoButtonWrap.mktoNative {
+    margin-left: 10px !important;
+}
+
+#video-row-webinar {
+    display: none;
+}
+
+.webinar-video #video-row-webinar {
+    display: block;
+}
+
+.webinar-video #mktoForm_1162 {
+    display: none;
+}
+
+
+
+.free-offer {
+    padding: 80px 0;
+    text-align: center;
+    background: url(/wp-content/uploads/2017/05/disruptive2017_bkgrd.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.free-offer h1 {
+    font-size: 4.5em;
+    text-transform: uppercase !important;
+}
+
+.page-id-1650>.container h1 {
+    font-size: 7.5em;
+    text-transform: uppercase !important;
+}
+
+.free-offer h2,
+.page-id-1650>.container h2 {
+    text-transform: initial;
+    color: #00fefb;
+    margin-bottom: 30px;
+}
+
+.free-offer h4,
+.page-id-1650>.container h4 {
+    text-transform: initial;
+}
+
+.page-id-1650>.container .col-md-12 {
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.page-id-1650>.container .col-md-12>p {
+    text-align: center;
+}
+
+.page-id-1650>.container .col-md-12 span {
+    position: absolute;
+    right: 24%;
+    top: 47%;
+    font-size: 32px;
+    text-align: left !important;
+    line-height: 34px;
+}
+
+.page-id-1650 {
+    background: url(/wp-content/uploads/2017/05/disruptive2017_bkgrd.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.event-web-title {
+    color: #00fefb;
+    text-transform: initial;
+    font-size: 1.3em;
+}
+
+
 
 /*MEDIA QUERIES*/
 
@@ -4200,6 +4417,10 @@ background: #333 !important;
 }
 
 @media (min-width: 768px) {
+    #video-webinar-modal .modal-dialog {
+        max-width: 700px;
+        width: 700px;
+    }
     .page-module.accordians .container .panel h5.panel-title {
         text-align: left;
         width: 30%;
@@ -4308,6 +4529,13 @@ background: #333 !important;
 }
 
 @media(max-width: 1200px) {
+    .page-id-1650>.container .col-md-12 span {
+        display: none;
+    }
+    .page-id-1650>.container .col-md-12 {
+        max-width: 80%;
+        margin: 0 auto;
+    }
     .flip-left,
     .flip-right {
         background-position: center;
@@ -4513,6 +4741,20 @@ width: 55% !important;
 }
 
 
+@media(min-width: 1100px){
+    #video-webinar-modal .modal-dialog{
+        max-width: 1024px;
+        width: 1024px;
+
+   }
+   #video-webinar-modal .modal-dialog video{
+    height: 768px;
+   }
+}
+
+
+
+
 
 
 
@@ -4531,6 +4773,11 @@ width: 55% !important;
 
 
 
+
+
+
+
+
 /* Background to pre-footer on splunk page */
 
 .how-proficio-can-help {
@@ -4539,6 +4786,11 @@ width: 55% !important;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+
+
+
+
 
 
 

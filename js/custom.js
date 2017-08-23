@@ -29,7 +29,11 @@ jQuery(document).ready(function() {
 
     $ = jQuery;
 
-
+      if ($(".webinar-video").length > 0) {
+        //alert("Hola");
+        //$("#video-webinar-modal").modal('show');
+        $("#show-modal").trigger('click');
+    }
     var c = new Image();
 
     c.onload = function() {
@@ -136,6 +140,7 @@ $(function() {
             sticky_relocate();
         }
     }
+
 
 
 

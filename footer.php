@@ -1,3 +1,24 @@
+
+<!-- Modal -->
+<div id="video-webinar-modal" class="modal fade" aria-hidden="true">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+         <video width="100%" height="400" controls>
+            <source src="https://www.proficio.com/uploads/webinars/proficio-content-discussion.mp4" type="video/mp4">
+         </video>
+      </div>
+      
+    </div>
+
+  </div>
+</div>
+
 <?php include('inc/customizable-section.php'); ?>
 
 <?php 

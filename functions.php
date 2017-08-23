@@ -689,3 +689,44 @@ function add_blog_rewrites( $wp_rewrite ) {
     ) + $wp_rewrite->rules;
 }
 
+
+//REDIRECT SIGNATURES
+
+add_action ('wp_loaded', 'my_redirect_function');
+
+function my_redirect_function() {
+    $url = 'https://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+
+$titan = TitanFramework::getInstance( 'proficio' );
+    
+    $signature1 = $titan->getOption('signature1');
+    $signature2 = $titan->getOption('signature2');
+
+    $signature3 = $titan->getOption('signature3');
+    $signature4 = $titan->getOption('signature4');
+    $signature5 = $titan->getOption('signature5');
+    $signature6 = $titan->getOption('signature6');
+
+
+if (strpos($url,'signature1') !== false) {
+    wp_redirect($signature1);
+    exit;
+} elseif (strpos($url,'signature2') !== false) {
+  wp_redirect($signature2);
+    exit;
+} elseif (strpos($url,'signature3') !== false) {
+ wp_redirect($signature3);
+    exit;
+}elseif (strpos($url,'signature4') !== false) {
+ wp_redirect($signature4);
+    exit;
+} elseif (strpos($url,'signature5') !== false) {
+ wp_redirect($signature5);
+    exit;
+} elseif (strpos($url,'signature6') !== false) {
+  wp_redirect($signature6);
+    exit;
+}  
+
+    
+}
