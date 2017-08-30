@@ -58,9 +58,35 @@
                  
                  <div class="col-md-4">
                  <h1 style="margin-bottom: 30px;">IN THE NEWS</h1>
-                   <?php if ( is_active_sidebar( 'news_sidebar' ) ) : ?>
-                      <?php dynamic_sidebar( 'news_sidebar' ); ?>
-                  <?php endif; ?>
+                   <?php
+
+                  if( have_rows('news_sidebar', 116) ):
+
+                      while ( have_rows('news_sidebar', 116) ) : the_row(); ?>
+                        
+                        <a class="press-mentions" target="_blank" href="<?php the_sub_field('url') ?>">
+      
+                          <div class="press-mentions-img">
+                            <img src="<?php the_sub_field('image_logo') ?>" class="img-responsive">
+                          </div>
+                                
+                        <div class="press-mentions-cell">
+                          <h2 class="press-mentions-title"><?php the_sub_field('title') ?></h2>
+                        </div>
+                          
+                      </a> 
+                       &nbsp;
+                       <?php
+
+                      endwhile;
+
+                  else :
+
+                      // no rows found
+
+                  endif;
+
+                  ?>
                  </div>                  
     
   </div>

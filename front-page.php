@@ -26,7 +26,16 @@
       </div>
         <?php echo do_shortcode('[customer-logos]'); ?>
 
-        <hr />
+          <hr />
+  <div class="free-offer">
+    <div class="container">
+        <h4>Limited Time Offer</h4>
+        <h1>First Year Free</h1>
+        <h2>World Class Cybersecurity Services</h2>
+        <a class="btn btn-primary btn-xl" href="/first-year-free/" >Learn more</a>
+    </div>
+  </div>
+  <hr>
 
       <div class="first-row flip-right">
         <div class="container">
@@ -53,24 +62,15 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-5">
-                <h1 style="font-size: 2.5rem !important;">Download Proficio’s Managed Services for Splunk Webinar</h1>
+                <h1 style="font-size: 2.5rem !important;">Watch  Proficio’s Managed Services for Splunk Webinar</h1>
                   <p>Watch CEO Brad Taylor and Splunk Evangelist Aleem Cummins discuss the advantages of partnering with Proficio for monitoring and management of your Splunk Enterprise and Splunk Enterprise Security to maximize your SIEM results.</p>
-                <p><a class="btn btn-primary btn-xl" href="#" data-toggle="modal" data-target="#webinar-modal">Watch now!</a></p>
+                <p><a class="btn btn-primary btn-xl" href="/resources/webinars/" >Watch now!</a></p>
             </div>
         </div>
     </div>
 </div>
 </div>    
-      <hr />
-  <div class="free-offer">
-    <div class="container">
-        <h4>Limited Time Offer</h4>
-        <h1>First Year Free</h1>
-        <h2>World Class Cybersecurity Services</h2>
-        <a class="btn btn-primary btn-xl" href="/first-time-free-offer/" >Learn more</a>
-    </div>
-  </div>
-  <hr>
+    
 
     <div class="first-row flip-right">
       <div class="container">
@@ -177,21 +177,7 @@
           </div>
         </div>
 
-        <div class="modal fade" tabindex="-1" role="dialog" id="webinar-modal">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-              </div>
-              <div class="modal-body"> 
-                <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
-                <form id="mktoForm_1162"></form>
-              <script>MktoForms2.loadForm("//app-sj20.marketo.com", "608-UKL-227", 1162);</script>
-              </div>
-
-            </div>
-          </div>
-        </div>
+       
 
 
 <?php get_footer(); ?>

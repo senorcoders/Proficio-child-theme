@@ -44,8 +44,8 @@ rtp('get', 'campaign',true);
     <body  id="page-top"  class="thanks-body" >
 
 <?php } elseif ( (isset($_GET["aliId"]) and is_page(1179)) or (isset($_GET["aliId"]) and is_page(1503)) or (isset($_GET["aliId"]) and is_page(1416))
-        or (isset($_GET["aliId"]) and is_page(1462)) or (isset($_GET["aliId"]) and is_page(1466))) { ?>
-    <body  id="page-top"  class="rsvp-thank" >
+        or (isset($_GET["aliId"]) and is_page(1462)) or (isset($_GET["aliId"]) and is_page(1466)) or (isset($_GET["aliId"]) and is_page(1650))) { ?>
+    <body  id="page-top" <?php body_class('rsvp-thank'); ?>   >
  <?php } elseif (isset($_GET["aliId"]) and is_page(118)) { ?>
         <body  id="page-top" <?php body_class('webinar-video'); ?> >
  <?php } else{ ?>

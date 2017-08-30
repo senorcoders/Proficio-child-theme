@@ -101,6 +101,8 @@ jQuery(document).ready(function() {
 
     jQuery('.rsvp-thank #rsvp-proficio-form').html('<p>Thank you for requesting an invitation to our exclusive Whitelist Party. <br>We will be in touch shortly as we finalize our guest list. If approved you will receive a confirmation email by July 14.</p>');
     jQuery('.rsvp-thank #webinar-proficio-form').html('<p>Thank You For Registering, We Will Send You the Webinar Login Information Shortly</p>');
+    jQuery('.rsvp-thank #free-year-form').html('<p>Thank You For Registering, We Will Send You the First Year Free Login Information Shortly</p>');
+
 
 
 
