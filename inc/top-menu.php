@@ -24,7 +24,7 @@
                           <li>
                             <a id="" href="/partners/">Partners</a>
                         </li>
-                        <li class=" internalUrl  first  ">
+                      <!--   <li class=" internalUrl  first  ">
                             <a id="" href="/contact/">Contact</a>
                         </li>
                         
@@ -32,7 +32,7 @@
                     
                         <li class=" externalUrl last   ">
                             <a id="" href="tel:+18007795042">800.779.5042</a>
-                        </li>
+                        </li> -->
                        
                       
                 

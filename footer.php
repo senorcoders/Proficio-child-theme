@@ -1,4 +1,10 @@
-
+<div class="floating-cta">
+  <ul class="list-inline">
+    <li class="list-inline-item"><a class="btn btn-primary btn-xl" href="/contact/">Contact</a></li>
+    <li class="list-inline-item"><a class="btn btn-primary btn-xl" href="tel:+18007795042">800.779.5042</a></li>
+  </ul>
+                     
+</div>
 <!-- Modal -->
 <div id="video-webinar-modal" class="modal fade" aria-hidden="true">
   <div class="modal-dialog">

@@ -48,6 +48,8 @@ rtp('get', 'campaign',true);
     <body  id="page-top" <?php body_class('rsvp-thank'); ?>   >
  <?php } elseif (isset($_GET["aliId"]) and is_page(118)) { ?>
         <body  id="page-top" <?php body_class('webinar-video'); ?> >
+ <?php } elseif (isset($_GET["aliId"]) and is_page(899)) { ?>
+        <body  id="page-top" <?php body_class('thank-page-last'); ?> >
  <?php } else{ ?>
         <body  id="page-top" <?php body_class(); ?> >
 

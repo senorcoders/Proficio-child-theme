@@ -1,6 +1,6 @@
 <?php /* Template Name: Homepage */ ?>
 
-<?php include('header-video.php'); ?>
+<?php include('header-slide.php'); ?>
 <?php
   $titan = TitanFramework::getInstance( 'proficio' );
 
@@ -30,7 +30,7 @@
   <div class="free-offer">
     <div class="container">
         <h4>Limited Time Offer</h4>
-        <h1>First Year Free</h1>
+        <h1>First Year <span style="color: #fff;">Free</span></h1>
         <h2>World Class Cybersecurity Services</h2>
         <a class="btn btn-primary btn-xl" href="/first-year-free/" >Learn more</a>
     </div>

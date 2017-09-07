@@ -730,3 +730,23 @@ if (strpos($url,'signature1') !== false) {
 
     
 }
+
+
+
+function fyf_shortcode() {
+  ob_start(); ?>
+     <hr />
+  <div class="free-offer">
+    <div class="container">
+        <h4>Limited Time Offer</h4>
+        <h1>First Year <span style="color: #fff;">Free</span></h1>
+        <h2>World Class Cybersecurity Services</h2>
+        <a class="btn btn-primary btn-xl" href="/first-year-free/" >Learn more</a>
+    </div>
+  </div>
+  <hr>
+
+  <?php return ob_get_clean();
+
+}
+add_shortcode( 'fyf_pod', 'fyf_shortcode' );
